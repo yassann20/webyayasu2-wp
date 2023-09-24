@@ -37,19 +37,28 @@ function add_next_post_link_class($output) {
   return str_replace('<a href=', '<a id="Next-page" href=', $output); //次の記事リンク
 }
 add_filter( 'next_post_link', 'add_next_post_link_class' );
-//カスタマイザー付与
-add_action( 'customize_register', 'theme_customize_register' );
+
+
+//画像カスタマイザー付与
 function theme_customize_register($wp_customize) {
+  $number = 3;/*-- スライドの枚数 --*/
   /* セクション追加 */
-  $wp_customize->add_setting('original_image', array(
+  for( $i=1; $i<=$number; $i++):
+  $wp_customize->add_section('original_custom'.$i , array(
+    'title' => 'スライダー画像'.$i ,
+    'priority' => 30,
+  ));
+  $wp_customize->add_setting('original_image'.$i , array(
     'type' => 'option',
   ));
-if(class_exists('WP_Customize_Image_Control')):
-  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'original_image', array(
-    'settings' => 'original_image',
-    'label' => 'オリジナル画像',
-    'section' => 'original_custom',
-  )));
-endif;
- 
+  if(class_exists('WP_Customize_Image_Control')):
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'original_image'.$i , array(
+      'settings' => 'original_image'.$i ,
+      'label' => 'オリジナル画像'.$i ,
+      'section' => 'original_custom'.$i ,
+      'description' => 'ロゴ画像を設定してください。',
+    )));
+  endif;
+endfor;
 }
+add_action( 'customize_register', 'theme_customize_register' );
