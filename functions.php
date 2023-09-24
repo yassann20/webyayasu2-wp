@@ -1,4 +1,7 @@
 <?php
+session_start();
+$_SESSION["number"] = 5; /* スライドショーの枚数 */
+
 function webst8_setup()
 {
     //ここに関数の中身を記述します。
@@ -41,9 +44,9 @@ add_filter( 'next_post_link', 'add_next_post_link_class' );
 
 //画像カスタマイザー付与
 function theme_customize_register($wp_customize) {
-  $number = 3;/*-- スライドの枚数 --*/
+  $num = $_SESSION["number"]; /* スライド枚数を代入 */
   /* セクション追加 */
-  for( $i=1; $i<=$number; $i++):
+  for( $i=1; $i<=$num; $i++):
   $wp_customize->add_section('original_custom'.$i , array(
     'title' => 'スライダー画像'.$i ,
     'priority' => 30,

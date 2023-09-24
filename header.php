@@ -1,3 +1,4 @@
+<?php session_start(); /*スライド枚数を読み込むために追加*/?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -29,21 +30,15 @@
   </div>
   <header>
     <div class="slider">
+      <?php 
+      $number = $_SESSION["number"]; /*functionsで定義したスライド枚数をここに定義*/
+      for( $i=1; $i<=$number; $i++): ?>
       <div>
       <a href="<?php echo home_url(); ?>">
-      <img src="<?php echo get_option('original_image1')?>">
+      <img src="<?php echo get_option('original_image'.$i)?>">
       </a>
       </div>
-      <div>
-      <a href="<?php echo home_url(); ?>">
-      <img src="<?php echo get_option('original_image2')?>">
-      </a>
-      </div>
-      <div>
-      <a href="<?php echo home_url(); ?>">
-      <img src="<?php echo get_option('original_image3')?>">
-      </a>
-      </div>
+      <?php endfor; ?>
     </div>
     <nav id="nav">
       <?php
