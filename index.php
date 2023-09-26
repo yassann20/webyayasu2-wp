@@ -33,39 +33,36 @@
   </div>
   <div id="Content">
     <div id="Welcom">
-      <h2>ようこそWEBYAYASUへ</h2>
+      <h2><?php echo get_option('original_txt'); ?></h2>
       <div>
         <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/welcome-img.jpg" alt="">
         <p>私は北海道札幌市を起点にフロントエンドエンジニアとして活動している安崎と申します。業務内容は主にホームページのコーディングやワードプレステーマの制作をさせていただいております。</p>
       </div>
     </div>
     <div id="Business">
-      <h2>業務内容</h2>
+      <h2><?php echo get_option('section1-h2')?></h2>
       <ul>
         <li>
           <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/coding.png" alt="">
 
           <h3>コーディング業務</h3>
-          <p>デザインカンプを元にアークアップ、プログラミングしていき最終的にインターネットで閲覧できるデータを制作します。</p>
+          <p><?php echo get_option('section2_li1-text')?></p>
         </li>
         <li>
           <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/wordpress.png" alt="">
-
           <h3>WPテーマ制作</h3>
-          <p>プログラミングしたデータを元にワードプレスのテーマを制作します。ブログや情報発信を行う場合など必須のツールです。</p>
-
+          <p><?php echo get_option('section2_li2-text')?></p>
         </li>
         <li>
           <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/setting.png" alt="">
 
           <h3>保守・運営</h3>
-          <p>サイト運用中の軽微なデザイン修正、また機能の追加などサイトに不都合が生じた際など、サイト運営に関するサポートをしています。</p>
-
+          <p><?php echo get_option('section2_li3-text')?></p>
         </li>
       </ul>
     </div>
     <div id="Achievement">
-      <h2>作業実績</h2>
+      <h2><?php echo get_option('section2-h2')?></h2>
       <img class="pc" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/achievement.png" alt="">
       <img class="sp" src="<?php echo get_template_directory_uri(); ?>/photos/SP-img/achievement.jpg" alt="">
       <div>
@@ -74,7 +71,7 @@
       </div>
     </div>
     <div id="Activity">
-      <h2>活動記録</h2>
+      <h2><?php echo get_option('section3-h2')?></h2>
       <img class="pc" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/activity.png" alt="">
       <img class="sp" src="<?php echo get_template_directory_uri(); ?>/photos/SP-img/activity.jpg" alt="">
       <div>

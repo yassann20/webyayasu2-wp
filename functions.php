@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["number"] = 5; /* スライドショーの枚数 */
+$_SESSION["number"] = 3; /* スライドショーの枚数 */
 
 function webst8_setup()
 {
@@ -42,10 +42,10 @@ function add_next_post_link_class($output) {
 add_filter( 'next_post_link', 'add_next_post_link_class' );
 
 
-//画像カスタマイザー付与
+//カスタマイザー付与
 function theme_customize_register($wp_customize) {
-  $num = $_SESSION["number"]; /* スライド枚数を代入 */
-  /* セクション追加 */
+  /* スライダー画像の処理 */
+  $num = $_SESSION["number"];
   for( $i=1; $i<=$num; $i++):
   $wp_customize->add_section('original_custom'.$i , array(
     'title' => 'スライダー画像'.$i ,
@@ -61,7 +61,98 @@ function theme_customize_register($wp_customize) {
       'section' => 'original_custom'.$i ,
       'description' => 'ロゴ画像を設定してください。',
     )));
-  endif;
-endfor;
+    endif;
+  endfor;
+
+
+    /* トップページ大見出し */
+    $wp_customize->add_section('original_h1' , array(
+      'title' => '大見出し',
+      'priority' => 30,
+    ));
+    $wp_customize->add_setting('original_txt', array(
+      'type' => 'option',
+    ));
+   
+    $wp_customize->add_control( 'original_txt', array(
+      'settings' => 'original_txt',
+      'label' => 'オリジナルテキスト',
+      'section' => 'original_h1',
+      'type' => 'text',
+    ));
+    /* 大見出しここまで */
+
+
+    /* sectionの見出し*/
+    $h2_array = [
+      '(セクション1)見出し',
+      '(セクション2)見出し',
+      '(セクション3)見出し',
+    ];
+    for($i = 1; $i <= count($h2_array); $i++){
+      $wp_customize->add_section('section_li_text'.$i , array(
+        'title' => '(セクション'.$i.')見出し',
+        'priority' => 30,
+      ));
+      $wp_customize->add_setting('section'.$i.'-h2', array(
+        'type' => 'option',
+      ));
+      $wp_customize->add_control('section'.$i.'-h2', array(
+        'settings' => 'section'.$i.'-h2',
+        'label' => 'オリジナルテキスト',
+        'section' => 'section_li_text'.$i,
+        'type' => 'text',
+      ));
+    }
+    /* section2見出しここまで */
+
+
+    /* sectionの見出し*/
+    $h2_array = [
+      '(セクション1)見出し',
+      '(セクション2)見出し',
+      '(セクション3)見出し',
+    ];
+    for($i = 1; $i <= count($h2_array); $i++){
+      $wp_customize->add_section('section'.$i."h2" , array(
+        'title' => '(セクション'.$i.')見出し',
+        'priority' => 30,
+      ));
+      $wp_customize->add_setting('section'.$i.'-h2', array(
+        'type' => 'option',
+      ));
+      $wp_customize->add_control('section'.$i.'-h2', array(
+        'settings' => 'section'.$i.'-h2',
+        'label' => 'オリジナルテキスト',
+        'section' => 'section'.$i."h2",
+        'type' => 'text',
+      ));
+    }
+    /* section2見出しここまで */
+
+
+    /* section2リストごとのテキスト*/
+    $sec1_li_array = [
+      'section2内liテキスト',
+      'section2内liテキスト',
+      'section2内liテキスト',
+    ];
+    for($i = 1; $i <= count($sec1_li_array); $i++){
+      $wp_customize->add_section('section_li_text'.$i , array(
+        'title' => 'section2内テキスト'.$i,
+        'priority' => 30,
+      ));
+      $wp_customize->add_setting('section2_li'.$i.'-text', array(
+        'type' => 'option',
+      ));
+      $wp_customize->add_control('section2_li'.$i.'-text', array(
+        'settings' => 'section2_li'.$i.'-text',
+        'label' => 'オリジナルテキスト',
+        'section' => 'section_li_text'.$i,
+        'type' => 'textarea',
+      ));
+    }
+    /* section2テキストここまで */
+
 }
 add_action( 'customize_register', 'theme_customize_register' );
