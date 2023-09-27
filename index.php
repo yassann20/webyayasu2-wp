@@ -36,7 +36,7 @@
       <h2><?php echo get_option('original_txt'); ?></h2>
       <div>
         <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/welcome-img.jpg" alt="">
-        <p>私は北海道札幌市を起点にフロントエンドエンジニアとして活動している安崎と申します。業務内容は主にホームページのコーディングやワードプレステーマの制作をさせていただいております。</p>
+        <p><?php echo get_option('sec1_maintext'); ?></p>
       </div>
     </div>
     <div id="Business">
@@ -44,19 +44,17 @@
       <ul>
         <li>
           <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/coding.png" alt="">
-
-          <h3>コーディング業務</h3>
+          <h3><?php echo get_option('section2_li1-h3')?></h3>
           <p><?php echo get_option('section2_li1-text')?></p>
         </li>
         <li>
           <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/wordpress.png" alt="">
-          <h3>WPテーマ制作</h3>
+          <h3><?php echo get_option('section2_li2-h3')?></h3>
           <p><?php echo get_option('section2_li2-text')?></p>
         </li>
         <li>
           <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/setting.png" alt="">
-
-          <h3>保守・運営</h3>
+          <h3><?php echo get_option('section2_li3-h3')?></h3>
           <p><?php echo get_option('section2_li3-text')?></p>
         </li>
       </ul>
@@ -66,8 +64,8 @@
       <img class="pc" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/achievement.png" alt="">
       <img class="sp" src="<?php echo get_template_directory_uri(); ?>/photos/SP-img/achievement.jpg" alt="">
       <div>
-        <p>これまで複数の案件に取り組ませていただきまして、その中で実績として記載可能なものをご紹介しております。</p>
-        <a href="<?php echo home_url('/category/work'); ?>">実績</a>
+        <p><?php echo get_option('sec2_maintext'); ?></p>
+        <a href="<?php echo home_url('/category/work'); ?>"><?php echo get_option('sec1_button')?></a>
       </div>
     </div>
     <div id="Activity">
@@ -75,8 +73,8 @@
       <img class="pc" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/activity.png" alt="">
       <img class="sp" src="<?php echo get_template_directory_uri(); ?>/photos/SP-img/activity.jpg" alt="">
       <div>
-        <p>日々の業務、私生活での出来事などをご紹介しております。</p>
-        <a href="<?php echo home_url('/news/'); ?>">お知らせ</a>
+        <p><?php echo get_option('sec3_maintext'); ?></p>
+        <a href="<?php echo home_url('/news/'); ?>"><?php echo get_option('sec2_button')?></a>
       </div>
     </div>
     <div id="Contact">
