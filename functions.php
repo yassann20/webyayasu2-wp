@@ -177,24 +177,25 @@ function theme_customize_register($wp_customize) {
     }
     /* section　本文ここまで*/
 
-    $num = $_SESSION["number"];
+  /* リストコンコンテンツ画像　*/
   for( $i=1; $i<=$num; $i++):
-  $wp_customize->add_section('original_custom'.$i , array(
-    'title' => 'スライダー画像'.$i ,
+  $wp_customize->add_section('list-img'.$i , array(
+    'title' => 'リストコンテンツ画像'.$i ,
     'priority' => 30,
   ));
-  $wp_customize->add_setting('original_image'.$i , array(
+  $wp_customize->add_setting('original_list_image'.$i , array(
     'type' => 'option',
   ));
   if(class_exists('WP_Customize_Image_Control')):
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'original_image'.$i , array(
-      'settings' => 'original_image'.$i ,
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'original_list_image'.$i , array(
+      'settings' => 'original_list_image'.$i ,
       'label' => 'オリジナル画像'.$i ,
-      'section' => 'original_custom'.$i ,
-      'description' => 'ロゴ画像を設定してください。',
+      'section' => 'list-img'.$i ,
+      'description' => 'リスト内の画像を選択してください',
     )));
     endif;
   endfor;
+  /* リストコンテンツ画像 */
   
 
     /* section2リストごとのテキスト*/

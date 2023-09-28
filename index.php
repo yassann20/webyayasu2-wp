@@ -43,17 +43,17 @@
       <h2><?php echo get_option('section1-h2')?></h2>
       <ul>
         <li>
-          <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/coding.png" alt="">
+          <img src="<?php echo get_option("original_list_image1")?>" alt="">
           <h3><?php echo get_option('section2_li1-h3')?></h3>
           <p><?php echo get_option('section2_li1-text')?></p>
         </li>
         <li>
-          <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/wordpress.png" alt="">
+          <img src="<?php echo get_option("original_list_image2")?>" alt="">
           <h3><?php echo get_option('section2_li2-h3')?></h3>
           <p><?php echo get_option('section2_li2-text')?></p>
         </li>
         <li>
-          <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/setting.png" alt="">
+          <img src="<?php echo get_option("original_list_image3")?>" alt="">
           <h3><?php echo get_option('section2_li3-h3')?></h3>
           <p><?php echo get_option('section2_li3-text')?></p>
         </li>
