@@ -82,6 +82,25 @@ function theme_customize_register($wp_customize) {
     ));
     /* 大見出しここまで */
 
+    /* sectionの画像 */
+    for( $i=1; $i<=$num; $i++):
+      $wp_customize->add_section('section-img'.$i , array(
+        'title' => 'セクションコンテンツ画像'.$i ,
+        'priority' => 30,
+      ));
+      $wp_customize->add_setting('section_image'.$i , array(
+        'type' => 'option',
+      ));
+      if(class_exists('WP_Customize_Image_Control')):
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'section_image'.$i , array(
+          'settings' => 'section_image'.$i ,
+          'label' => 'オリジナル画像'.$i ,
+          'section' => 'section-img'.$i ,
+          'description' => 'リスト内の画像を選択してください',
+        )));
+        endif;
+      endfor;
+    /* sectionの画像ここまで */
 
     /* sectionの見出し*/
     $h2_array = [
@@ -128,7 +147,7 @@ function theme_customize_register($wp_customize) {
         'type' => 'text',
       ));
     }
-    /* section2見出しここまで */
+    /* section見出しここまで */
 
     /* section　本文*/
     $maintext_array = [

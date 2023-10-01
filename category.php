@@ -44,11 +44,11 @@ $catname = $cat[0]->cat_name;
                                 <div class="news-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/photos/PC-img/singlesample.jpg');"></div>
                             <?php endif; ?>
                             <div>
-                                <!--抜粋を７０文字まで取得、それ以降は切り捨て-->
-                                <dt><?php echo mb_substr(get_the_excerpt(), 0, 70) . '…'; ?></dt>
+                                <!--抜粋を５０文字まで取得、それ以降は切り捨て-->
+                                <dt><?php echo mb_substr(get_the_excerpt(), 0, 50) . '…'; ?></dt>
                                 <!--カテゴリー名を取得-->
                                 <dd class="category"><?php echo $catname; ?></dd>
-                                <div>
+                                <div class="time-date">
                                     <img class="time-img" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/time-img.jpg" alt="">
                                     <!--投稿日を取得-->
                                     <dd><?php echo get_the_date('Y.m.d'); ?></dd>

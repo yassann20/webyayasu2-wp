@@ -21,8 +21,8 @@
               <dd class="dd1"><?php echo get_the_date('Y.m.d'); ?></dd>
               <!--カテゴリー名を取得-->
               <dd class="category"><?php echo $catname; ?></dd>
-              <!--タイトルを取得２５文字以降は切り捨て-->
-              <dt><?php echo mb_substr($post->post_title, 0, 25) . '…'; ?></dt>
+              <!--タイトルを取得60文字以降は切り捨て-->
+              <dt><?php echo mb_substr($post->post_title, 0, 60) . '…'; ?></dt>
             </a>
           </dl>
       <?php
@@ -35,7 +35,7 @@
     <div id="Welcom">
       <h2><?php echo get_option('original_txt'); ?></h2>
       <div>
-        <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/welcome-img.jpg" alt="">
+        <img src="<?php echo get_option("section_image1"); ?>" alt="">
         <p><?php echo get_option('sec1_maintext'); ?></p>
       </div>
     </div>
@@ -61,8 +61,7 @@
     </div>
     <div id="Achievement">
       <h2><?php echo get_option('section2-h2')?></h2>
-      <img class="pc" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/achievement.png" alt="">
-      <img class="sp" src="<?php echo get_template_directory_uri(); ?>/photos/SP-img/achievement.jpg" alt="">
+      <img class="pc" src="<?php echo get_option("section_image2"); ?>" alt="">
       <div>
         <p><?php echo get_option('sec2_maintext'); ?></p>
         <a href="<?php echo home_url('/category/work'); ?>"><?php echo get_option('sec1_button')?></a>
@@ -70,8 +69,7 @@
     </div>
     <div id="Activity">
       <h2><?php echo get_option('section3-h2')?></h2>
-      <img class="pc" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/activity.png" alt="">
-      <img class="sp" src="<?php echo get_template_directory_uri(); ?>/photos/SP-img/activity.jpg" alt="">
+      <img class="pc" src="<?php echo get_option("section_image3"); ?>" alt="">
       <div>
         <p><?php echo get_option('sec3_maintext'); ?></p>
         <a href="<?php echo home_url('/news/'); ?>"><?php echo get_option('sec2_button')?></a>

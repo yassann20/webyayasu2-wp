@@ -39,43 +39,12 @@
     #particles-js
     ============================*/
   }
-  header div img {
-    display: block;
-    width: 1300px;
-    height: 443px;
-    margin: 0 auto;
-  }
-  header nav {
-    width: 1300px;
-    height: 85px;
-    margin: 0 auto;
-  }
-  header nav ul {
-    width: 100%;
-    height: 100%;
+  .container {
     display: flex;
-    justify-content: center;
-    align-items: normal;
-    margin: 0 auto;
-  }
-  header nav ul li a {
-    font-family: Meiryo;
-    font-weight: normal;
-    line-height: 125px;
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-    margin: 0 50px;
-  }
-  header div#Hum-menu {
-    display: none;
-  }
-  main {
-    display: flex !important;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1300px;
-    height: auto;
+    width: 90%;
+    max-width: 1300px;
     margin: 0 auto;
     /*============================
     #News
@@ -87,14 +56,45 @@
     #Single
     ============================*/
     /*============================
-    #Content
-    ============================*/
-    /*============================
     #SideNav
     ============================*/
   }
-  main div#News {
-    width: 1299px;
+  .container header {
+    width: 100%;
+  }
+  .container header div img {
+    display: block;
+    width: 100%;
+    height: 443px;
+    margin: 0 auto;
+  }
+  .container header nav {
+    width: 100%;
+    height: 85px;
+    margin: 0 auto;
+  }
+  .container header nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    margin: 0 auto;
+  }
+  .container header nav ul li a {
+    font-family: Meiryo;
+    font-weight: normal;
+    line-height: 125px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 0 50px;
+  }
+  .container header div#Hum-menu {
+    display: none;
+  }
+  .container div#News {
+    width: 100%;
     height: auto;
     background: rgba(255, 255, 255, 0.65);
     margin: 0 auto;
@@ -102,15 +102,16 @@
     padding-bottom: 60px;
     margin-top: 40px;
   }
-  main div#News h2 {
+  .container div#News h2 {
     margin: 35px auto 25px;
   }
-  main div#News div {
-    width: 700px;
+  .container div#News div {
+    width: 75%;
+    max-width: 700px;
     height: auto;
     margin: 0 auto;
   }
-  main div#News div dl {
+  .container div#News div dl {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -120,30 +121,30 @@
     width: 700px;
     border-top: 1px solid #707070;
   }
-  main div#News div dl:nth-last-of-type(1) {
+  .container div#News div dl:nth-last-of-type(1) {
     border-bottom: 1px solid #707070;
   }
-  main div#News div dl a {
+  .container div#News div dl a {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  main div#News div dl a dd.dd1 {
+  .container div#News div dl a dd.dd1 {
     font-family: Meiryo;
     font-weight: normal;
     font-size: 16px;
     text-align: center;
     color: #000;
   }
-  main div#News div dl a dt {
+  .container div#News div dl a dt {
     font-family: Meiryo;
     font-weight: normal;
     font-size: 16px;
     text-align: center;
     color: #000;
   }
-  main div#achive-news {
+  .container div#achive-news {
     width: 700px;
     height: auto;
     margin: 0 auto;
@@ -151,43 +152,43 @@
     #Page-controll
     ============================*/
   }
-  main div#achive-news h2 {
+  .container div#achive-news h2 {
     margin: 40px auto;
   }
-  main div#achive-news p {
+  .container div#achive-news p {
     width: 490px;
     height: auto;
     margin: 0 auto 30px;
   }
-  main div#achive-news a {
+  .container div#achive-news a {
     color: black;
   }
-  main div#achive-news a:visited {
+  .container div#achive-news a:visited {
     color: black;
   }
-  main div#achive-news #all-category {
+  .container div#achive-news #all-category {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0;
   }
-  main div#achive-news #all-category dd {
+  .container div#achive-news #all-category dd {
     display: inline-block;
     margin: 0 5px;
   }
-  main div#achive-news dl {
+  .container div#achive-news dl {
     width: 100%;
     height: 160px;
     background: rgba(255, 255, 255, 0.65);
     margin-bottom: 20px;
   }
-  main div#achive-news dl a {
+  .container div#achive-news dl a {
     width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
   }
-  main div#achive-news dl a div.news-img {
+  .container div#achive-news dl a div.news-img {
     display: block;
     width: 241px;
     height: 160px;
@@ -195,30 +196,30 @@
     background-size: cover;
     margin: 0;
   }
-  main div#achive-news dl a div {
+  .container div#achive-news dl a div {
     display: flex;
     flex-wrap: wrap;
     width: 400px;
     margin: 30px auto;
   }
-  main div#achive-news dl a div dt {
+  .container div#achive-news dl a div dt {
     width: 100%;
     margin-bottom: 18px;
   }
-  main div#achive-news dl a div div {
+  .container div#achive-news dl a div div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     width: 140px;
     margin: 0 30px;
   }
-  main div#achive-news dl a div div img.time-img {
+  .container div#achive-news dl a div div img.time-img {
     display: block;
     width: 16px;
     height: 16px;
     margin-right: 7px;
   }
-  main div#achive-news div#Page-controll {
+  .container div#achive-news div#Page-controll {
     width: 700px;
     display: flex;
     flex-wrap: wrap;
@@ -226,7 +227,7 @@
     align-items: center;
     margin: 30px auto 50px;
   }
-  main div#Single {
+  .container div#Single {
     width: 700px;
     height: auto;
     background: #fff;
@@ -242,20 +243,20 @@
     #Page-controll
     ============================*/
   }
-  main div#Single div.Thumbnail {
+  .container div#Single div.Thumbnail {
     width: 600px;
     height: 322px;
     background-size: cover;
     background-position: center;
     margin: 50px auto 15px;
   }
-  main div#Single img {
+  .container div#Single img {
     display: block;
     width: 600px;
     height: 322px;
     margin: 50px auto 15px;
   }
-  main div#Single h1#Single-title {
+  .container div#Single h1#Single-title {
     width: 600px;
     font-family: Meiryo;
     font-weight: normal;
@@ -265,17 +266,17 @@
     color: #000;
     margin: 15px auto;
   }
-  main div#Single dl {
+  .container div#Single dl {
     display: flex;
     flex-wrap: nowrap;
     width: 600px;
     height: auto;
     margin: 15px auto;
   }
-  main div#Single dl dd.category {
+  .container div#Single dl dd.category {
     margin-right: 20px;
   }
-  main div#Single h2 {
+  .container div#Single h2 {
     width: 600px;
     font-family: Meiryo;
     font-weight: normal;
@@ -285,7 +286,7 @@
     color: #000;
     margin: 15px auto;
   }
-  main div#Single p {
+  .container div#Single p {
     width: 600px;
     font-family: Meiryo;
     font-weight: normal;
@@ -295,7 +296,7 @@
     color: #000;
     margin: 15px auto;
   }
-  main div#Single a {
+  .container div#Single a {
     display: block;
     width: 600px;
     font-family: Meiryo;
@@ -306,7 +307,7 @@
     color: #000;
     margin: 15px auto;
   }
-  main div#Single h3 {
+  .container div#Single h3 {
     width: 600px;
     font-family: Meiryo;
     font-weight: normal;
@@ -316,7 +317,7 @@
     color: #000;
     margin: 15px auto;
   }
-  main div#Single div#Page-controll {
+  .container div#Single div#Page-controll {
     width: 220px;
     display: flex;
     flex-wrap: nowrap;
@@ -330,7 +331,7 @@
     #Next-page
     ============================*/
   }
-  main div#Single div#Page-controll a#Prev-page {
+  .container div#Single div#Page-controll a#Prev-page {
     display: block;
     width: 120px;
     height: 30px;
@@ -343,7 +344,7 @@
     background: #fff;
     border: 1px solid #707070;
   }
-  main div#Single div#Page-controll a#Next-page {
+  .container div#Single div#Page-controll a#Next-page {
     display: block;
     width: 120px;
     height: 30px;
@@ -356,8 +357,17 @@
     background: #fff;
     border: 1px solid #707070;
   }
-  main div#Content {
-    width: 850px;
+  .container main {
+    width: 65%;
+    height: auto;
+    margin: 0 auto;
+    /*============================
+    #Content
+    ============================*/
+  }
+  .container main div#Content {
+    width: 100%;
+    max-width: 850px;
     background: rgba(255, 255, 255, 0.65);
     margin: 40px 0;
     /*============================
@@ -376,40 +386,40 @@
     #Contact
     ============================*/
   }
-  main div#Content div#Welcom {
+  .container main div#Content div#Welcom {
     width: 100%;
     height: auto;
   }
-  main div#Content div#Welcom h2 {
+  .container main div#Content div#Welcom h2 {
     margin: 40px auto;
   }
-  main div#Content div#Welcom div {
+  .container main div#Content div#Welcom div {
     display: flex;
     width: 100%;
   }
-  main div#Content div#Welcom div img {
+  .container main div#Content div#Welcom div img {
     display: block;
     width: 359px;
     height: 226px;
     margin: 0 0 0 78px;
   }
-  main div#Content div#Welcom div p {
+  .container main div#Content div#Welcom div p {
     width: 272px;
     margin: 20px 0 0 65px;
   }
-  main div#Content div#Business {
+  .container main div#Content div#Business {
     width: 700px;
     height: auto;
     margin: 0 auto;
   }
-  main div#Content div#Business h2 {
+  .container main div#Content div#Business h2 {
     margin: 121px auto 36px;
   }
-  main div#Content div#Business ul {
+  .container main div#Content div#Business ul {
     display: flex;
     justify-content: space-between;
   }
-  main div#Content div#Business ul li {
+  .container main div#Content div#Business ul li {
     width: 200px;
     height: 500px;
     list-style: none;
@@ -417,47 +427,47 @@
     width: 200px;
     box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
   }
-  main div#Content div#Business ul li img {
+  .container main div#Content div#Business ul li img {
     display: block;
     width: 150px;
     height: 150px;
     margin: 25px;
   }
-  main div#Content div#Business ul li h3 {
+  .container main div#Content div#Business ul li h3 {
     text-align: center;
     margin: 30px auto 20px;
   }
-  main div#Content div#Business ul li p {
+  .container main div#Content div#Business ul li p {
     width: 160px;
     margin: 0 auto;
   }
-  main div#Content div#Achievement {
+  .container main div#Content div#Achievement {
     display: flex;
     flex-wrap: wrap;
     width: 700px;
     margin: 0 auto;
   }
-  main div#Content div#Achievement h2 {
+  .container main div#Content div#Achievement h2 {
     width: 100%;
     margin: 90px auto 30px;
     order: 1;
   }
-  main div#Content div#Achievement img {
+  .container main div#Content div#Achievement img {
     display: block;
     width: 380px;
     height: 240px;
     order: 3;
   }
-  main div#Content div#Achievement div {
+  .container main div#Content div#Achievement div {
     width: 280px;
     height: auto;
     order: 2;
     margin-left: 40px;
   }
-  main div#Content div#Achievement div p {
+  .container main div#Content div#Achievement div p {
     margin: 45px auto;
   }
-  main div#Content div#Achievement div a {
+  .container main div#Content div#Achievement div a {
     display: block;
     width: 60px;
     height: 28px;
@@ -471,33 +481,33 @@
     color: #000;
     margin: 40px auto;
   }
-  main div#Content div#Activity {
+  .container main div#Content div#Activity {
     display: flex;
     flex-wrap: wrap;
     width: 700px;
     margin: 0 auto;
   }
-  main div#Content div#Activity h2 {
+  .container main div#Content div#Activity h2 {
     width: 100%;
     margin: 90px auto 30px;
     order: 1;
   }
-  main div#Content div#Activity img {
+  .container main div#Content div#Activity img {
     display: block;
     width: 380px;
     height: 240px;
     order: 2;
   }
-  main div#Content div#Activity div {
+  .container main div#Content div#Activity div {
     width: 280px;
     height: auto;
     order: 3;
     margin-left: 40px;
   }
-  main div#Content div#Activity div p {
+  .container main div#Content div#Activity div p {
     margin: 45px auto;
   }
-  main div#Content div#Activity div a {
+  .container main div#Content div#Activity div a {
     display: block;
     width: 60px;
     height: 28px;
@@ -511,20 +521,20 @@
     color: #000;
     margin: 40px auto;
   }
-  main div#Content div#Contact h2 {
+  .container main div#Content div#Contact h2 {
     margin: 75px auto 35px;
   }
-  main div#Content div#Contact p#Contact-alt {
+  .container main div#Content div#Contact p#Contact-alt {
     text-align: center;
     margin-bottom: 50px;
   }
-  main div#Content div#Contact form {
+  .container main div#Content div#Contact form {
     width: 700px;
     height: auto;
     margin: 0 auto;
     padding-top: 30px;
   }
-  main div#Content div#Contact form label {
+  .container main div#Content div#Contact form label {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -533,11 +543,11 @@
     width: 700px;
     border-top: 1px solid #707070;
   }
-  main div#Content div#Contact form label:nth-last-of-type(1) {
+  .container main div#Content div#Contact form label:nth-last-of-type(1) {
     align-items: normal;
     height: 180px;
   }
-  main div#Content div#Contact form label h3 {
+  .container main div#Content div#Contact form label h3 {
     width: 260px;
     font-family: Meiryo;
     font-weight: normal;
@@ -546,27 +556,27 @@
     text-align: left;
     color: #000;
   }
-  main div#Content div#Contact form label input {
+  .container main div#Content div#Contact form label input {
     width: 400px;
     height: 40px;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid #707070;
     margin: 15px 0;
   }
-  main div#Content div#Contact form label p {
+  .container main div#Content div#Contact form label p {
     width: 400px;
     height: 40px;
     margin: 15px 0;
     text-align: left;
   }
-  main div#Content div#Contact form label textarea {
+  .container main div#Content div#Contact form label textarea {
     width: 400px;
     height: 150px;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid #707070;
     margin: 15px 0;
   }
-  main div#Content div#Contact form button {
+  .container main div#Content div#Contact form button {
     display: block;
     width: 60px;
     height: 28px;
@@ -574,12 +584,13 @@
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     margin: 35px auto 45px;
   }
-  main div#SideNav {
-    width: 400px;
+  .container div#SideNav {
+    width: 30%;
+    max-width: 400px;
     height: 1060px;
     background: rgba(255, 255, 255, 0.65);
     margin: 0 0;
-    margin: 40px 0;
+    margin: 0;
     /*============================
     #Profile
     ============================*/
@@ -587,34 +598,34 @@
     #sns
     ============================*/
   }
-  main div#SideNav h2 {
+  .container div#SideNav h2 {
     margin: 40px auto;
   }
-  main div#SideNav img {
+  .container div#SideNav img {
     display: block;
     width: 200px;
     height: 200px;
     margin: 0 auto;
   }
-  main div#SideNav div#Profile {
+  .container div#SideNav div#Profile {
     width: 300px;
     margin: 45px auto 5px;
   }
-  main div#SideNav div#Profile dl {
+  .container div#SideNav div#Profile dl {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     margin: 15px auto;
   }
-  main div#SideNav div#Profile dl dt {
+  .container div#SideNav div#Profile dl dt {
     width: 64px;
   }
-  main div#SideNav div {
+  .container div#SideNav div {
     width: 300px;
     height: auto;
     margin: 0 auto 35px;
   }
-  main div#SideNav div h3 {
+  .container div#SideNav div h3 {
     font-family: Meiryo;
     font-weight: normal;
     font-size: 20px;
@@ -622,34 +633,35 @@
     color: #000;
     margin-bottom: 30px;
   }
-  main div#SideNav div#sns {
-    width: 300px;
+  .container div#SideNav div#sns {
+    width: 100%;
+    max-width: 300px;
     height: auto;
     margin: 0 auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  main div#SideNav div#sns h2 {
+  .container div#SideNav div#sns h2 {
     width: 100%;
     margin: 35px auto 50px;
   }
-  main div#SideNav div#sns a {
+  .container div#SideNav div#sns a {
     display: block;
     width: 80px;
     height: 80px;
   }
-  main div#SideNav div#sns a img {
+  .container div#SideNav div#sns a img {
     width: 100%;
     height: 100%;
   }
-  footer {
+  .container footer {
     width: 100%;
     height: 144px;
     background: rgba(255, 255, 255, 0.65);
     margin: 100px auto 0;
   }
-  footer p {
+  .container footer p {
     width: 100%;
     font-family: Meiryo;
     font-weight: normal;
@@ -2100,4 +2112,4 @@
     text-align: center;
     color: #000;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style2.css.map */
