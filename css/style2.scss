@@ -74,13 +74,13 @@ $sp: 320px;
 		/*============================
 		#particles-js
 		============================*/
-		div#particles-js {}
 	}
 
 	.container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		align-items: flex-start;
 		width: 90%;
 		max-width: 1300px;
 		margin: 0 auto;
@@ -142,7 +142,7 @@ $sp: 320px;
 			margin: 0 auto;
 			padding: 1px;
 			padding-bottom: 60px;
-			margin-top: 40px;
+			margin: 20px 0 40px;
 
 			h2 {
 				margin: 35px auto 25px;
@@ -279,7 +279,6 @@ $sp: 320px;
 								margin-right: 7px;
 							}
 
-							dd {}
 						}
 					}
 				}
@@ -352,7 +351,6 @@ $sp: 320px;
 					margin-right: 20px;
 				}
 
-				dd.dd2 {}
 			}
 
 			h2 {
@@ -451,7 +449,7 @@ $sp: 320px;
 		main {
 			width: 65%;
 			height: auto;
-			margin: 0 auto;
+			margin: 0;
 
 			/*============================
 		#Content
@@ -460,7 +458,8 @@ $sp: 320px;
 				width: 100%;
 				max-width: 850px;
 				background: rgba(255, 255, 255, 0.65);
-				margin: 40px 0;
+				margin: 0;
+				padding: 0 30px;
 
 				/*============================
 		#Welcom
@@ -470,7 +469,7 @@ $sp: 320px;
 					height: auto;
 
 					h2 {
-						margin: 40px auto;
+						padding: 30px;
 					}
 
 					div {
@@ -479,14 +478,14 @@ $sp: 320px;
 
 						img {
 							display: block;
-							width: 359px;
-							height: 226px;
-							margin: 0 0 0 78px;
+							width: 50%;
+							height: auto;
+							margin: 0;
 						}
 
 						p {
-							width: 272px;
-							margin: 20px 0 0 65px;
+							width: 50%;
+							padding-left: 35px;
 						}
 					}
 				}
@@ -495,12 +494,13 @@ $sp: 320px;
 		#Business
 		============================*/
 				div#Business {
-					width: 700px;
+					width: 100%;
 					height: auto;
 					margin: 0 auto;
 
 					h2 {
-						margin: 121px auto 36px;
+						padding: 40px 0;
+						;
 					}
 
 					ul {
@@ -508,24 +508,23 @@ $sp: 320px;
 						justify-content: space-between;
 
 						li {
-							width: 200px;
-							height: 500px;
+							width: 30%;
+							height: 400px;
 							list-style: none;
 							background: #fff;
-							width: 200px;
 							box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
 
 							img {
 								display: block;
-								width: 150px;
-								height: 150px;
-								margin: 25px;
+								width: 100px;
+								height: 100px;
+								margin: 25px auto;
 							}
 
 
 							h3 {
 								text-align: center;
-								margin: 30px auto 20px
+								margin: 20px auto 20px
 							}
 
 							p {
@@ -543,7 +542,7 @@ $sp: 320px;
 				div#Achievement {
 					display: flex;
 					flex-wrap: wrap;
-					width: 700px;
+					width: 100%;
 					margin: 0 auto;
 
 					h2 {
@@ -554,20 +553,18 @@ $sp: 320px;
 
 					img {
 						display: block;
-						width: 380px;
-						height: 240px;
+						width: 50%;
+						height: auto;
 						order: 3;
 					}
 
 					div {
-						width: 280px;
+						display: flex;
+						flex-wrap: wrap;
+						align-content: center;
+						width: 50%;
 						height: auto;
 						order: 2;
-						margin-left: 40px;
-
-						p {
-							margin: 45px auto;
-						}
 
 						a {
 							display: block;
@@ -581,9 +578,7 @@ $sp: 320px;
 							line-height: 28px;
 							text-align: center;
 							color: #000;
-							margin: 40px auto;
-
-
+							margin: 10px auto 0;
 						}
 					}
 				}
@@ -594,7 +589,7 @@ $sp: 320px;
 				div#Activity {
 					display: flex;
 					flex-wrap: wrap;
-					width: 700px;
+					width: 100%;
 					margin: 0 auto;
 
 					h2 {
@@ -605,20 +600,18 @@ $sp: 320px;
 
 					img {
 						display: block;
-						width: 380px;
-						height: 240px;
+						width: 50%;
+						height: auto;
 						order: 2;
 					}
 
 					div {
-						width: 280px;
+						display: flex;
+						flex-wrap: wrap;
+						align-content: center;
+						width: 50%;
 						height: auto;
 						order: 3;
-						margin-left: 40px;
-
-						p {
-							margin: 45px auto;
-						}
 
 						a {
 							display: block;
@@ -632,7 +625,7 @@ $sp: 320px;
 							line-height: 28px;
 							text-align: center;
 							color: #000;
-							margin: 40px auto;
+							margin: 10px auto 0;
 
 
 						}
@@ -649,11 +642,11 @@ $sp: 320px;
 
 					p#Contact-alt {
 						text-align: center;
-						margin-bottom: 50px;
+						padding-bottom: 30px;
 					}
 
 					form {
-						width: 700px;
+						width: 100%;
 						height: auto;
 						margin: 0 auto;
 						padding-top: 30px;
@@ -664,7 +657,7 @@ $sp: 320px;
 							align-items: center;
 							width: 100%;
 							height: 70px;
-							width: 700px;
+							width: 100%;
 							border-top: 1px solid #707070;
 
 							&:nth-last-of-type(1) {
@@ -680,6 +673,7 @@ $sp: 320px;
 								line-height: 70px;
 								text-align: left;
 								color: #000;
+								padding-left: 50px;
 							}
 
 							input {
@@ -714,7 +708,7 @@ $sp: 320px;
 							background: rgba(255, 255, 255, 0.65);
 							;
 							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-							margin: 35px auto 45px;
+							margin: 30px auto;
 						}
 					}
 				}
@@ -727,13 +721,13 @@ $sp: 320px;
 		div#SideNav {
 			width: 30%;
 			max-width: 400px;
-			height: 1060px;
+			height: auto;
 			background: rgba(255, 255, 255, 0.65);
-			margin: 0 0;
 			margin: 0;
+			padding: 30px;
 
 			h2 {
-				margin: 40px auto;
+				margin: 0 auto 30px;
 			}
 
 			img {
@@ -747,7 +741,7 @@ $sp: 320px;
 		#Profile
 		============================*/
 			div#Profile {
-				width: 300px;
+				width: 100%;
 				margin: 45px auto 5px;
 
 				dl {
@@ -760,12 +754,10 @@ $sp: 320px;
 						width: 64px;
 					}
 
-					dd {}
 				}
 			}
 
 			div {
-				width: 300px;
 				height: auto;
 				margin: 0 auto 35px;
 
@@ -777,8 +769,6 @@ $sp: 320px;
 					color: #000;
 					margin-bottom: 30px;
 				}
-
-				p {}
 			}
 
 			/*============================
@@ -786,7 +776,6 @@ $sp: 320px;
 		============================*/
 			div#sns {
 				width: 100%;
-				max-width: 300px;
 				height: auto;
 				margin: 0 auto 0;
 				display: flex;
@@ -800,8 +789,8 @@ $sp: 320px;
 
 				a {
 					display: block;
-					width: 80px;
-					height: 80px;
+					width: 30%;
+					height: auto;
 
 					img {
 						width: 100%;
@@ -829,7 +818,6 @@ $sp: 320px;
 			}
 		}
 	}
-
 }
 
 @include tab {
@@ -846,29 +834,19 @@ $sp: 320px;
 	body p {
 		font-family: Meiryo;
 		font-weight: normal;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 32px;
 		text-align: left;
 		color: #000;
 
 	}
 
-	p#Contact-alt {
-		text-align: center;
-		margin-bottom: 50px;
-	}
-
-	body .sp {
-		display: none !important;
-	}
-
-	body dd.category {
+	dd.category {
 		width: auto;
-		height: 25px;
-		padding: 0 5px;
-		margin: 5px;
+		height: auto;
+		padding: 0 10px;
+		margin: 0 20px;
 		background: #ffa7a7;
-		margin: 0;
 	}
 
 	div.bg {
@@ -878,57 +856,66 @@ $sp: 320px;
 		background: linear-gradient(-135deg, #e4a972, #9941d8);
 		z-index: -1;
 
-		/*============================
-		#particles-js
-		============================*/
-		div#particles-js {}
 	}
 
-	header {
-		div {
-			img {
-				display: block;
-				width: 700px;
-				height: 239px;
-				margin: 0 auto;
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 90%;
+		max-width: 1300px;
+		margin: 0 auto;
+
+		header {
+			width: 100%;
+
+			div {
+				img {
+					display: block;
+					width: 100%;
+					height: 443px;
+					margin: 0 auto;
+				}
 			}
-		}
 
-		nav {
-			width: 700px;
-			height: 100px;
-			margin: 0 auto;
-
-			ul {
+			nav {
 				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				height: 60px;
 				margin: 0 auto;
 
-				li {
+				ul {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: normal;
+					margin: 0 auto;
 
-					a {
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 20px;
-						text-align: center;
-						color: #fff;
-						margin: 0 40px;
+					li {
+						width: 25%;
+
+						a {
+							display: block;
+							width: 100%;
+							font-family: Meiryo;
+							font-weight: normal;
+							line-height: 60px;
+							font-size: 20px;
+							text-align: center;
+							color: #fff;
+							margin: 0;
+						}
 					}
 				}
 			}
-		}
-	}
 
-	main {
-		display: flex !important;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 700px;
-		height: auto;
-		margin: 0 auto;
+			div#Hum-menu {
+				display: none;
+			}
+		}
+
+
 
 		/*============================
 		#News
@@ -937,22 +924,29 @@ $sp: 320px;
 			width: 100%;
 			height: auto;
 			background: rgba(255, 255, 255, 0.65);
-			margin: 0 auto 0;
+			margin: 0 auto;
 			padding: 1px;
+			padding-bottom: 60px;
+			margin: 0 0 40px;
 
 			h2 {
 				margin: 35px auto 25px;
 			}
 
 			div {
-				width: 600px;
+				width: 75%;
+				min-width: 500px;
+				max-width: 700px;
 				height: auto;
 				margin: 0 auto;
 
 				dl {
+					display: flex;
+					flex-wrap: nowrap;
+					justify-content: center;
+					align-items: center;
 					width: 100%;
 					height: 60px;
-					width: 100%;
 					border-top: 1px solid #707070;
 
 					&:nth-last-of-type(1) {
@@ -968,20 +962,15 @@ $sp: 320px;
 						dd.dd1 {
 							font-family: Meiryo;
 							font-weight: normal;
-							font-size: 16px;
+							font-size: 14px;
 							text-align: center;
 							color: #000;
-
-						}
-
-						dd.category {
-							margin: 30px;
 						}
 
 						dt {
 							font-family: Meiryo;
 							font-weight: normal;
-							font-size: 16px;
+							font-size: 14px;
 							text-align: center;
 							color: #000;
 
@@ -995,18 +984,26 @@ $sp: 320px;
 #achive-news
 ============================*/
 		div#achive-news {
-			width: 600px;
+			width: 700px;
 			height: auto;
 			margin: 0 auto;
 
 			h2 {
-				margin: 50px auto 30px;
+				margin: 40px auto;
 			}
 
 			p {
 				width: 490px;
 				height: auto;
 				margin: 0 auto 30px;
+			}
+
+			a {
+				color: black;
+
+				&:visited {
+					color: black;
+				}
 			}
 
 			#all-category {
@@ -1045,7 +1042,7 @@ $sp: 320px;
 					div {
 						display: flex;
 						flex-wrap: wrap;
-						width: 320px;
+						width: 400px;
 						margin: 30px auto;
 
 						dt {
@@ -1053,28 +1050,18 @@ $sp: 320px;
 							margin-bottom: 18px;
 						}
 
-						div.time-date {
+						div {
 							display: flex;
 							flex-wrap: nowrap;
 							align-items: center;
-							width: auto;
-							margin: 0 0 0 30px;
+							width: 140px;
+							margin: 0 30px;
 
 							img.time-img {
 								display: block;
 								width: 16px;
 								height: 16px;
 								margin-right: 7px;
-							}
-
-							dd {
-								font-family: Meiryo;
-								font-weight: normal;
-								font-size: 16px;
-								line-height: 16px;
-								text-align: center;
-								color: #000;
-
 							}
 						}
 					}
@@ -1085,7 +1072,7 @@ $sp: 320px;
 #Page-controll
 ============================*/
 			div#Page-controll {
-				width: 100%;
+				width: 700px;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
@@ -1094,21 +1081,22 @@ $sp: 320px;
 			}
 		}
 
+
 		/*============================
 #Single
 ============================*/
 		div#Single {
-			width: 600px;
+			width: 700px;
 			height: auto;
 			background: #fff;
-			margin: 50px auto 0;
+			margin: 75px auto 0;
 			padding: 1px;
 
 			/*============================
-.Thumbnail
-============================*/
+	.Thumbnail
+	============================*/
 			div.Thumbnail {
-				width: 500px;
+				width: 600px;
 				height: 322px;
 				background-size: cover;
 				background-position: center;
@@ -1117,16 +1105,16 @@ $sp: 320px;
 
 			img {
 				display: block;
-				width: 500px;
+				width: 600px;
 				height: 322px;
 				margin: 50px auto 15px;
 			}
 
 			/*============================
-#Single-title
-============================*/
+	#Single-title
+	============================*/
 			h1#Single-title {
-				width: 500px;
+				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 24px;
@@ -1139,19 +1127,17 @@ $sp: 320px;
 			dl {
 				display: flex;
 				flex-wrap: nowrap;
-				width: 500px;
+				width: 600px;
 				height: auto;
 				margin: 15px auto;
 
 				dd.category {
 					margin-right: 20px;
 				}
-
-				dd.dd2 {}
 			}
 
 			h2 {
-				width: 500px;
+				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 20px;
@@ -1163,7 +1149,7 @@ $sp: 320px;
 			}
 
 			p {
-				width: 500px;
+				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
@@ -1175,7 +1161,7 @@ $sp: 320px;
 
 			a {
 				display: block;
-				width: 500px;
+				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
@@ -1186,7 +1172,7 @@ $sp: 320px;
 			}
 
 			h3 {
-				width: 500px;
+				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 18px;
@@ -1197,8 +1183,8 @@ $sp: 320px;
 			}
 
 			/*============================
-#Page-controll
-============================*/
+	#Page-controll
+	============================*/
 			div#Page-controll {
 				width: 220px;
 				display: flex;
@@ -1208,8 +1194,8 @@ $sp: 320px;
 				margin: 30px auto 50px;
 
 				/*============================
-#Prev-page
-============================*/
+	#Prev-page
+	============================*/
 				a#Prev-page {
 					display: block;
 					width: 120px;
@@ -1225,8 +1211,8 @@ $sp: 320px;
 				}
 
 				/*============================
-#Next-page
-============================*/
+	#Next-page
+	============================*/
 				a#Next-page {
 					display: block;
 					width: 120px;
@@ -1243,299 +1229,308 @@ $sp: 320px;
 			}
 		}
 
-
-		/*============================
-		#Content
-		============================*/
-		div#Content {
+		main {
 			width: 100%;
-			background: rgba(255, 255, 255, 0.65);
+			height: auto;
 			margin: 0;
 
 			/*============================
+		#Content
+		============================*/
+			div#Content {
+				width: 100%;
+				background: rgba(255, 255, 255, 0.65);
+				margin: 0;
+				padding: 0 30px;
+
+				/*============================
 		#Welcom
 		============================*/
-			div#Welcom {
-				width: 100%;
-				height: auto;
-
-				h2 {
-					margin: 48px auto 42px;
-				}
-
-				div {
-					display: flex;
+				div#Welcom {
 					width: 100%;
+					height: auto;
 
-					img {
-						display: block;
-						width: 359px;
-						height: 226px;
-						margin: 0;
+					h2 {
+						padding: 30px;
 					}
 
-					p {
-						width: 272px;
-						margin: 20px 0 0 32px;
-					}
-				}
-			}
-
-			/*============================
-		#Business
-		============================*/
-			div#Business {
-				width: 650px;
-				height: auto;
-				margin: 0 auto;
-
-				h2 {
-					margin: 121px auto 36px;
-				}
-
-				ul {
-					display: flex;
-					justify-content: space-between;
-
-					li {
-						width: 200px;
-						height: 500px;
-						list-style: none;
-						background: #fff;
-						box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+					div {
+						display: flex;
+						align-items: center;
+						width: 100%;
 
 						img {
 							display: block;
-							width: 150px;
-							height: 150px;
-							margin: 25px;
-						}
-
-						h3 {
-							text-align: center;
-							margin: 30px auto 20px
+							width: 50%;
+							height: auto;
+							margin: 0;
 						}
 
 						p {
-							width: 160px;
-							margin: 0 auto;
+							width: 50%;
+							padding-left: 35px;
 						}
-
 					}
 				}
-			}
 
-			/*============================
-		#Achievement
+				/*============================
+		#Business
 		============================*/
-			div#Achievement {
-				display: flex;
-				flex-wrap: wrap;
-				width: 700px;
-				margin: 0 auto;
-
-				h2 {
+				div#Business {
 					width: 100%;
-					margin: 90px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 380px;
-					height: 240px;
-					order: 3;
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 2;
-					margin-left: 40px;
-
-					p {
-						margin: 45px auto;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 40px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Activity
-		============================*/
-			div#Activity {
-				display: flex;
-				flex-wrap: wrap;
-				width: 700px;
-				margin: 0 auto;
-
-				h2 {
-					width: 100%;
-					margin: 60px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 380px;
-					height: 240px;
-					order: 2;
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 3;
-					margin-left: 10px;
-
-					p {
-						margin: 45px auto;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 40px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Contact
-		============================*/
-			div#Contact {
-				h2 {
-					margin: 75px auto 35px;
-				}
-
-				p#Contact-alt {
-					text-align: center;
-					margin-bottom: 50px;
-				}
-
-				form {
-					width: 600px;
 					height: auto;
 					margin: 0 auto;
 
-					label {
-						display: flex;
-						flex-wrap: nowrap;
-						align-items: center;
-						width: 550px;
-						height: 70px;
-						border-top: 1px solid #707070;
-						margin: 0 auto;
-
-						&:nth-last-of-type(1) {
-							align-items: normal;
-							height: 180px;
-						}
-
-						h3 {
-							width: 260px;
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 16px;
-							line-height: 70px;
-							text-align: left;
-							color: #000;
-						}
-
-						input {
-							width: 400px;
-							height: 40px;
-							background: rgba(255, 255, 255, 0.65);
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
-
-						p {
-							width: 400px;
-							height: 40px;
-							margin: 15px 0;
-							text-align: left;
-						}
-
-						textarea {
-							width: 400px;
-							height: 150px;
-							background: rgba(255, 255, 255, 0.65);
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
+					h2 {
+						padding: 40px 0;
+						;
 					}
 
-					button {
+					ul {
+						display: flex;
+						justify-content: space-between;
+
+						li {
+							width: 30%;
+							min-height: 400px;
+							list-style: none;
+							background: #fff;
+							box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+
+							img {
+								display: block;
+								width: 100px;
+								height: 100px;
+								margin: 25px auto;
+							}
+
+
+							h3 {
+								text-align: center;
+								margin: 20px auto 20px
+							}
+
+							p {
+								width: 100%;
+								margin: 0 auto;
+								padding: 0 20px;
+							}
+
+						}
+					}
+				}
+
+				/*============================
+		#Achievement
+		============================*/
+				div#Achievement {
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+					margin: 0 auto;
+
+					h2 {
+						width: 100%;
+						margin: 90px auto 30px;
+						order: 1;
+					}
+
+					img {
 						display: block;
-						width: 60px;
-						height: 28px;
-						background: rgba(255, 255, 255, 0.65);
-						;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						margin: 35px auto 45px;
+						width: 50%;
+						height: auto;
+						order: 3;
+					}
+
+					div {
+						display: flex;
+						flex-wrap: wrap;
+						align-content: center;
+						width: 50%;
+						height: auto;
+						order: 2;
+
+						a {
+							display: block;
+							width: 60px;
+							height: 28px;
+							background-color: #fff;
+							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+							font-family: Meiryo;
+							font-weight: normal;
+							font-size: 14px;
+							line-height: 28px;
+							text-align: center;
+							color: #000;
+							margin: 10px auto 0;
+						}
+					}
+				}
+
+				/*============================
+		#Activity
+		============================*/
+				div#Activity {
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+					margin: 0 auto;
+
+					h2 {
+						width: 100%;
+						margin: 90px auto 30px;
+						order: 1;
+					}
+
+					img {
+						display: block;
+						width: 50%;
+						height: auto;
+						order: 2;
+					}
+
+					div {
+						display: flex;
+						flex-wrap: wrap;
+						align-content: center;
+						width: 50%;
+						height: auto;
+						order: 3;
+
+						a {
+							display: block;
+							width: 60px;
+							height: 28px;
+							background-color: #fff;
+							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+							font-family: Meiryo;
+							font-weight: normal;
+							font-size: 14px;
+							line-height: 28px;
+							text-align: center;
+							color: #000;
+							margin: 10px auto 0;
+
+
+						}
+					}
+				}
+
+				/*============================
+		#Contact
+		============================*/
+				div#Contact {
+					h2 {
+						margin: 75px auto 35px;
+					}
+
+					p#Contact-alt {
+						text-align: center;
+						padding-bottom: 30px;
+					}
+
+					form {
+						width: 100%;
+						height: auto;
+						margin: 0 auto;
+						padding-top: 30px;
+
+						label {
+							display: flex;
+							flex-wrap: nowrap;
+							align-items: center;
+							width: 100%;
+							height: 70px;
+							width: 100%;
+							border-top: 1px solid #707070;
+
+							&:nth-last-of-type(1) {
+								align-items: normal;
+								height: 180px;
+							}
+
+							h3 {
+								width: 260px;
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 16px;
+								line-height: 70px;
+								text-align: left;
+								color: #000;
+								padding-left: 50px;
+							}
+
+							input {
+								width: 400px;
+								height: 40px;
+								background: rgba(255, 255, 255, 0.65);
+								border: 1px solid #707070;
+								margin: 15px 0;
+							}
+
+							p {
+								width: 400px;
+								height: 40px;
+								margin: 15px 0;
+								text-align: left;
+							}
+
+							textarea {
+								width: 400px;
+								height: 150px;
+								background: rgba(255, 255, 255, 0.65);
+								;
+								border: 1px solid #707070;
+								margin: 15px 0;
+							}
+						}
+
+						button {
+							display: block;
+							width: 60px;
+							height: 28px;
+							background: rgba(255, 255, 255, 0.65);
+							;
+							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+							margin: 30px auto;
+						}
 					}
 				}
 			}
 		}
-
+	
 		/*============================
 		#SideNav
 		============================*/
 		div#SideNav {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: center;
 			width: 100%;
 			height: auto;
 			background: rgba(255, 255, 255, 0.65);
-			margin: 0 0;
 			margin: 0;
+			padding: 30px;
 
 			h2 {
 				width: 100%;
-				margin: 65px auto 14px;
+				padding-bottom: 30px;
 			}
 
 			img {
 				display: block;
-				width: 200px;
-				height: 200px;
-				margin: 0 auto;
+				width: 35%;
+				height: 15%;
+				margin: 0;
+				padding-left: 20%;
 			}
 
 			/*============================
 		#Profile
 		============================*/
 			div#Profile {
-				width: 300px;
-				margin: 45px auto 5px;
+				width: 55%;
+				padding: 0 15% 0 0;
 
 				dl {
 					display: flex;
@@ -1546,15 +1541,12 @@ $sp: 320px;
 					dt {
 						width: 64px;
 					}
-
-					dd {}
 				}
 			}
 
 			div {
-				width: 100%;
 				height: auto;
-				margin: 35px auto 30px;
+				margin: 0 auto 35px;
 
 				h3 {
 					font-family: Meiryo;
@@ -1566,8 +1558,8 @@ $sp: 320px;
 				}
 
 				p {
-					width: 300px;
-					margin: 0 auto;
+					margin: 0;
+					padding: 0 10% 30px;
 				}
 			}
 
@@ -1575,47 +1567,48 @@ $sp: 320px;
 		#sns
 		============================*/
 			div#sns {
-				width: 350px;
+				width: 100%;
 				height: auto;
-				margin: 0 auto 60px;
+				margin: 0 auto 0;
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-between;
+				justify-content: space-around;
+				padding: 0 20%;
 
 				h2 {
 					width: 100%;
-					margin: 35px auto 50px;
+					padding: 0 0 30px;
 				}
 
 				a {
 					display: block;
-					width: 80px;
-					height: 80px;
+					width: 20%;
+					height: auto;
 
 					img {
 						width: 100%;
 						height: 100%;
+						padding: 0;
 					}
 				}
 			}
 		}
-	}
 
-	footer {
-		width: 100%;
-		height: 144px;
-		background: rgba(255, 255, 255, 0.65);
-		margin: 100px auto 0;
-
-		p {
+		footer {
 			width: 100%;
-			font-family: Meiryo;
-			font-weight: normal;
-			font-size: 20px;
-			line-height: 144px;
-			text-align: center;
-			color: #000;
+			height: 70px;
+			background: rgba(255, 255, 255, 0.65);
 
+			p {
+				width: 100%;
+				font-family: Meiryo;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 70px;
+				text-align: center;
+				color: #000;
+
+			}
 		}
 	}
 }
@@ -1624,7 +1617,7 @@ $sp: 320px;
 	body h2 {
 		font-family: Meiryo;
 		font-weight: normal;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		text-align: center;
 		color: #000;
@@ -1661,119 +1654,112 @@ $sp: 320px;
 		height: 100%;
 		background: linear-gradient(-135deg, #e4a972, #9941d8);
 		z-index: -1;
-
-		/*============================
-		#particles-js
-		============================*/
-		div#particles-js {}
 	}
 
-	header {
-		padding-top: 85px;
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 20px;
 
-		div {
-			img {
-				display: block;
-				width: 320px;
-				height: 109px;
-				margin: 0 auto;
-			}
-		}
-
-		nav {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			height: 100vh;
-			margin: 0 auto;
+		header {
 			padding-top: 85px;
-			background: linear-gradient(-135deg, #e4a972, #9941d8);
-			transform: translateY(-100vh);
-			transition: all 0.3s;
 
-			&.active {
-				transform: translateX(0);
+			div {
+				img {
+					display: block;
+					width: 100%;
+					height: 109px;
+					margin: 0 auto;
+				}
 			}
 
-			ul {
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
 				width: 100%;
-				height: auto;
-				display: flex;
-				flex-wrap: wrap;
+				height: 100vh;
 				margin: 0 auto;
+				padding-top: 85px;
+				background: linear-gradient(-135deg, #e4a972, #9941d8);
+				transform: translateY(-100vh);
+				transition: all 0.3s;
 
-				li {
+				&.active {
+					transform: translateX(0);
+				}
+
+				ul {
 					width: 100%;
-					height: 40px;
+					height: auto;
+					display: flex;
+					flex-wrap: wrap;
+					margin: 0 auto;
 
-					a {
-						display: block;
+					li {
 						width: 100%;
 						height: 40px;
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 20px;
-						line-height: 40px;
-						text-align: center;
-						color: #fff;
-						margin: 0;
+
+						a {
+							display: block;
+							width: 100%;
+							height: 40px;
+							font-family: Meiryo;
+							font-weight: normal;
+							font-size: 20px;
+							line-height: 40px;
+							text-align: center;
+							color: #fff;
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			div#Hum-menu {
+				position: fixed;
+				top: 20px;
+				right: calc(10% - 22.5px);
+				width: 45px;
+				height: 45px;
+
+				span {
+					position: absolute;
+					left: 10px;
+					width: 25px;
+					height: 4px;
+					border-radius: 2px;
+					background: #fff;
+					transition: all .3s;
+
+					&:nth-of-type(1) {
+						top: 10px;
+					}
+
+					&:nth-of-type(2) {
+						top: 20px;
+					}
+
+					&:nth-of-type(3) {
+						top: 30px;
+					}
+
+					&#span1.active {
+						top: 20px;
+						transform: rotate(225deg);
+					}
+
+					&#span2.active {
+						display: none;
+					}
+
+					&#span3.active {
+						top: 20px;
+						transform: rotate(-225deg);
 					}
 				}
 			}
 		}
-
-		div#Hum-menu {
-			position: fixed;
-			top: 20px;
-			left: calc(50% - 22.5px);
-			width: 45px;
-			height: 45px;
-
-			span {
-				position: absolute;
-				left: 10px;
-				width: 25px;
-				height: 4px;
-				border-radius: 2px;
-				background: #fff;
-				transition: all .3s;
-
-				&:nth-of-type(1) {
-					top: 10px;
-				}
-
-				&:nth-of-type(2) {
-					top: 20px;
-				}
-
-				&:nth-of-type(3) {
-					top: 30px;
-				}
-
-				&#span1.active {
-					top: 20px;
-					transform: rotate(225deg);
-				}
-
-				&#span2.active {
-					display: none;
-				}
-
-				&#span3.active {
-					top: 20px;
-					transform: rotate(-225deg);
-				}
-			}
-		}
-	}
-
-	main {
-		display: flex !important;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 320px;
-		height: auto;
-		margin: 0 auto;
 
 		/*============================
 		#News
@@ -1781,12 +1767,11 @@ $sp: 320px;
 		div#News {
 			width: 100%;
 			height: auto;
-			background: rgba(255, 255, 255, 0.65);
 			margin: 0 auto 0;
-			padding: 1px 20px;
+			padding: 0 20px;
 
 			h2 {
-				margin: 35px auto 25px;
+				padding: 30px 0 10px;
 			}
 
 			div {
@@ -1813,6 +1798,7 @@ $sp: 320px;
 						align-items: center;
 
 						dd.dd1 {
+							width: auto;
 							font-family: Meiryo;
 							font-weight: normal;
 							font-size: 14px;
@@ -1822,7 +1808,9 @@ $sp: 320px;
 						}
 
 						dd.category {
-							margin: 0 5px;
+							width: auto;
+							margin: 0;
+							margin-left: 10px;
 						}
 
 						dt {
@@ -1830,10 +1818,10 @@ $sp: 320px;
 							font-family: Meiryo;
 							font-weight: normal;
 							font-size: 14px;
-							text-align: center;
+							text-align: left;
 							color: #000;
-							margin-bottom: 10px;
-							padding: 0 10px;
+							margin: 5px 0;
+							padding: 0;
 						}
 					}
 				}
@@ -1844,12 +1832,12 @@ $sp: 320px;
 #achive-news
 ============================*/
 		div#achive-news {
-			width: 300px;
+			width: 100%;
 			height: auto;
 			margin: 0 auto;
 
 			h2 {
-				margin: 50px auto 30px;
+				margin: 40px auto 30px;
 			}
 
 			p {
@@ -1873,7 +1861,6 @@ $sp: 320px;
 			dl {
 				width: 100%;
 				height: auto;
-				background: rgba(255, 255, 255, 0.65);
 				margin-bottom: 20px;
 
 				a {
@@ -2033,8 +2020,6 @@ $sp: 320px;
 				dd.category {
 					margin-right: 20px;
 				}
-
-				dd.dd2 {}
 			}
 
 			h2 {
@@ -2130,291 +2115,290 @@ $sp: 320px;
 			}
 		}
 
-		/*============================
+		main {
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			padding: 0 20px;
+
+
+			/*============================
 		#Content
 		============================*/
-		div#Content {
-			width: 100%;
-			background: rgba(255, 255, 255, 0.65);
-			;
-			margin: 0;
+			div#Content {
+				width: 100%;
+				margin: 0;
 
-			/*============================
+				/*============================
 		#Welcom
 		============================*/
-			div#Welcom {
-				width: 100%;
-				height: auto;
-
-				h2 {
-					margin: 48px auto 22px;
-				}
-
-				div {
-					display: flex;
-					flex-wrap: wrap;
+				div#Welcom {
 					width: 100%;
+					height: auto;
 
-					img {
-						display: block;
-						width: 320px;
-						height: 202px;
-						margin: 0;
+					h2 {
+						padding: 40px 0 15px;
 					}
 
-					p {
-						width: 270px;
-						margin: 20px auto 32px;
-					}
-				}
-			}
-
-			/*============================
-		#Business
-		============================*/
-			div#Business {
-				width: 300px;
-				height: auto;
-				margin: 0 auto;
-
-				h2 {
-					margin: 0 auto 36px;
-				}
-
-				ul {
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: space-between;
-
-					li {
+					div {
 						display: flex;
 						flex-wrap: wrap;
-						width: 280px;
-						height: 206px;
-						list-style: none;
-						background: #fff;
-						box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
-						margin: 0 auto 40px;
+						width: 100%;
 
 						img {
 							display: block;
-							width: 60px;
-							height: 60px;
-							margin: 10px;
-						}
-
-
-
-						h3 {
-							width: calc(100% - 80px);
-							text-align: center;
-							margin: 30px auto 20px;
+							width: 100%;
+							height: auto;
+							margin: 0;
 						}
 
 						p {
-							width: 240px;
-							margin: 0 auto 20px;
+							width: 100%;
+							padding: 10px 0 10px;
 						}
-
 					}
 				}
-			}
 
-			/*============================
-		#Achievement
+				/*============================
+		#Business
 		============================*/
-			div#Achievement {
-				display: flex;
-				flex-wrap: wrap;
-				width: 320px;
-				margin: 0 auto;
-
-				h2 {
+				div#Business {
 					width: 100%;
-					margin: 60px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 320px;
-					height: 202px;
-					order: 2;
-
-					&.pc {
-						display: none;
-					}
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 3;
-					margin: 30px auto;
-
-					p {
-						margin: 0 auto 30px;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 30px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Activity
-		============================*/
-			div#Activity {
-				display: flex;
-				flex-wrap: wrap;
-				width: 320px;
-				margin: 0 auto;
-
-				h2 {
-					width: 100%;
-					margin: 30px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 320px;
-					height: 202px;
-					order: 2;
-
-					&.pc {
-						display: none !important;
-					}
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 3;
-					margin: 30px auto;
-
-					p {
-						margin: 0 auto 30px;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 30px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Contact
-		============================*/
-			div#Contact {
-				width: 100%;
-
-				h2 {
-					margin: 45px auto 35px;
-				}
-
-				p#Contact-alt {
-					text-align: center;
-					width: 280px;
-					margin: 0 auto 30px;
-				}
-
-				form {
-					width: 280px;
 					height: auto;
 					margin: 0 auto;
 
-					label {
+					h2 {
+						padding: 30px 0 15px;
+					}
+
+					ul {
 						display: flex;
 						flex-wrap: wrap;
-						align-items: center;
-						width: 260px;
-						height: 105px;
-						margin: 0 auto;
+						justify-content: space-between;
 
-						&:nth-last-of-type(1) {
-							align-items: normal;
-							min-height: 105px;
-							height: auto;
-						}
-
-						h3 {
+						li {
+							display: flex;
+							flex-wrap: wrap;
 							width: 100%;
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 16px;
-							line-height: 20px;
-							text-align: center;
-							color: #000;
-							margin: 10px auto;
-						}
+							height: auto;
+							list-style: none;
+							background: #fff;
+							box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+							margin: 0 auto 30px;
 
-						input {
-							width: 400px;
-							height: 40px;
-							background: rgba(255, 255, 255, 0.65);
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
-
-						p {
-							width: 300px;
-							height: 40px;
-							margin: 10px 0;
-							text-align: center;
-
-							&#Semdtext {
-								width: 240px;
-								margin: 10px auto;
+							img {
+								display: block;
+								width: 60px;
+								height: 60px;
+								margin: 10px;
 							}
-						}
 
-						textarea {
-							display: block;
-							width: 400px;
-							height: 150px;
-							background: rgba(255, 255, 255, 0.65);
-							;
-							border: 1px solid #707070;
-							margin: 15px 0;
+
+
+							h3 {
+								width: calc(100% - 80px);
+								text-align: center;
+								margin: 30px auto 20px;
+							}
+
+							p {
+								width: 240px;
+								margin: 0 auto 20px;
+							}
+
+						}
+					}
+				}
+
+				/*============================
+		#Achievement
+		============================*/
+				div#Achievement {
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+					margin: 0 auto;
+
+					h2 {
+						width: 100%;
+						margin: 40px auto 15px;
+						order: 1;
+					}
+
+					img {
+						display: block;
+						width: 100%;
+						height: auto;
+						order: 2;
+
+						&.pc {
+							display: none;
 						}
 					}
 
-					button {
+					div {
+						width: 100%;
+						height: auto;
+						order: 3;
+						padding: 10px 0;
+
+						a {
+							display: block;
+							width: 60px;
+							height: 28px;
+							background-color: #fff;
+							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+							font-family: Meiryo;
+							font-weight: normal;
+							font-size: 14px;
+							line-height: 28px;
+							text-align: center;
+							color: #000;
+							margin: 10px auto;
+
+
+						}
+					}
+				}
+
+				/*============================
+		#Activity
+		============================*/
+				div#Activity {
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+					margin: 0 auto;
+
+					h2 {
+						width: 100%;
+						margin: 40px auto 10px;
+						order: 1;
+					}
+
+					img {
 						display: block;
-						width: 60px;
-						height: 28px;
-						background: rgba(255, 255, 255, 0.65);
-						;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						margin: 35px auto 45px;
+						width: 100%;
+						height: auto;
+						order: 2;
+
+						&.pc {
+							display: none !important;
+						}
+					}
+
+					div {
+						width: 100%;
+						height: auto;
+						order: 3;
+						padding: 10px 0;
+
+						a {
+							display: block;
+							width: 60px;
+							height: 28px;
+							background-color: #fff;
+							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+							font-family: Meiryo;
+							font-weight: normal;
+							font-size: 14px;
+							line-height: 28px;
+							text-align: center;
+							color: #000;
+							margin: 10px auto;
+
+
+						}
+					}
+				}
+
+				/*============================
+		#Contact
+		============================*/
+				div#Contact {
+					width: 100%;
+
+					h2 {
+						margin: 40px auto 10px;
+					}
+
+					p#Contact-alt {
+						text-align: left;
+						width: 100%;
+						margin: 0 auto;
+						line-height: 1.6;
+						font-size: 12px;
+					}
+
+					form {
+						width: 100%;
+						height: auto;
+						margin: 0 auto;
+
+						label {
+							display: flex;
+							flex-wrap: wrap;
+							align-items: center;
+							width: 100%;
+							height: 80px;
+							margin: 0 auto;
+
+							&:nth-last-of-type(1) {
+								align-items: normal;
+								min-height: 80px;
+								height: auto;
+							}
+
+							h3 {
+								width: 100%;
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 16px;
+								line-height: 20px;
+								text-align: left;
+								color: #000;
+								margin: 10px auto;
+							}
+
+							input {
+								width: 100%;
+								height: 40px;
+								background: rgba(255, 255, 255, 0.65);
+								border: 1px solid #707070;
+							}
+
+							p {
+								width: 100%;
+								height: 40px;
+								margin: 10px 0;
+								text-align: center;
+
+								&#Semdtext {
+									width: 240px;
+									margin: 10px auto;
+								}
+							}
+
+							textarea {
+								display: block;
+								width: 400px;
+								height: 150px;
+								background: rgba(255, 255, 255, 0.65);
+								border: 1px solid #707070;
+							}
+						}
+
+						button {
+							display: block;
+							width: 60px;
+							height: 28px;
+							background: rgba(255, 255, 255, 0.65);
+							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+							margin: 20px auto;
+						}
 					}
 				}
 			}
@@ -2426,21 +2410,21 @@ $sp: 320px;
 		div#SideNav {
 			display: flex;
 			flex-wrap: wrap;
+			align-content: flex-start;
 			width: 100%;
 			height: auto;
-			background: rgba(255, 255, 255, 0.65);
 			margin: 0 0;
 			padding: 0 30px;
 
 			h2 {
 				width: 100%;
-				margin: 65px auto 14px;
+				margin: 40px auto 10px;
 			}
 
 			img {
 				display: block;
-				width: 200px;
-				height: 200px;
+				width: 50%;
+				height: auto;
 				margin: 0 auto;
 			}
 
@@ -2449,16 +2433,15 @@ $sp: 320px;
 		============================*/
 			div#Profile {
 				width: 100%;
-				margin: 45px auto 5px;
 
 				dl {
 					display: flex;
 					flex-wrap: nowrap;
 					width: 100%;
-					margin: 15px auto;
+					margin: auto;
 
 					dt {
-						width: 64px;
+						width: 50px;
 					}
 
 					dd {
@@ -2470,7 +2453,7 @@ $sp: 320px;
 			div {
 				width: 100%;
 				height: auto;
-				margin: 35px auto 30px;
+				margin: 15px auto;
 
 				h3 {
 					font-family: Meiryo;
@@ -2478,7 +2461,7 @@ $sp: 320px;
 					font-size: 20px;
 					text-align: center;
 					color: #000;
-					margin-bottom: 30px;
+					margin-bottom: 10px;
 				}
 
 				p {
@@ -2490,22 +2473,22 @@ $sp: 320px;
 		#sns
 		============================*/
 			div#sns {
-				width: 280px;
+				width: 100%;
 				height: auto;
-				margin: 0 auto 40px;
+				margin: 0 auto 30px;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
 
 				h2 {
 					width: 100%;
-					margin: 25px auto 30px;
+					margin: 20px auto 10px;
 				}
 
 				a {
 					display: block;
-					width: 80px;
-					height: 80px;
+					width: 30%;
+					height: auto;
 
 					img {
 						width: 100%;
@@ -2514,23 +2497,20 @@ $sp: 320px;
 				}
 			}
 		}
-	}
 
-	footer {
-		width: 100%;
-		height: 144px;
-		background: rgba(255, 255, 255, 0.65);
-		margin: 100px auto 0;
-
-		p {
+		footer {
 			width: 100%;
-			font-family: Meiryo;
-			font-weight: normal;
-			font-size: 20px;
-			line-height: 144px;
-			text-align: center;
-			color: #000;
+			height: 50px;
+			p {
+				width: 100%;
+				font-family: Meiryo;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 50px;
+				text-align: center;
+				color: #000;
 
+			}
 		}
 	}
 }
