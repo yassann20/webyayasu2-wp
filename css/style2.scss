@@ -1,12 +1,8 @@
-$pc: 1100px;
-$tab-end: 1099px;
-$tab: 600px;
-$sp-end: 599px;
-$sp: 320px;
-
-$pc: 1100px;
-$tab: 600px;
-$sp: 320px;
+$pc: 1281px;
+$tab-end: 1280px;
+$tab: 768px;
+$sp-end: 767px;
+$sp: 0px;
 
 @mixin pc {
 	@media screen and (min-width: ($pc)) {
@@ -55,7 +51,7 @@ $sp: 320px;
 		width: auto;
 		height: 25px;
 		padding: 0 10px;
-		margin: 0 20px;
+		margin: 0;
 		background: #ffa7a7;
 	}
 
@@ -68,7 +64,7 @@ $sp: 320px;
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(-135deg, #e4a972, #9941d8);
+		background: linear-gradient(-135deg, #1717e6, #00004d);
 		z-index: -1;
 
 		/*============================
@@ -115,7 +111,7 @@ $sp: 320px;
 						a {
 							font-family: Meiryo;
 							font-weight: normal;
-							line-height: 125px;
+							line-height: 85px;
 							font-size: 20px;
 							text-align: center;
 							color: #fff;
@@ -142,7 +138,7 @@ $sp: 320px;
 			margin: 0 auto;
 			padding: 1px;
 			padding-bottom: 60px;
-			margin: 20px 0 40px;
+			margin: 0 0 40px;
 
 			h2 {
 				margin: 35px auto 25px;
@@ -199,18 +195,18 @@ $sp: 320px;
 #achive-news
 ============================*/
 		div#achive-news {
-			width: 700px;
+			width: 100%;
 			height: auto;
 			margin: 0 auto;
 
 			h2 {
-				margin: 40px auto;
+				padding: 40px 0 10px;
 			}
 
 			p {
-				width: 490px;
 				height: auto;
-				margin: 0 auto 30px;
+				margin: 0 auto 10px;
+				text-align: center;
 			}
 
 			a {
@@ -245,9 +241,9 @@ $sp: 320px;
 					display: flex;
 					flex-wrap: nowrap;
 
-					div.news-img {
+					img {
 						display: block;
-						width: 241px;
+						width: 30%;
 						height: 160px;
 						background-position: center;
 						background-size: cover;
@@ -257,21 +253,23 @@ $sp: 320px;
 					div {
 						display: flex;
 						flex-wrap: wrap;
-						width: 400px;
-						margin: 30px auto;
+						align-content: space-between;
+						width: 64%;
+						margin: 3% auto;
 
 						dt {
 							width: 100%;
-							margin-bottom: 18px;
+							height: auto;
 						}
 
-						div {
+						div{
 							display: flex;
 							flex-wrap: nowrap;
 							align-items: center;
 							width: 140px;
-							margin: 0 30px;
-
+							margin: 0;
+							height: 25px;
+							margin-left: 20px;
 							img.time-img {
 								display: block;
 								width: 16px;
@@ -459,7 +457,7 @@ $sp: 320px;
 				max-width: 850px;
 				background: rgba(255, 255, 255, 0.65);
 				margin: 0;
-				padding: 0 30px;
+				padding: 1px 30px;
 
 				/*============================
 		#Welcom
@@ -842,10 +840,11 @@ $sp: 320px;
 	}
 
 	dd.category {
+		display: block;
 		width: auto;
-		height: auto;
+		height: 25px;
 		padding: 0 10px;
-		margin: 0 20px;
+		margin: 0;
 		background: #ffa7a7;
 	}
 
@@ -853,7 +852,7 @@ $sp: 320px;
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(-135deg, #e4a972, #9941d8);
+		background: linear-gradient(-135deg, #1717e6, #00004d);
 		z-index: -1;
 
 	}
@@ -881,7 +880,7 @@ $sp: 320px;
 
 			nav {
 				width: 100%;
-				height: 60px;
+				height: 80px;
 				margin: 0 auto;
 
 				ul {
@@ -900,7 +899,7 @@ $sp: 320px;
 							width: 100%;
 							font-family: Meiryo;
 							font-weight: normal;
-							line-height: 60px;
+							line-height: 80px;
 							font-size: 20px;
 							text-align: center;
 							color: #fff;
@@ -984,18 +983,19 @@ $sp: 320px;
 #achive-news
 ============================*/
 		div#achive-news {
-			width: 700px;
+			width: 100%;
+			max-width: 750px;
 			height: auto;
 			margin: 0 auto;
 
 			h2 {
-				margin: 40px auto;
+				padding: 40px 0 10px;
 			}
 
 			p {
 				width: 490px;
 				height: auto;
-				margin: 0 auto 30px;
+				margin: 0 auto 10px;
 			}
 
 			a {
@@ -1010,7 +1010,7 @@ $sp: 320px;
 				width: 100%;
 				display: flex;
 				flex-wrap: wrap;
-				margin: 20px 0;
+				padding: 10px 0 20px;
 
 				dd {
 					display: inline-block;
@@ -1020,34 +1020,34 @@ $sp: 320px;
 
 			dl {
 				width: 100%;
+				max-width: 750px;
 				height: 160px;
 				background: rgba(255, 255, 255, 0.65);
-				margin-bottom: 20px;
-
+				margin: 0 auto 20px;
 				a {
 					width: 100%;
 					height: 100%;
 					display: flex;
+					align-items: center;
 					flex-wrap: nowrap;
-
-					div.news-img {
+					align-content: space-between;
+					img {
 						display: block;
-						width: 241px;
-						height: 160px;
-						background-position: center;
-						background-size: cover;
+						width: auto;
+						height: 100%;
 						margin: 0;
 					}
 
 					div {
 						display: flex;
 						flex-wrap: wrap;
-						width: 400px;
-						margin: 30px auto;
-
+						align-content: space-between;
+						width: 64%;
+						height: 100%;
+						margin: 0 3%;
+						padding: 3% 0;
 						dt {
 							width: 100%;
-							margin-bottom: 18px;
 						}
 
 						div {
@@ -1055,8 +1055,8 @@ $sp: 320px;
 							flex-wrap: nowrap;
 							align-items: center;
 							width: 140px;
-							margin: 0 30px;
-
+							height: 25px;
+							margin: 0 0 0 20px;
 							img.time-img {
 								display: block;
 								width: 16px;
@@ -1420,8 +1420,9 @@ $sp: 320px;
 		#Contact
 		============================*/
 				div#Contact {
+					padding: 1px;
 					h2 {
-						margin: 75px auto 35px;
+						margin: 30px auto 20px;
 					}
 
 					p#Contact-alt {
@@ -1433,8 +1434,6 @@ $sp: 320px;
 						width: 100%;
 						height: auto;
 						margin: 0 auto;
-						padding-top: 30px;
-
 						label {
 							display: flex;
 							flex-wrap: nowrap;
@@ -1490,9 +1489,8 @@ $sp: 320px;
 							width: 60px;
 							height: 28px;
 							background: rgba(255, 255, 255, 0.65);
-							;
 							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-							margin: 30px auto;
+							margin: 0 auto;
 						}
 					}
 				}
@@ -1620,7 +1618,7 @@ $sp: 320px;
 		font-size: 18px;
 		line-height: 20px;
 		text-align: center;
-		color: #000;
+		color: #fff;
 
 	}
 
@@ -1630,7 +1628,7 @@ $sp: 320px;
 		font-size: 14px;
 		line-height: 28px;
 		text-align: left;
-		color: #000;
+		color: #fff;
 
 	}
 
@@ -1652,14 +1650,15 @@ $sp: 320px;
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(-135deg, #e4a972, #9941d8);
+		background: linear-gradient(-135deg, #000080, #9941d8);
 		z-index: -1;
 	}
 
 	.container {
 		width: 100%;
+		max-width: 500px;
 		margin: 0 auto;
-		padding: 20px;
+		padding: 1px 20px;
 
 		header {
 			padding-top: 85px;
@@ -1681,7 +1680,7 @@ $sp: 320px;
 				height: 100vh;
 				margin: 0 auto;
 				padding-top: 85px;
-				background: linear-gradient(-135deg, #e4a972, #9941d8);
+				background: linear-gradient(-135deg, #000080, #9941d8);
 				transform: translateY(-100vh);
 				transition: all 0.3s;
 
@@ -1837,11 +1836,11 @@ $sp: 320px;
 			margin: 0 auto;
 
 			h2 {
-				margin: 40px auto 30px;
+				margin: 20px auto 10px;
 			}
 
 			p {
-				width: 280px;
+				width: 100%;
 				height: auto;
 				margin: 0 auto 20px;
 			}
@@ -1861,7 +1860,8 @@ $sp: 320px;
 			dl {
 				width: 100%;
 				height: auto;
-				margin-bottom: 20px;
+				margin-bottom: 40px;
+				background: rgba(255, 255, 255, 0.65);
 
 				a {
 					width: 100%;
@@ -1869,10 +1869,10 @@ $sp: 320px;
 					display: flex;
 					flex-wrap: wrap;
 
-					div.news-img {
+					img {
 						display: block;
-						width: 300px;
-						height: 200px;
+						width: 100%;
+						height: auto;
 						background-position: center;
 						background-size: cover;
 						margin: 0;
@@ -2131,7 +2131,7 @@ $sp: 320px;
 			div#Content {
 				width: 100%;
 				margin: 0;
-
+				padding: 1px;
 				/*============================
 		#Welcom
 		============================*/

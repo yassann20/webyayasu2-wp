@@ -1,4 +1,4 @@
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1281px) {
   body h2 {
     font-family: Meiryo;
     font-weight: normal;
@@ -22,7 +22,7 @@
     width: auto;
     height: 25px;
     padding: 0 10px;
-    margin: 0 20px;
+    margin: 0;
     background: #ffa7a7;
   }
   p#Contact-alt {
@@ -33,7 +33,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-135deg, #e4a972, #9941d8);
+    background: linear-gradient(-135deg, #1717e6, #00004d);
     z-index: -1;
     /*============================
     #particles-js
@@ -85,7 +85,7 @@
   .container header nav ul li a {
     font-family: Meiryo;
     font-weight: normal;
-    line-height: 125px;
+    line-height: 85px;
     font-size: 20px;
     text-align: center;
     color: #fff;
@@ -101,7 +101,7 @@
     margin: 0 auto;
     padding: 1px;
     padding-bottom: 60px;
-    margin: 20px 0 40px;
+    margin: 0 0 40px;
   }
   .container div#News h2 {
     margin: 35px auto 25px;
@@ -146,7 +146,7 @@
     color: #000;
   }
   .container div#achive-news {
-    width: 700px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     /*============================
@@ -154,12 +154,12 @@
     ============================*/
   }
   .container div#achive-news h2 {
-    margin: 40px auto;
+    padding: 40px 0 10px;
   }
   .container div#achive-news p {
-    width: 490px;
     height: auto;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
+    text-align: center;
   }
   .container div#achive-news a {
     color: black;
@@ -189,9 +189,9 @@
     display: flex;
     flex-wrap: nowrap;
   }
-  .container div#achive-news dl a div.news-img {
+  .container div#achive-news dl a img {
     display: block;
-    width: 241px;
+    width: 30%;
     height: 160px;
     background-position: center;
     background-size: cover;
@@ -200,19 +200,22 @@
   .container div#achive-news dl a div {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    margin: 30px auto;
+    align-content: space-between;
+    width: 64%;
+    margin: 3% auto;
   }
   .container div#achive-news dl a div dt {
     width: 100%;
-    margin-bottom: 18px;
+    height: auto;
   }
   .container div#achive-news dl a div div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     width: 140px;
-    margin: 0 30px;
+    margin: 0;
+    height: 25px;
+    margin-left: 20px;
   }
   .container div#achive-news dl a div div img.time-img {
     display: block;
@@ -371,7 +374,7 @@
     max-width: 850px;
     background: rgba(255, 255, 255, 0.65);
     margin: 0;
-    padding: 0 30px;
+    padding: 1px 30px;
     /*============================
     #Welcom
     ============================*/
@@ -669,7 +672,7 @@
     color: #000;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1099px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
   body h2 {
     font-family: Meiryo;
     font-weight: normal;
@@ -687,17 +690,18 @@
     color: #000;
   }
   dd.category {
+    display: block;
     width: auto;
-    height: auto;
+    height: 25px;
     padding: 0 10px;
-    margin: 0 20px;
+    margin: 0;
     background: #ffa7a7;
   }
   div.bg {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-135deg, #e4a972, #9941d8);
+    background: linear-gradient(-135deg, #1717e6, #00004d);
     z-index: -1;
   }
   .container {
@@ -732,7 +736,7 @@
   }
   .container header nav {
     width: 100%;
-    height: 60px;
+    height: 80px;
     margin: 0 auto;
   }
   .container header nav ul {
@@ -751,7 +755,7 @@
     width: 100%;
     font-family: Meiryo;
     font-weight: normal;
-    line-height: 60px;
+    line-height: 80px;
     font-size: 20px;
     text-align: center;
     color: #fff;
@@ -812,7 +816,8 @@
     color: #000;
   }
   .container div#achive-news {
-    width: 700px;
+    width: 100%;
+    max-width: 750px;
     height: auto;
     margin: 0 auto;
     /*============================
@@ -820,12 +825,12 @@
     ============================*/
   }
   .container div#achive-news h2 {
-    margin: 40px auto;
+    padding: 40px 0 10px;
   }
   .container div#achive-news p {
     width: 490px;
     height: auto;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
   }
   .container div#achive-news a {
     color: black;
@@ -837,7 +842,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0;
+    padding: 10px 0 20px;
   }
   .container div#achive-news #all-category dd {
     display: inline-block;
@@ -845,40 +850,44 @@
   }
   .container div#achive-news dl {
     width: 100%;
+    max-width: 750px;
     height: 160px;
     background: rgba(255, 255, 255, 0.65);
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
   .container div#achive-news dl a {
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
+    align-content: space-between;
   }
-  .container div#achive-news dl a div.news-img {
+  .container div#achive-news dl a img {
     display: block;
-    width: 241px;
-    height: 160px;
-    background-position: center;
-    background-size: cover;
+    width: auto;
+    height: 100%;
     margin: 0;
   }
   .container div#achive-news dl a div {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    margin: 30px auto;
+    align-content: space-between;
+    width: 64%;
+    height: 100%;
+    margin: 0 3%;
+    padding: 3% 0;
   }
   .container div#achive-news dl a div dt {
     width: 100%;
-    margin-bottom: 18px;
   }
   .container div#achive-news dl a div div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     width: 140px;
-    margin: 0 30px;
+    height: 25px;
+    margin: 0 0 0 20px;
   }
   .container div#achive-news dl a div div img.time-img {
     display: block;
@@ -1187,8 +1196,11 @@
     color: #000;
     margin: 10px auto 0;
   }
+  .container main div#Content div#Contact {
+    padding: 1px;
+  }
   .container main div#Content div#Contact h2 {
-    margin: 75px auto 35px;
+    margin: 30px auto 20px;
   }
   .container main div#Content div#Contact p#Contact-alt {
     text-align: center;
@@ -1198,7 +1210,6 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding-top: 30px;
   }
   .container main div#Content div#Contact form label {
     display: flex;
@@ -1249,7 +1260,7 @@
     height: 28px;
     background: rgba(255, 255, 255, 0.65);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    margin: 30px auto;
+    margin: 0 auto;
   }
   .container div#SideNav {
     display: flex;
@@ -1345,14 +1356,14 @@
     color: #000;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 599px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
   body h2 {
     font-family: Meiryo;
     font-weight: normal;
     font-size: 18px;
     line-height: 20px;
     text-align: center;
-    color: #000;
+    color: #fff;
   }
   body p {
     font-family: Meiryo;
@@ -1360,7 +1371,7 @@
     font-size: 14px;
     line-height: 28px;
     text-align: left;
-    color: #000;
+    color: #fff;
   }
   p#Contact-alt {
     text-align: center;
@@ -1378,13 +1389,14 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-135deg, #e4a972, #9941d8);
+    background: linear-gradient(-135deg, #000080, #9941d8);
     z-index: -1;
   }
   .container {
     width: 100%;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1px 20px;
     /*============================
     #News
     ============================*/
@@ -1415,7 +1427,7 @@
     height: 100vh;
     margin: 0 auto;
     padding-top: 85px;
-    background: linear-gradient(-135deg, #e4a972, #9941d8);
+    background: linear-gradient(-135deg, #000080, #9941d8);
     transform: translateY(-100vh);
     transition: all 0.3s;
   }
@@ -1545,10 +1557,10 @@
     ============================*/
   }
   .container div#achive-news h2 {
-    margin: 40px auto 30px;
+    margin: 20px auto 10px;
   }
   .container div#achive-news p {
-    width: 280px;
+    width: 100%;
     height: auto;
     margin: 0 auto 20px;
   }
@@ -1565,7 +1577,8 @@
   .container div#achive-news dl {
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.65);
   }
   .container div#achive-news dl a {
     width: 100%;
@@ -1573,10 +1586,10 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .container div#achive-news dl a div.news-img {
+  .container div#achive-news dl a img {
     display: block;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     background-position: center;
     background-size: cover;
     margin: 0;
@@ -1801,6 +1814,7 @@
   .container main div#Content {
     width: 100%;
     margin: 0;
+    padding: 1px;
     /*============================
     #Welcom
     ============================*/
