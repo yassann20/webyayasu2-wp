@@ -99,7 +99,8 @@
       <p id="Contact-alt">※ いたずら防止のためIPアドレスの保存をしております、ご容赦ください</p>
     </div>
   </div>
+  </main>
   <?php get_sidebar(); ?>
-</main>
+
 
 <?php get_footer(); ?>
