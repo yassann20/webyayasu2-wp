@@ -8,6 +8,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style2.css">
     <link rel="stylesheet" href="../css/sanitize.css">
+    <!-- ウェブページにソースコードを表示するためのcssとjavascript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-dark.min.css" />
+<!-- Toolbar -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/toolbar/prism-toolbar.min.css" />
+<!-- Line Numbers -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.css" />
+<!-- Unescaped Markup -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/unescaped-markup/prism-unescaped-markup.min.css" />
+    <!-- ソースコード用プログラムはここまで -->
 </head>
 
 <body>
@@ -16,88 +25,126 @@
         </div>
     </div>
     <div class="container">
-    <header>
-        <div>
-            <img src="../photos/PC-img/title-img.jpg" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">news</a></li>
-                <li><a href="">work</a></li>
-                <li><a href="">portfolio</a></li>
-                <li><a href="">contact</a></li>
-            </ul>
-        </nav>
-        <div id="Hum-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-    <main>
-        <div id="Content">
-            <pre id="Single">
-                <div id="Thumbnail" style="background-image: url('../photos/PC-img/single-noimg.jpg');">
-                </div>
-                <h1 id="Single-title">ブログタイトル</h1>
-                <dl>
-                    <dd class="category">カテゴリ</dd>
-                    <dd class="dd2">作成日 1999・01・18</dd>
-                </dl>
-                <h2>ブログタイトル</h2>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <h3>ブログタイトル</h3>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <div id="Page-controll">
-                    <a id="Prev-page" href="">＜ 前の記事</a>
-                    <a id="Next-page" href="">次の記事 ＞</a>
-                </div>
-                <h3>サンプルコード</h3>
-                <pre>
-                <code>
-                        <!--ソースコード-->
-                        <nav>
-                            <ul>
-                                <li><a href="">home</a></li>
-                                <li><a href="">news</a></li>
-                                <li><a href="">work</a></li>
-                                <li><a href="">portfolio</a></li>
-                                <li><a href="">contact</a></li>
-                            </ul>
-                        </nav>
-                        <!--ここまで-->
-                </code>
-            </pre>
+        <header>
+            <div>
+                <img src="../photos/PC-img/title-img.jpg" alt="">
             </div>
-            <div id="Contact">
-                <h2>お問い合わせ</h2>
-                <form action="">
-                    <label for="">
-                        <h3>氏名</h3>
-                        <input type="text" name="nam" id="">
-                    </label>
-                    <label for="">
-                        <h3>氏名(ふりがな)</h3>
-                        <input type="text" name="kana" id="">
-                    </label>
-                    <label for="">
-                        <h3>メールアドレス</h3>
-                        <input type="text" name="mail" id="">
-                    </label>
-                    <label for="">
-                        <h3>内容</h3>
-                        <textarea name="text" id="" cols="30" rows="10"></textarea>
-                    </label>
-                    <button type="submit" name="submit">送信</button>
-                </form>
+            <nav>
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">news</a></li>
+                    <li><a href="">work</a></li>
+                    <li><a href="">portfolio</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </nav>
+            <div id="Hum-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </div>
-    </main>
+        </header>
+        <main>
+            <div id="Content">
+                <div id="Single">
+                    <div id="Thumbnail" style="background-image: url('../photos/PC-img/single-noimg.jpg');">
+                    </div>
+                    <h1 id="Single-title">ブログタイトル</h1>
+                    <dl>
+                        <dd class="category">カテゴリ</dd>
+                        <dd class="dd2">作成日 1999・01・18</dd>
+                    </dl>
+                    <h2>ブログタイトル</h2>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <h3>ブログタイトル</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <div id="Page-controll">
+                        <a id="Prev-page" href="">＜ 前の記事</a>
+                        <a id="Next-page" href="">次の記事 ＞</a>
+                    </div>
+                    <h3>サンプルコード</h3>
+                    <pre>
+                        <code class="language-javascript">
+                            var trigger = document.getElementById("Hum-menu");
+                            var span1 = document.getElementById("span1");
+                            var span2 = document.getElementById("span2");
+                            var span3 = document.getElementById("span3");
+                            let position = 0;
+                          
+                          
+                            /*メニューがScrollした場合に下に下がった場合は色を変更し上に戻った場合は色を戻す*/
+                            window.addEventListener("scroll", function(){
+                              if( position < this.document.documentElement.scrollTop ){
+                                span1.style.backgroundColor ="black";
+                                span2.style.backgroundColor ="black";
+                                span3.style.backgroundColor ="black";
+                              }else{
+                                span1.style.backgroundColor ="";
+                                span2.style.backgroundColor ="";
+                                span3.style.backgroundColor ="";
+                              }
+                            });
+                            /*メニュー制御ここまで*/
+                          
+                            /*ハンバーガーメニューがクリックされた場合の挙動*/
+                              if(trigger){
+                                  trigger.addEventListener("click",function(){
+                                      var targetspan1 = document.getElementById("span1");
+                                      var targetspan2 = document.getElementById("span2");
+                                      var targetspan3 = document.getElementById("span3");
+                                      var nav = document.getElementById("nav");
+                                      targetspan1.classList.toggle("active");
+                                      targetspan2.classList.toggle("active");
+                                      targetspan3.classList.toggle("active");
+                                      nav.classList.toggle("active");
+                                  },false);
+                              }
+                              /*ハンバーガー制御ここまで */
+                          
+                              /* slick.jsの設定 */
+                              $('.slider').slick({
+                                autoplay: true,       //自動再生
+                                autoplaySpeed: 2000,  //自動再生のスピード
+                                speed: 800,           //スライドするスピード
+                                dots: true,           //スライド下のドット
+                                arrows: true,         //左右の矢印
+                                infinite: true,       //永久にループさせる
+                            });
+                            /* slickここまで */
+                            
+                              
+                            
+                        </code>
+                    </pre>
+                </div>
+                <div id="Contact">
+                    <h2>お問い合わせ</h2>
+                    <form action="">
+                        <label for="">
+                            <h3>氏名</h3>
+                            <input type="text" name="nam" id="">
+                        </label>
+                        <label for="">
+                            <h3>氏名(ふりがな)</h3>
+                            <input type="text" name="kana" id="">
+                        </label>
+                        <label for="">
+                            <h3>メールアドレス</h3>
+                            <input type="text" name="mail" id="">
+                        </label>
+                        <label for="">
+                            <h3>内容</h3>
+                            <textarea name="text" id="" cols="30" rows="10"></textarea>
+                        </label>
+                        <button type="submit" name="submit">送信</button>
+                    </form>
+                </div>
+            </div>
+        </main>
         <div id="SideNav">
             <h2>プロフィール</h2>
             <img src="../photos/PC-img/profile.png" alt="">
@@ -128,12 +175,31 @@
                 <a href=""><img src="../photos/PC-img/git.png" alt=""></a>
             </div>
         </div>
-    <footer>
-        <p>Kaisei Yasuzaki © 2023</p>
-    </footer>
+        <footer>
+            <p>Kaisei Yasuzaki © 2023</p>
+        </footer>
     </div>
     <script type="text/javascript" src="../animation.js/particles.min.js"></script>
     <script type="text/javascript" src="../animation.js/app.js"></script>
+    <!-- *** SyntaxHighlight [Prism.js] start *** -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+<!-- Toolbar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/toolbar/prism-toolbar.min.js"></script>
+<!-- Show Language -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/show-language/prism-show-language.min.js"></script>
+<!-- Line Numbers -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<!-- Copy to Clipboard -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<!-- Autoloader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<!-- Unescaped Markup -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/unescaped-markup/prism-unescaped-markup.min.js"></script>
+<!-- *** SyntaxHighlight [Prism.js] end *** -->
+    <script>
+        // コードハイライティングライブラリの初期化などの設定
+        Prism.highlightAll();
+    </script>
 </body>
 
 </html>
