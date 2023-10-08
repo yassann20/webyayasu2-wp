@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (min-width: 1281px) {
   body h2 {
     font-family: Meiryo;
@@ -32,7 +33,7 @@
   div.bg {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100lvh;
     background: linear-gradient(-135deg, #1717e6, #00004d);
     z-index: -1;
     /*============================
@@ -232,11 +233,12 @@
     margin: 30px auto 50px;
   }
   .container div#Single {
-    width: 700px;
+    max-width: 700px;
+    width: 90%;
     height: auto;
     background: #fff;
     margin: 75px auto 0;
-    padding: 1px;
+    padding: 50px;
     /*============================
     .Thumbnail
     ============================*/
@@ -248,20 +250,20 @@
     ============================*/
   }
   .container div#Single div.Thumbnail {
-    width: 600px;
-    height: 322px;
+    width: 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
     margin: 50px auto 15px;
   }
   .container div#Single img {
     display: block;
-    width: 600px;
-    height: 322px;
+    width: 100%;
+    height: 100%;
     margin: 50px auto 15px;
   }
   .container div#Single h1#Single-title {
-    width: 600px;
+    width: 100%;
     font-family: Meiryo;
     font-weight: normal;
     font-size: 24px;
@@ -281,80 +283,63 @@
     margin-right: 20px;
   }
   .container div#Single h2 {
-    width: 600px;
+    width: 100%;
+    height: auto;
     font-family: Meiryo;
     font-weight: normal;
     font-size: 20px;
-    line-height: 32px;
     text-align: center;
     color: #000;
-    margin: 15px auto;
+    padding: 40px 0 10px;
   }
   .container div#Single p {
-    width: 600px;
+    width: 100%;
     font-family: Meiryo;
     font-weight: normal;
     font-size: 16px;
     line-height: 32px;
     text-align: left;
     color: #000;
-    margin: 15px auto;
+    padding: 5px 0 5px;
   }
   .container div#Single a {
     display: block;
-    width: 600px;
+    width: 100%;
     font-family: Meiryo;
     font-weight: normal;
     font-size: 16px;
     line-height: 32px;
     text-align: left;
     color: #000;
-    margin: 15px auto;
   }
   .container div#Single h3 {
-    width: 600px;
+    width: 100%;
+    height: auto;
     font-family: Meiryo;
     font-weight: normal;
     font-size: 18px;
-    line-height: 32px;
     text-align: center;
     color: #000;
-    margin: 15px auto;
+    padding: 40px 0 10px;
   }
   .container div#Single div#Page-controll {
-    width: 220px;
+    width: 240px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 30px auto 50px;
+    margin: 30px auto 0;
     /*============================
-    #Prev-page
-    ============================*/
-    /*============================
-    #Next-page
+    #Prev-page及び#Next-page
     ============================*/
   }
-  .container div#Single div#Page-controll a#Prev-page {
+  .container div#Single div#Page-controll a#Prev-page, .container div#Single div#Page-controll a#Next-page {
     display: block;
-    width: 120px;
+    width: 100px;
     height: 30px;
     font-family: Meiryo;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 30px;
-    text-align: center;
-    color: #000;
-    background: #fff;
-    border: 1px solid #707070;
-  }
-  .container div#Single div#Page-controll a#Next-page {
-    display: block;
-    width: 120px;
-    height: 30px;
-    font-family: Meiryo;
-    font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     text-align: center;
     color: #000;
@@ -700,7 +685,7 @@
   div.bg {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100lvh;
     background: linear-gradient(-135deg, #1717e6, #00004d);
     z-index: -1;
   }
