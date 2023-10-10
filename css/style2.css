@@ -57,9 +57,6 @@
     /*============================
     #Single
     ============================*/
-    /*============================
-    #SideNav
-    ============================*/
   }
   .container header {
     width: 100%;
@@ -346,7 +343,15 @@
     background: #fff;
     border: 1px solid #707070;
   }
-  .container main {
+  .container .main-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /*============================
+    #SideNav
+    ============================*/
+  }
+  .container .main-container main {
     width: 65%;
     height: auto;
     margin: 0;
@@ -354,7 +359,7 @@
     #Content
     ============================*/
   }
-  .container main div#Content {
+  .container .main-container main div#Content {
     width: 100%;
     max-width: 850px;
     background: rgba(255, 255, 255, 0.65);
@@ -376,78 +381,78 @@
     #Contact
     ============================*/
   }
-  .container main div#Content div#Welcom {
+  .container .main-container main div#Content div#Welcom {
     width: 100%;
     height: auto;
   }
-  .container main div#Content div#Welcom h2 {
+  .container .main-container main div#Content div#Welcom h2 {
     padding: 30px;
   }
-  .container main div#Content div#Welcom div {
+  .container .main-container main div#Content div#Welcom div {
     display: flex;
     width: 100%;
   }
-  .container main div#Content div#Welcom div img {
+  .container .main-container main div#Content div#Welcom div img {
     display: block;
     width: 50%;
     height: auto;
     margin: 0;
   }
-  .container main div#Content div#Welcom div p {
+  .container .main-container main div#Content div#Welcom div p {
     width: 50%;
     padding-left: 35px;
   }
-  .container main div#Content div#Business {
+  .container .main-container main div#Content div#Business {
     width: 100%;
     height: auto;
     margin: 0 auto;
   }
-  .container main div#Content div#Business h2 {
+  .container .main-container main div#Content div#Business h2 {
     padding: 40px 0;
   }
-  .container main div#Content div#Business ul {
+  .container .main-container main div#Content div#Business ul {
     display: flex;
     justify-content: space-between;
   }
-  .container main div#Content div#Business ul li {
+  .container .main-container main div#Content div#Business ul li {
     width: 30%;
     height: 400px;
     list-style: none;
     background: #fff;
     box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
   }
-  .container main div#Content div#Business ul li img {
+  .container .main-container main div#Content div#Business ul li img {
     display: block;
     width: 100px;
     height: 100px;
     margin: 25px auto;
   }
-  .container main div#Content div#Business ul li h3 {
+  .container .main-container main div#Content div#Business ul li h3 {
     text-align: center;
     margin: 20px auto 20px;
   }
-  .container main div#Content div#Business ul li p {
+  .container .main-container main div#Content div#Business ul li p {
     width: 160px;
     margin: 0 auto;
   }
-  .container main div#Content div#Achievement {
+  .container .main-container main div#Content div#Achievement {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
   }
-  .container main div#Content div#Achievement h2 {
+  .container .main-container main div#Content div#Achievement h2 {
     width: 100%;
     margin: 90px auto 30px;
     order: 1;
   }
-  .container main div#Content div#Achievement img {
+  .container .main-container main div#Content div#Achievement img {
     display: block;
     width: 50%;
     height: auto;
     order: 3;
   }
-  .container main div#Content div#Achievement div {
+  .container .main-container main div#Content div#Achievement div {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -455,7 +460,7 @@
     height: auto;
     order: 2;
   }
-  .container main div#Content div#Achievement div a {
+  .container .main-container main div#Content div#Achievement div a {
     display: block;
     width: 60px;
     height: 28px;
@@ -469,24 +474,24 @@
     color: #000;
     margin: 10px auto 0;
   }
-  .container main div#Content div#Activity {
+  .container .main-container main div#Content div#Activity {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
   }
-  .container main div#Content div#Activity h2 {
+  .container .main-container main div#Content div#Activity h2 {
     width: 100%;
     margin: 90px auto 30px;
     order: 1;
   }
-  .container main div#Content div#Activity img {
+  .container .main-container main div#Content div#Activity img {
     display: block;
     width: 50%;
     height: auto;
     order: 2;
   }
-  .container main div#Content div#Activity div {
+  .container .main-container main div#Content div#Activity div {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -494,7 +499,7 @@
     height: auto;
     order: 3;
   }
-  .container main div#Content div#Activity div a {
+  .container .main-container main div#Content div#Activity div a {
     display: block;
     width: 60px;
     height: 28px;
@@ -508,20 +513,20 @@
     color: #000;
     margin: 10px auto 0;
   }
-  .container main div#Content div#Contact h2 {
+  .container .main-container main div#Content div#Contact h2 {
     margin: 75px auto 35px;
   }
-  .container main div#Content div#Contact p#Contact-alt {
+  .container .main-container main div#Content div#Contact p#Contact-alt {
     text-align: center;
     padding-bottom: 30px;
   }
-  .container main div#Content div#Contact form {
+  .container .main-container main div#Content div#Contact form {
     width: 100%;
     height: auto;
     margin: 0 auto;
     padding-top: 30px;
   }
-  .container main div#Content div#Contact form label {
+  .container .main-container main div#Content div#Contact form label {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -530,11 +535,11 @@
     width: 100%;
     border-top: 1px solid #707070;
   }
-  .container main div#Content div#Contact form label:nth-last-of-type(1) {
+  .container .main-container main div#Content div#Contact form label:nth-last-of-type(1) {
     align-items: normal;
     height: 180px;
   }
-  .container main div#Content div#Contact form label h3 {
+  .container .main-container main div#Content div#Contact form label h3 {
     width: 260px;
     font-family: Meiryo;
     font-weight: normal;
@@ -544,27 +549,27 @@
     color: #000;
     padding-left: 50px;
   }
-  .container main div#Content div#Contact form label input {
+  .container .main-container main div#Content div#Contact form label input {
     width: 400px;
     height: 40px;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid #707070;
     margin: 15px 0;
   }
-  .container main div#Content div#Contact form label p {
+  .container .main-container main div#Content div#Contact form label p {
     width: 400px;
     height: 40px;
     margin: 15px 0;
     text-align: left;
   }
-  .container main div#Content div#Contact form label textarea {
+  .container .main-container main div#Content div#Contact form label textarea {
     width: 400px;
     height: 150px;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid #707070;
     margin: 15px 0;
   }
-  .container main div#Content div#Contact form button {
+  .container .main-container main div#Content div#Contact form button {
     display: block;
     width: 60px;
     height: 28px;
@@ -572,10 +577,12 @@
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     margin: 30px auto;
   }
-  .container div#SideNav {
+  .container .main-container div#SideNav {
+    position: sticky;
+    top: -500px;
     width: 30%;
     max-width: 400px;
-    height: auto;
+    height: 1000px;
     background: rgba(255, 255, 255, 0.65);
     margin: 0;
     padding: 30px;
@@ -586,33 +593,33 @@
     #sns
     ============================*/
   }
-  .container div#SideNav h2 {
+  .container .main-container div#SideNav h2 {
     margin: 0 auto 30px;
   }
-  .container div#SideNav img {
+  .container .main-container div#SideNav img {
     display: block;
     width: 200px;
     height: 200px;
     margin: 0 auto;
   }
-  .container div#SideNav div#Profile {
+  .container .main-container div#SideNav div#Profile {
     width: 100%;
     margin: 45px auto 5px;
   }
-  .container div#SideNav div#Profile dl {
+  .container .main-container div#SideNav div#Profile dl {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     margin: 15px auto;
   }
-  .container div#SideNav div#Profile dl dt {
+  .container .main-container div#SideNav div#Profile dl dt {
     width: 64px;
   }
-  .container div#SideNav div {
+  .container .main-container div#SideNav div {
     height: auto;
     margin: 0 auto 35px;
   }
-  .container div#SideNav div h3 {
+  .container .main-container div#SideNav div h3 {
     font-family: Meiryo;
     font-weight: normal;
     font-size: 20px;
@@ -620,7 +627,7 @@
     color: #000;
     margin-bottom: 30px;
   }
-  .container div#SideNav div#sns {
+  .container .main-container div#SideNav div#sns {
     width: 100%;
     height: auto;
     margin: 0 auto 0;
@@ -628,16 +635,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .container div#SideNav div#sns h2 {
+  .container .main-container div#SideNav div#sns h2 {
     width: 100%;
     margin: 35px auto 50px;
   }
-  .container div#SideNav div#sns a {
+  .container .main-container div#SideNav div#sns a {
     display: block;
     width: 30%;
     height: auto;
   }
-  .container div#SideNav div#sns a img {
+  .container .main-container div#SideNav div#sns a img {
     width: 100%;
     height: 100%;
   }
@@ -1248,11 +1255,12 @@
     margin: 0 auto;
   }
   .container div#SideNav {
+    position: sticky;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    height: auto;
+    height: 1000px;
     background: rgba(255, 255, 255, 0.65);
     margin: 0;
     padding: 30px;
