@@ -262,7 +262,7 @@ $sp: 0px;
 							height: auto;
 						}
 
-						div{
+						div {
 							display: flex;
 							flex-wrap: nowrap;
 							align-items: center;
@@ -270,6 +270,7 @@ $sp: 0px;
 							margin: 0;
 							height: 25px;
 							margin-left: 20px;
+
 							img.time-img {
 								display: block;
 								width: 16px;
@@ -400,6 +401,7 @@ $sp: 0px;
 			/*============================
 	#Page-controll
 	============================*/
+
 			div#Page-controll {
 				width: 240px;
 				display: flex;
@@ -411,7 +413,8 @@ $sp: 0px;
 				/*============================
 	#Prev-page及び#Next-page
 	============================*/
-				a#Prev-page, a#Next-page{
+				a#Prev-page,
+				a#Next-page {
 					display: block;
 					width: 100px;
 					height: 30px;
@@ -426,366 +429,368 @@ $sp: 0px;
 				}
 			}
 		}
-		.main-container{
+
+		.main-container {
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
-		main {
-			width: 65%;
-			height: auto;
-			margin: 0;
 
-			/*============================
-		#Content
-		============================*/
-			div#Content {
-				width: 100%;
-				max-width: 850px;
-				background: rgba(255, 255, 255, 0.65);
+			main {
+				width: 65%;
+				height: auto;
 				margin: 0;
-				padding: 1px 30px;
 
 				/*============================
+		#Content
+		============================*/
+				div#Content {
+					width: 100%;
+					max-width: 850px;
+					background: rgba(255, 255, 255, 0.65);
+					margin: 0;
+					padding: 1px 30px;
+
+					/*============================
 		#Welcom
 		============================*/
-				div#Welcom {
-					width: 100%;
-					height: auto;
+					div#Welcom {
+						width: 100%;
+						height: auto;
 
-					h2 {
-						padding: 30px;
+						h2 {
+							padding: 30px;
+						}
+
+						div {
+							display: flex;
+							width: 100%;
+
+							img {
+								display: block;
+								width: 50%;
+								height: auto;
+								margin: 0;
+							}
+
+							p {
+								width: 50%;
+								padding-left: 35px;
+							}
+						}
 					}
 
-					div {
-						display: flex;
+					/*============================
+		#Business
+		============================*/
+					div#Business {
 						width: 100%;
+						height: auto;
+						margin: 0 auto;
+
+						h2 {
+							padding: 40px 0;
+							;
+						}
+
+						ul {
+							display: flex;
+							justify-content: space-between;
+
+							li {
+								width: 30%;
+								height: 400px;
+								list-style: none;
+								background: #fff;
+								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+
+								img {
+									display: block;
+									width: 100px;
+									height: 100px;
+									margin: 25px auto;
+								}
+
+
+								h3 {
+									text-align: center;
+									margin: 20px auto 20px
+								}
+
+								p {
+									width: 160px;
+									margin: 0 auto;
+								}
+
+							}
+						}
+					}
+
+					/*============================
+		#Achievement
+		============================*/
+					div#Achievement {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
+
+						h2 {
+							width: 100%;
+							margin: 90px auto 30px;
+							order: 1;
+						}
 
 						img {
 							display: block;
 							width: 50%;
 							height: auto;
-							margin: 0;
+							order: 3;
 						}
 
-						p {
-							width: 50%;
-							padding-left: 35px;
-						}
-					}
-				}
-
-				/*============================
-		#Business
-		============================*/
-				div#Business {
-					width: 100%;
-					height: auto;
-					margin: 0 auto;
-
-					h2 {
-						padding: 40px 0;
-						;
-					}
-
-					ul {
-						display: flex;
-						justify-content: space-between;
-
-						li {
-							width: 30%;
-							height: 400px;
-							list-style: none;
-							background: #fff;
-							box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
-
-							img {
-								display: block;
-								width: 100px;
-								height: 100px;
-								margin: 25px auto;
-							}
-
-
-							h3 {
-								text-align: center;
-								margin: 20px auto 20px
-							}
-
-							p {
-								width: 160px;
-								margin: 0 auto;
-							}
-
-						}
-					}
-				}
-
-				/*============================
-		#Achievement
-		============================*/
-				div#Achievement {
-					display: flex;
-					flex-wrap: wrap;
-					width: 100%;
-					margin: 0 auto;
-
-					h2 {
-						width: 100%;
-						margin: 90px auto 30px;
-						order: 1;
-					}
-
-					img {
-						display: block;
-						width: 50%;
-						height: auto;
-						order: 3;
-					}
-
-					div {
-						display: flex;
-						flex-wrap: wrap;
-						align-content: center;
-						width: 50%;
-						height: auto;
-						order: 2;
-
-						a {
-							display: block;
-							width: 60px;
-							height: 28px;
-							background-color: #fff;
-							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 14px;
-							line-height: 28px;
-							text-align: center;
-							color: #000;
-							margin: 10px auto 0;
-						}
-					}
-				}
-
-				/*============================
-		#Activity
-		============================*/
-				div#Activity {
-					display: flex;
-					flex-wrap: wrap;
-					width: 100%;
-					margin: 0 auto;
-
-					h2 {
-						width: 100%;
-						margin: 90px auto 30px;
-						order: 1;
-					}
-
-					img {
-						display: block;
-						width: 50%;
-						height: auto;
-						order: 2;
-					}
-
-					div {
-						display: flex;
-						flex-wrap: wrap;
-						align-content: center;
-						width: 50%;
-						height: auto;
-						order: 3;
-
-						a {
-							display: block;
-							width: 60px;
-							height: 28px;
-							background-color: #fff;
-							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 14px;
-							line-height: 28px;
-							text-align: center;
-							color: #000;
-							margin: 10px auto 0;
-
-
-						}
-					}
-				}
-
-				/*============================
-		#Contact
-		============================*/
-				div#Contact {
-					h2 {
-						margin: 75px auto 35px;
-					}
-
-					p#Contact-alt {
-						text-align: center;
-						padding-bottom: 30px;
-					}
-
-					form {
-						width: 100%;
-						height: auto;
-						margin: 0 auto;
-						padding-top: 30px;
-
-						label {
+						div {
 							display: flex;
-							flex-wrap: nowrap;
-							align-items: center;
-							width: 100%;
-							height: 70px;
-							width: 100%;
-							border-top: 1px solid #707070;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 2;
 
-							&:nth-last-of-type(1) {
-								align-items: normal;
-								height: 180px;
-							}
-
-							h3 {
-								width: 260px;
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 								font-family: Meiryo;
 								font-weight: normal;
-								font-size: 16px;
-								line-height: 70px;
-								text-align: left;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
 								color: #000;
-								padding-left: 50px;
-							}
-
-							input {
-								width: 400px;
-								height: 40px;
-								background: rgba(255, 255, 255, 0.65);
-								border: 1px solid #707070;
-								margin: 15px 0;
-							}
-
-							p {
-								width: 400px;
-								height: 40px;
-								margin: 15px 0;
-								text-align: left;
-							}
-
-							textarea {
-								width: 400px;
-								height: 150px;
-								background: rgba(255, 255, 255, 0.65);
-								;
-								border: 1px solid #707070;
-								margin: 15px 0;
+								margin: 10px auto 0;
 							}
 						}
+					}
 
-						button {
+					/*============================
+		#Activity
+		============================*/
+					div#Activity {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
+
+						h2 {
+							width: 100%;
+							margin: 90px auto 30px;
+							order: 1;
+						}
+
+						img {
 							display: block;
-							width: 60px;
-							height: 28px;
-							background: rgba(255, 255, 255, 0.65);
-							;
-							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-							margin: 30px auto;
+							width: 50%;
+							height: auto;
+							order: 2;
+						}
+
+						div {
+							display: flex;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 3;
+
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto 0;
+
+
+							}
+						}
+					}
+
+					/*============================
+		#Contact
+		============================*/
+					div#Contact {
+						h2 {
+							margin: 75px auto 35px;
+						}
+
+						p#Contact-alt {
+							text-align: center;
+							padding-bottom: 30px;
+						}
+
+						form {
+							width: 100%;
+							height: auto;
+							margin: 0 auto;
+							padding-top: 30px;
+
+							label {
+								display: flex;
+								flex-wrap: nowrap;
+								align-items: center;
+								width: 100%;
+								height: 70px;
+								width: 100%;
+								border-top: 1px solid #707070;
+
+								&:nth-last-of-type(1) {
+									align-items: normal;
+									height: 180px;
+								}
+
+								h3 {
+									width: 260px;
+									font-family: Meiryo;
+									font-weight: normal;
+									font-size: 16px;
+									line-height: 70px;
+									text-align: left;
+									color: #000;
+									padding-left: 50px;
+								}
+
+								input {
+									width: 400px;
+									height: 40px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+
+								p {
+									width: 400px;
+									height: 40px;
+									margin: 15px 0;
+									text-align: left;
+								}
+
+								textarea {
+									width: 400px;
+									height: 150px;
+									background: rgba(255, 255, 255, 0.65);
+									;
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+							}
+
+							button {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background: rgba(255, 255, 255, 0.65);
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								margin: 30px auto;
+							}
 						}
 					}
 				}
 			}
-		}
 
-		/*============================
+			/*============================
 		#SideNav
 		============================*/
-		div#SideNav {
-			position: sticky;
-			top: -500px;
-			width: 30%;
-			max-width: 400px;
-			height: 1000px;
-			background: rgba(255, 255, 255, 0.65);
-			margin: 0;
-			padding: 30px;
-
-			h2 {
-				margin: 0 auto 30px;
-			}
-
-			img {
-				display: block;
-				width: 200px;
-				height: 200px;
-				margin: 0 auto;
-			}
-
-			/*============================
-		#Profile
-		============================*/
-			div#Profile {
-				width: 100%;
-				margin: 45px auto 5px;
-
-				dl {
-					display: flex;
-					flex-wrap: nowrap;
-					width: 100%;
-					margin: 15px auto;
-
-					dt {
-						width: 64px;
-					}
-
-				}
-			}
-
-			div {
-				height: auto;
-				margin: 0 auto 35px;
-
-				h3 {
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 20px;
-					text-align: center;
-					color: #000;
-					margin-bottom: 30px;
-				}
-			}
-
-			/*============================
-		#sns
-		============================*/
-			div#sns {
-				width: 100%;
-				height: auto;
-				margin: 0 auto 0;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
+			div#SideNav {
+				position: sticky;
+				top: 0;
+				width: 30%;
+				max-width: 400px;
+				height: 1000px;
+				background: rgba(255, 255, 255, 0.65);
+				margin: 0;
+				padding: 30px;
 
 				h2 {
-					width: 100%;
-					margin: 35px auto 50px;
+					margin: 0 auto 30px;
 				}
 
-				a {
+				img {
 					display: block;
-					width: 30%;
-					height: auto;
+					width: 200px;
+					height: 200px;
+					margin: 0 auto;
+				}
 
-					img {
+				/*============================
+		#Profile
+		============================*/
+				div#Profile {
+					width: 100%;
+					margin: 45px auto 5px;
+
+					dl {
+						display: flex;
+						flex-wrap: nowrap;
 						width: 100%;
-						height: 100%;
+						margin: 15px auto;
+
+						dt {
+							width: 64px;
+						}
+
+					}
+				}
+
+				div {
+					height: auto;
+					margin: 0 auto 35px;
+
+					h3 {
+						font-family: Meiryo;
+						font-weight: normal;
+						font-size: 20px;
+						text-align: center;
+						color: #000;
+						margin-bottom: 30px;
+					}
+				}
+
+				/*============================
+		#sns
+		============================*/
+				div#sns {
+					width: 100%;
+					height: auto;
+					margin: 0 auto 0;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+
+					h2 {
+						width: 100%;
+						margin: 35px auto 50px;
+					}
+
+					a {
+						display: block;
+						width: 30%;
+						height: auto;
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
 					}
 				}
 			}
 		}
-	}
+
 		footer {
 			width: 100%;
 			height: 144px;
@@ -851,7 +856,7 @@ $sp: 0px;
 		justify-content: space-between;
 		align-items: flex-start;
 		width: 90%;
-		max-width: 1300px;
+		max-width: 700px;
 		margin: 0 auto;
 
 		header {
@@ -1012,6 +1017,7 @@ $sp: 0px;
 				height: 160px;
 				background: rgba(255, 255, 255, 0.65);
 				margin: 0 auto 20px;
+
 				a {
 					width: 100%;
 					height: 100%;
@@ -1019,6 +1025,7 @@ $sp: 0px;
 					align-items: center;
 					flex-wrap: nowrap;
 					align-content: space-between;
+
 					img {
 						display: block;
 						width: auto;
@@ -1034,6 +1041,7 @@ $sp: 0px;
 						height: 100%;
 						margin: 0 3%;
 						padding: 3% 0;
+
 						dt {
 							width: 100%;
 						}
@@ -1045,6 +1053,7 @@ $sp: 0px;
 							width: 140px;
 							height: 25px;
 							margin: 0 0 0 20px;
+
 							img.time-img {
 								display: block;
 								width: 16px;
@@ -1074,17 +1083,17 @@ $sp: 0px;
 #Single
 ============================*/
 		div#Single {
-			width: 700px;
+			width: 100%;
 			height: auto;
 			background: #fff;
-			margin: 75px auto 0;
-			padding: 1px;
+			margin: 0 auto;
+			padding: 40px;
 
 			/*============================
 	.Thumbnail
 	============================*/
 			div.Thumbnail {
-				width: 600px;
+				width: 100%;
 				height: 322px;
 				background-size: cover;
 				background-position: center;
@@ -1093,100 +1102,95 @@ $sp: 0px;
 
 			img {
 				display: block;
-				width: 600px;
+				width: 100%;
 				height: 322px;
-				margin: 50px auto 15px;
+				padding: 50px 0 15px;
 			}
 
 			/*============================
 	#Single-title
 	============================*/
 			h1#Single-title {
-				width: 600px;
+				width: 100%;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 24px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 30px 0 10px;
 			}
 
 			dl {
 				display: flex;
 				flex-wrap: nowrap;
-				width: 600px;
+				width: 100%;
 				height: auto;
-				margin: 15px auto;
-
+				padding: 15px 0;
 				dd.category {
 					margin-right: 20px;
 				}
 			}
 
 			h2 {
-				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 20px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
-
+				padding: 30px 0 10px;
 			}
 
 			p {
-				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 5px 0;
 			}
 
 			a {
 				display: block;
-				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 5px 0;
 			}
 
 			h3 {
-				width: 600px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 18px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 30px 0 10px;
 			}
 
 			/*============================
 	#Page-controll
 	============================*/
 			div#Page-controll {
-				width: 220px;
+				width: 240px;
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
 				align-items: center;
-				margin: 30px auto 50px;
+				margin: 0 auto;
+				padding: 30px 0 50px;
 
 				/*============================
-	#Prev-page
+	#Prev-page及び#Next-page
 	============================*/
-				a#Prev-page {
+				a#Prev-page, a#Next-page{
 					display: block;
-					width: 120px;
+					width: 100px;
 					height: 30px;
 					font-family: Meiryo;
 					font-weight: normal;
@@ -1196,386 +1200,379 @@ $sp: 0px;
 					color: #000;
 					background: #fff;
 					border: 1px solid #707070;
-				}
-
-				/*============================
-	#Next-page
-	============================*/
-				a#Next-page {
-					display: block;
-					width: 120px;
-					height: 30px;
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 16px;
-					line-height: 30px;
-					text-align: center;
-					color: #000;
-					background: #fff;
-					border: 1px solid #707070;
+					padding: 0;
 				}
 			}
 		}
 
-		main {
+		.main-container {
 			width: 100%;
-			height: auto;
-			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 
-			/*============================
-		#Content
-		============================*/
-			div#Content {
+			main {
 				width: 100%;
-				background: rgba(255, 255, 255, 0.65);
+				height: auto;
 				margin: 0;
-				padding: 0 30px;
 
 				/*============================
+		#Content
+		============================*/
+				div#Content {
+					width: 100%;
+					background: rgba(255, 255, 255, 0.65);
+					margin: 0;
+					padding: 60px 60px;
+
+					/*============================
 		#Welcom
 		============================*/
-				div#Welcom {
-					width: 100%;
-					height: auto;
+					div#Welcom {
+						width: 100%;
+						height: auto;
 
-					h2 {
-						padding: 30px;
+						h2 {
+							padding: 30px;
+						}
+
+						div {
+							display: flex;
+							align-items: center;
+							width: 100%;
+
+							img {
+								display: block;
+								width: 50%;
+								height: auto;
+								margin: 0;
+							}
+
+							p {
+								width: 50%;
+								padding-left: 35px;
+							}
+						}
 					}
 
-					div {
-						display: flex;
-						align-items: center;
+					/*============================
+		#Business
+		============================*/
+					div#Business {
 						width: 100%;
+						height: auto;
+						margin: 0 auto;
+
+						h2 {
+							padding: 40px 0;
+							;
+						}
+
+						ul {
+							display: flex;
+							justify-content: space-between;
+
+							li {
+								width: 30%;
+								min-height: 400px;
+								list-style: none;
+								background: #fff;
+								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+
+								img {
+									display: block;
+									width: 100px;
+									height: 100px;
+									margin: 25px auto;
+								}
+
+
+								h3 {
+									text-align: center;
+									margin: 20px auto 20px
+								}
+
+								p {
+									width: 100%;
+									margin: 0 auto;
+									padding: 0 20px;
+								}
+
+							}
+						}
+					}
+
+					/*============================
+		#Achievement
+		============================*/
+					div#Achievement {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
+
+						h2 {
+							width: 100%;
+							margin: 90px auto 30px;
+							order: 1;
+						}
 
 						img {
 							display: block;
 							width: 50%;
 							height: auto;
-							margin: 0;
+							order: 3;
 						}
 
-						p {
-							width: 50%;
-							padding-left: 35px;
-						}
-					}
-				}
-
-				/*============================
-		#Business
-		============================*/
-				div#Business {
-					width: 100%;
-					height: auto;
-					margin: 0 auto;
-
-					h2 {
-						padding: 40px 0;
-						;
-					}
-
-					ul {
-						display: flex;
-						justify-content: space-between;
-
-						li {
-							width: 30%;
-							min-height: 400px;
-							list-style: none;
-							background: #fff;
-							box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
-
-							img {
-								display: block;
-								width: 100px;
-								height: 100px;
-								margin: 25px auto;
-							}
-
-
-							h3 {
-								text-align: center;
-								margin: 20px auto 20px
-							}
-
-							p {
-								width: 100%;
-								margin: 0 auto;
-								padding: 0 20px;
-							}
-
-						}
-					}
-				}
-
-				/*============================
-		#Achievement
-		============================*/
-				div#Achievement {
-					display: flex;
-					flex-wrap: wrap;
-					width: 100%;
-					margin: 0 auto;
-
-					h2 {
-						width: 100%;
-						margin: 90px auto 30px;
-						order: 1;
-					}
-
-					img {
-						display: block;
-						width: 50%;
-						height: auto;
-						order: 3;
-					}
-
-					div {
-						display: flex;
-						flex-wrap: wrap;
-						align-content: center;
-						width: 50%;
-						height: auto;
-						order: 2;
-
-						a {
-							display: block;
-							width: 60px;
-							height: 28px;
-							background-color: #fff;
-							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 14px;
-							line-height: 28px;
-							text-align: center;
-							color: #000;
-							margin: 10px auto 0;
-						}
-					}
-				}
-
-				/*============================
-		#Activity
-		============================*/
-				div#Activity {
-					display: flex;
-					flex-wrap: wrap;
-					width: 100%;
-					margin: 0 auto;
-
-					h2 {
-						width: 100%;
-						margin: 90px auto 30px;
-						order: 1;
-					}
-
-					img {
-						display: block;
-						width: 50%;
-						height: auto;
-						order: 2;
-					}
-
-					div {
-						display: flex;
-						flex-wrap: wrap;
-						align-content: center;
-						width: 50%;
-						height: auto;
-						order: 3;
-
-						a {
-							display: block;
-							width: 60px;
-							height: 28px;
-							background-color: #fff;
-							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 14px;
-							line-height: 28px;
-							text-align: center;
-							color: #000;
-							margin: 10px auto 0;
-
-
-						}
-					}
-				}
-
-				/*============================
-		#Contact
-		============================*/
-				div#Contact {
-					padding: 1px;
-					h2 {
-						margin: 30px auto 20px;
-					}
-
-					p#Contact-alt {
-						text-align: center;
-						padding-bottom: 30px;
-					}
-
-					form {
-						width: 100%;
-						height: auto;
-						margin: 0 auto;
-						label {
+						div {
 							display: flex;
-							flex-wrap: nowrap;
-							align-items: center;
-							width: 100%;
-							height: 70px;
-							width: 100%;
-							border-top: 1px solid #707070;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 2;
 
-							&:nth-last-of-type(1) {
-								align-items: normal;
-								height: 180px;
-							}
-
-							h3 {
-								width: 260px;
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 								font-family: Meiryo;
 								font-weight: normal;
-								font-size: 16px;
-								line-height: 70px;
-								text-align: left;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
 								color: #000;
-								padding-left: 50px;
-							}
-
-							input {
-								width: 400px;
-								height: 40px;
-								background: rgba(255, 255, 255, 0.65);
-								border: 1px solid #707070;
-								margin: 15px 0;
-							}
-
-							p {
-								width: 400px;
-								height: 40px;
-								margin: 15px 0;
-								text-align: left;
-							}
-
-							textarea {
-								width: 400px;
-								height: 150px;
-								background: rgba(255, 255, 255, 0.65);
-								;
-								border: 1px solid #707070;
-								margin: 15px 0;
+								margin: 10px auto 0;
 							}
 						}
+					}
 
-						button {
+					/*============================
+		#Activity
+		============================*/
+					div#Activity {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
+
+						h2 {
+							width: 100%;
+							margin: 90px auto 30px;
+							order: 1;
+						}
+
+						img {
 							display: block;
-							width: 60px;
-							height: 28px;
-							background: rgba(255, 255, 255, 0.65);
-							box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+							width: 50%;
+							height: auto;
+							order: 2;
+						}
+
+						div {
+							display: flex;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 3;
+
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto 0;
+
+
+							}
+						}
+					}
+
+					/*============================
+		#Contact
+		============================*/
+					div#Contact {
+						width: 100%;
+						padding: 1;
+						margin: 0 auto;
+						h2 {
+							margin: 30px auto 20px;
+						}
+
+						p#Contact-alt {
+							text-align: center;
+							padding-bottom: 30px;
+						}
+
+						form {
+							width: 100%;
+							height: auto;
 							margin: 0 auto;
+
+							label {
+								display: flex;
+								flex-wrap: nowrap;
+								align-items: center;
+								width: 100%;
+								height: 70px;
+								width: 100%;
+								border-top: 1px solid #707070;
+
+								&:nth-last-of-type(1) {
+									align-items: normal;
+									height: 180px;
+								}
+
+								h3 {
+									width: 260px;
+									font-family: Meiryo;
+									font-weight: normal;
+									font-size: 16px;
+									line-height: 70px;
+									text-align: left;
+									color: #000;
+									padding-left: 50px;
+								}
+
+								input {
+									width: 400px;
+									height: 40px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+
+								p {
+									width: 400px;
+									height: 40px;
+									margin: 15px 0;
+									text-align: left;
+								}
+
+								textarea {
+									width: 400px;
+									height: 150px;
+									background: rgba(255, 255, 255, 0.65);
+									;
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+							}
+
+							button {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background: rgba(255, 255, 255, 0.65);
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								margin: 0 auto;
+							}
 						}
 					}
 				}
 			}
-		}
-	
-		/*============================
+
+			/*============================
 		#SideNav
 		============================*/
-		div#SideNav {
-			position: sticky;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			width: 100%;
-			height: 1000px;
-			background: rgba(255, 255, 255, 0.65);
-			margin: 0;
-			padding: 30px;
-
-			h2 {
-				width: 100%;
-				padding-bottom: 30px;
-			}
-
-			img {
-				display: block;
-				width: 35%;
-				height: 15%;
-				margin: 0;
-				padding-left: 20%;
-			}
-
-			/*============================
-		#Profile
-		============================*/
-			div#Profile {
-				width: 55%;
-				padding: 0 15% 0 0;
-
-				dl {
-					display: flex;
-					flex-wrap: nowrap;
-					width: 100%;
-					margin: 15px auto;
-
-					dt {
-						width: 64px;
-					}
-				}
-			}
-
-			div {
-				height: auto;
-				margin: 0 auto 35px;
-
-				h3 {
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 20px;
-					text-align: center;
-					color: #000;
-					margin-bottom: 30px;
-				}
-
-				p {
-					margin: 0;
-					padding: 0 10% 30px;
-				}
-			}
-
-			/*============================
-		#sns
-		============================*/
-			div#sns {
-				width: 100%;
-				height: auto;
-				margin: 0 auto 0;
+			div#SideNav {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-around;
-				padding: 0 20%;
+				justify-content: center;
+				width: 100%;
+				height: auto;
+				background: rgba(255, 255, 255, 0.65);
+				margin: 0;
+				padding: 30px;
 
 				h2 {
 					width: 100%;
-					padding: 0 0 30px;
+					padding-bottom: 10px;
 				}
 
-				a {
+				img {
 					display: block;
-					width: 20%;
-					height: auto;
+					width: 35%;
+					height: 15%;
+					margin: 0;
+					padding-left: 20%;
+				}
 
-					img {
+				/*============================
+		#Profile
+		============================*/
+				div#Profile {
+					width: 55%;
+					padding: 0 15% 0 0;
+
+					dl {
+						display: flex;
+						flex-wrap: nowrap;
 						width: 100%;
-						height: 100%;
-						padding: 0;
+						margin: 15px auto;
+
+						dt {
+							width: 64px;
+						}
+					}
+				}
+
+				div {
+					height: auto;
+					margin: 0 auto 35px;
+
+					h3 {
+						font-family: Meiryo;
+						font-weight: normal;
+						font-size: 20px;
+						text-align: center;
+						color: #000;
+						margin-bottom: 10px;
+					}
+
+					p {
+						margin: 0;
+						padding: 0 10% 10px;
+					}
+				}
+
+				/*============================
+		#sns
+		============================*/
+				div#sns {
+					width: 100%;
+					height: auto;
+					margin: 0 auto 0;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+					padding: 0 20%;
+
+					h2 {
+						width: 100%;
+						padding: 0 0 10px;
+					}
+
+					a {
+						display: block;
+						width: 20%;
+						height: auto;
+
+						img {
+							width: 100%;
+							height: 100%;
+							padding: 0;
+						}
 					}
 				}
 			}
@@ -1647,7 +1644,7 @@ $sp: 0px;
 
 	.container {
 		width: 100%;
-		max-width: 500px;
+		width: 320px;
 		margin: 0 auto;
 		padding: 1px 20px;
 
@@ -1963,7 +1960,8 @@ $sp: 0px;
 #Single
 ============================*/
 		div#Single {
-			width: 320px;
+			width: 100%;
+			min-width: 320px;
 			height: auto;
 			background: #fff;
 			margin: 0 auto;
@@ -2105,7 +2103,7 @@ $sp: 0px;
 				}
 			}
 		}
-
+		.main-container{
 		main {
 			display: flex !important;
 			flex-wrap: wrap;
@@ -2113,7 +2111,7 @@ $sp: 0px;
 			width: 100%;
 			height: auto;
 			margin: 0 auto;
-			padding: 0 20px;
+			padding: 0;
 
 
 			/*============================
@@ -2123,6 +2121,7 @@ $sp: 0px;
 				width: 100%;
 				margin: 0;
 				padding: 1px;
+
 				/*============================
 		#Welcom
 		============================*/
@@ -2433,10 +2432,12 @@ $sp: 0px;
 
 					dt {
 						width: 50px;
+						color: #fff;
 					}
 
 					dd {
 						font-size: 14px;
+						color: #fff;
 					}
 				}
 			}
@@ -2451,7 +2452,7 @@ $sp: 0px;
 					font-weight: normal;
 					font-size: 20px;
 					text-align: center;
-					color: #000;
+					color: #fff;
 					margin-bottom: 10px;
 				}
 
@@ -2488,10 +2489,12 @@ $sp: 0px;
 				}
 			}
 		}
+	}
 
 		footer {
 			width: 100%;
 			height: 50px;
+
 			p {
 				width: 100%;
 				font-family: Meiryo;
@@ -2499,7 +2502,7 @@ $sp: 0px;
 				font-size: 14px;
 				line-height: 50px;
 				text-align: center;
-				color: #000;
+				color: #fff;
 
 			}
 		}
