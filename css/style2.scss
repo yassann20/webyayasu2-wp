@@ -1644,7 +1644,7 @@ $sp: 0px;
 
 	.container {
 		width: 100%;
-		width: 320px;
+		min-width: 320px;
 		margin: 0 auto;
 		padding: 1px 20px;
 
@@ -1961,18 +1961,17 @@ $sp: 0px;
 ============================*/
 		div#Single {
 			width: 100%;
-			min-width: 320px;
 			height: auto;
 			background: #fff;
 			margin: 0 auto;
-			padding: 1px;
+			padding: 20px;
 
 			/*============================
 .Thumbnail
 ============================*/
 			div.Thumbnail {
-				width: 300px;
-				height: 183px;
+				width: 100%;
+				height: auto;
 				background-size: cover;
 				background-position: center;
 				margin: 50px auto 15px;
@@ -1980,8 +1979,8 @@ $sp: 0px;
 
 			img {
 				display: block;
-				width: 300px;
-				height: 183px;
+				width: 100%;
+				height: auto;
 				margin: 50px auto 15px;
 			}
 
@@ -1989,91 +1988,90 @@ $sp: 0px;
 #Single-title
 ============================*/
 			h1#Single-title {
-				width: 300px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 24px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 			}
 
 			dl {
 				display: flex;
 				flex-wrap: nowrap;
-				width: 280px;
 				height: auto;
-				margin: 15px auto;
+				padding: 20px 0 5;
 
 				dd.category {
 					margin-right: 20px;
+					font-size: 12px;
+				}
+				dd.dd2{
+					font-size: 12px;
 				}
 			}
 
 			h2 {
-				width: 300px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 20px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 
 			}
 
 			p {
-				width: 280px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 5px 0;
 			}
 
 			a {
 				display: block;
-				width: 280px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 			}
 
 			h3 {
-				width: 300px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 18px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 			}
 
 			/*============================
 #Page-controll
 ============================*/
 			div#Page-controll {
-				width: 220px;
+				width: 240px;
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
 				align-items: center;
-				margin: 30px auto 50px;
+				margin: auto;
+				padding: 30px 0 50px;
 
 				/*============================
-#Prev-page
+#Prev-page及び#Next-page
 ============================*/
-				a#Prev-page {
+				a#Prev-page, a#Next-page{
 					display: block;
-					width: 120px;
+					width: 100px;
 					height: 30px;
 					font-family: Meiryo;
 					font-weight: normal;
@@ -2083,23 +2081,7 @@ $sp: 0px;
 					color: #000;
 					background: #fff;
 					border: 1px solid #707070;
-				}
-
-				/*============================
-#Next-page
-============================*/
-				a#Next-page {
-					display: block;
-					width: 120px;
-					height: 30px;
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 16px;
-					line-height: 30px;
-					text-align: center;
-					color: #000;
-					background: #fff;
-					border: 1px solid #707070;
+					padding: 0;
 				}
 			}
 		}
@@ -2333,24 +2315,13 @@ $sp: 0px;
 							flex-wrap: wrap;
 							align-items: center;
 							width: 100%;
-							height: 80px;
+							height: auto;
 							margin: 0 auto;
 
 							&:nth-last-of-type(1) {
 								align-items: normal;
 								min-height: 80px;
 								height: auto;
-							}
-
-							h3 {
-								width: 100%;
-								font-family: Meiryo;
-								font-weight: normal;
-								font-size: 16px;
-								line-height: 20px;
-								text-align: left;
-								color: #000;
-								margin: 10px auto;
 							}
 
 							input {
@@ -2362,8 +2333,8 @@ $sp: 0px;
 
 							p {
 								width: 100%;
-								height: 40px;
-								margin: 10px 0;
+								padding: 20px 0 10px;
+								color: #fff;
 								text-align: center;
 
 								&#Semdtext {
