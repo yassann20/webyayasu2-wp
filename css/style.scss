@@ -1,12 +1,8 @@
-$pc: 1100px;
-$tab-end: 1099px;
-$tab: 600px;
-$sp-end: 599px;
-$sp: 320px;
-
-$pc: 1100px;
-$tab: 600px;
-$sp: 320px;
+$pc: 1281px;
+$tab-end: 1280px;
+$tab: 768px;
+$sp-end: 767px;
+$sp: 0px;
 
 @mixin pc {
 	@media screen and (min-width: ($pc)) {
@@ -26,6 +22,9 @@ $sp: 320px;
 	}
 }
 
+/*--------------------------------------------------
+            PC
+--------------------------------------------------*/
 @include pc {
 	body h2 {
 		font-family: Meiryo;
@@ -55,7 +54,6 @@ $sp: 320px;
 		width: auto;
 		height: 25px;
 		padding: 0 10px;
-		margin: 0 20px;
 		background: #ffa7a7;
 	}
 
@@ -67,84 +65,84 @@ $sp: 320px;
 	div.bg {
 		position: fixed;
 		width: 100%;
-		height: 100%;
-		background: linear-gradient(-135deg, #e4a972, #9941d8);
+		height: 100lvh;
+		background: linear-gradient(-135deg, #1717e6, #00004d);
 		z-index: -1;
 
-		/*============================
-		#particles-js
-		============================*/
-		div#particles-js {}
+		/*============================ #particles-js ============================*/
 	}
 
-	header {
-		div {
-			img {
-				display: block;
-				width: 1300px;
-				height: 443px;
-				margin: 0 auto;
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 90%;
+		max-width: 1300px;
+		margin: 0 auto;
+
+		header {
+			width: 100%;
+
+			div {
+				img {
+					display: block;
+					width: 100%;
+					height: 443px;
+					margin: 0 auto;
+				}
 			}
-		}
 
-		nav {
-			width: 1300px;
-			height: 85px;
-			margin: 0 auto;
-
-			ul {
+			nav {
 				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: normal;
+				height: 85px;
 				margin: 0 auto;
 
-				li {
+				ul {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: normal;
+					margin: 0 auto;
 
-					a {
-						font-family: Meiryo;
-						font-weight: normal;
-						line-height: 125px;
-						font-size: 20px;
-						text-align: center;
-						color: #fff;
-						margin: 0 50px;
+					li {
+
+						a {
+							font-family: Meiryo;
+							font-weight: normal;
+							line-height: 85px;
+							font-size: 20px;
+							text-align: center;
+							color: #fff;
+							margin: 0 50px;
+						}
 					}
 				}
 			}
+
+			div#Hum-menu {
+				display: none;
+			}
 		}
 
-		div#Hum-menu {
-			display: none;
-		}
-	}
-
-	main {
-		display: flex !important;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 1300px;
-		height: auto;
-		margin: 0 auto;
-
-		/*============================
-		#News
-		============================*/
+		/*============================ #News ============================*/
 		div#News {
-			width: 1299px;
+			width: 100%;
 			height: auto;
 			background: rgba(255, 255, 255, 0.65);
 			margin: 0 auto;
 			padding: 1px;
 			padding-bottom: 60px;
-			margin-top: 40px;
+			margin: 0 0 60px;
+
 			h2 {
 				margin: 35px auto 25px;
 			}
 
 			div {
-				width: 700px;
+				width: 75%;
+				max-width: 700px;
 				height: auto;
 				margin: 0 auto;
 
@@ -176,6 +174,10 @@ $sp: 320px;
 							color: #000;
 						}
 
+						dd.category {
+							margin: 0 10px;
+						}
+
 						dt {
 							font-family: Meiryo;
 							font-weight: normal;
@@ -189,22 +191,20 @@ $sp: 320px;
 			}
 		}
 
-		/*============================
-#achive-news
-============================*/
+		/*============================ #achive-news ============================*/
 		div#achive-news {
-			width: 700px;
+			width: 100%;
 			height: auto;
 			margin: 0 auto;
 
 			h2 {
-				margin: 40px auto;
+				padding: 40px 0 10px;
 			}
 
 			p {
-				width: 490px;
 				height: auto;
-				margin: 0 auto 30px;
+				margin: 0 auto 10px;
+				text-align: center;
 			}
 
 			a {
@@ -240,23 +240,27 @@ $sp: 320px;
 					flex-wrap: nowrap;
 
 					div.news-img {
-						display: block;
-						width: 241px;
-						height: 160px;
-						background-position: center;
-						background-size: cover;
-						margin: 0;
+						display: flex;
+						align-items: center;
+						width: 30%;
+						height: 100%;
+						img {
+							display: block;
+							width: 100%;
+							height: auto;
+						}
 					}
 
-					div {
+					div.news-container{
 						display: flex;
 						flex-wrap: wrap;
-						width: 400px;
-						margin: 30px auto;
+						align-content: space-between;
+						width: 64%;
+						margin: 3% auto;
 
 						dt {
 							width: 100%;
-							margin-bottom: 18px;
+							height: auto;
 						}
 
 						div {
@@ -264,7 +268,9 @@ $sp: 320px;
 							flex-wrap: nowrap;
 							align-items: center;
 							width: 140px;
-							margin: 0 30px;
+							margin: 0;
+							height: 25px;
+							margin-left: 20px;
 
 							img.time-img {
 								display: block;
@@ -272,16 +278,12 @@ $sp: 320px;
 								height: 16px;
 								margin-right: 7px;
 							}
-
-							dd {}
 						}
 					}
 				}
 			}
 
-			/*============================
-#Page-controll
-============================*/
+			/*============================ #Page-controll ============================*/
 			div#Page-controll {
 				width: 700px;
 				display: flex;
@@ -293,38 +295,33 @@ $sp: 320px;
 		}
 
 
-		/*============================
-#Single
-============================*/
+		/*============================ #Single ============================*/
 		div#Single {
-			width: 700px;
+			width: 100%;
 			height: auto;
 			background: #fff;
 			margin: 75px auto 0;
-			padding: 1px;
+			padding: 50px;
 
-			/*============================
-	.Thumbnail
-	============================*/
+			/*============================ .Thumbnail ============================*/
 			div.Thumbnail {
-				width: 600px;
-				height: 322px;
+				width: 100%;
+				height: auto;
 				background-size: cover;
 				background-position: center;
 				margin: 50px auto 15px;
 			}
+
 			img {
 				display: block;
-				width: 600px;
-				height: 322px;
+				width: 100%;
+				height: 100%;
 				margin: 50px auto 15px;
 			}
 
-			/*============================
-	#Single-title
-	============================*/
+			/*============================ #Single-title ============================*/
 			h1#Single-title {
-				width: 600px;
+				width: 100%;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 24px;
@@ -345,92 +342,72 @@ $sp: 320px;
 					margin-right: 20px;
 				}
 
-				dd.dd2 {}
 			}
 
 			h2 {
-				width: 600px;
+				width: 100%;
+				height: auto;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 20px;
-				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 40px 0 10px;
 
 			}
 
 			p {
-				width: 600px;
+				width: 100%;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 5px 0 5px;
 			}
+
 			a {
 				display: block;
-				width: 600px;
+				width: 100%;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
 			}
 
 			h3 {
-				width: 600px;
+				width: 100%;
+				height: auto;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 18px;
-				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 40px 0 10px;
 			}
 
-			/*============================
-	#Page-controll
-	============================*/
+			/*============================ #Page-controll ============================*/
+
 			div#Page-controll {
-				width: 220px;
+				width: 240px;
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
 				align-items: center;
-				margin: 30px auto 50px;
+				margin: 30px auto 0;
 
-				/*============================
-	#Prev-page
-	============================*/
-				a#Prev-page {
-					display: block;
-					width: 120px;
-					height: 30px;
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 16px;
-					line-height: 30px;
-					text-align: center;
-					color: #000;
-					background: #fff;
-					border: 1px solid #707070;
-				}
-
-				/*============================
-	#Next-page
-	============================*/
+				/*============================ #Prev-page及び#Next-page ============================*/
+				a#Prev-page,
 				a#Next-page {
 					display: block;
-					width: 120px;
+					width: 100px;
 					height: 30px;
 					font-family: Meiryo;
 					font-weight: normal;
-					font-size: 16px;
+					font-size: 14px;
 					line-height: 30px;
 					text-align: center;
 					color: #000;
@@ -440,381 +417,373 @@ $sp: 320px;
 			}
 		}
 
-		/*============================
-		#Content
-		============================*/
-		div#Content {
-			width: 850px;
-			background: rgba(255, 255, 255, 0.65);
-			margin: 40px 0;
+		.main-container {
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
 
-			/*============================
-		#Welcom
-		============================*/
-			div#Welcom {
-				width: 100%;
+			main {
+				width: 65%;
 				height: auto;
+				margin: 0;
 
-				h2 {
-					margin: 40px auto;
-				}
-
-				div {
-					display: flex;
+				/*============================ #Content ============================*/
+				div#Content {
 					width: 100%;
+					max-width: 850px;
+					background: rgba(255, 255, 255, 0.65);
+					margin: 0;
+					padding: 30px 60px;
 
-					img {
-						display: block;
-						width: 359px;
-						height: 226px;
-						margin: 0 0 0 78px;
+					/*============================ #Welcom ============================*/
+					div#Welcom {
+						width: 100%;
+						height: auto;
+
+						h2 {
+							padding: 30px 0 30px;
+						}
+
+						div {
+							display: flex;
+							align-items: center;
+							width: 100%;
+
+							img {
+								display: block;
+								width: 50%;
+								height: auto;
+								margin: 0;
+							}
+
+							p {
+								width: 50%;
+								padding-left: 35px;
+							}
+						}
 					}
 
-					p {
-						width: 272px;
-						margin: 20px 0 0 65px;
+					/*============================ #Business ============================*/
+					div#Business {
+						width: 100%;
+						height: auto;
+						margin: 0 auto;
+
+						h2 {
+							padding: 60px 0 30px;
+						}
+
+						ul {
+							display: flex;
+							justify-content: space-between;
+
+							li {
+								width: 30%;
+								height: 430px;
+								list-style: none;
+								background: #fff;
+								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+
+								img {
+									display: block;
+									width: 100px;
+									height: 100px;
+									margin: 25px auto;
+								}
+
+
+								h3 {
+									text-align: center;
+									margin: 20px auto 20px
+								}
+
+								p {
+									width: 160px;
+									margin: 0 auto;
+								}
+
+							}
+						}
 					}
-				}
-			}
 
-			/*============================
-		#Business
-		============================*/
-			div#Business {
-				width: 700px;
-				height: auto;
-				margin: 0 auto;
+					/*============================ #Achievement ============================*/
+					div#Achievement {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
 
-				h2 {
-					margin: 121px auto 36px;
-				}
-
-				ul {
-					display: flex;
-					justify-content: space-between;
-
-					li {
-						width: 200px;
-						height: 500px;
-						list-style: none;
-						background: #fff;
-						width: 200px;
-						box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+						h2 {
+							width: 100%;
+							padding: 60px 0 30px;
+							order: 1;
+						}
 
 						img {
 							display: block;
-							width: 150px;
-							height: 150px;
-							margin: 25px;
+							width: 50%;
+							height: auto;
+							order: 3;
 						}
 
+						div {
+							display: flex;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 2;
 
-						h3 {
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto 0;
+							}
+						}
+					}
+
+					/*============================ #Activity ============================*/
+					div#Activity {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
+
+						h2 {
+							width: 100%;
+							padding: 60px 0 30px;
+							order: 1;
+						}
+
+						img {
+							display: block;
+							width: 50%;
+							height: auto;
+							order: 2;
+						}
+
+						div {
+							display: flex;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 3;
+
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto 0;
+
+
+							}
+						}
+					}
+
+					/*============================ #Contact ============================*/
+					div#Contact {
+						h2 {
+							padding: 60px 0 30px;
+						}
+
+						p#Contact-alt {
 							text-align: center;
-							margin: 30px auto 20px
+							padding-bottom: 30px;
 						}
 
-						p {
-							width: 160px;
+						form {
+							width: 100%;
+							height: auto;
 							margin: 0 auto;
+
+							label {
+								display: flex;
+								flex-wrap: nowrap;
+								align-items: center;
+								justify-content: space-between;
+								width: 100%;
+								height: 70px;
+								width: 100%;
+								border-top: 1px solid #707070;
+								padding: 0 30px;
+
+								&:nth-last-of-type(1) {
+									align-items: normal;
+									height: 180px;
+								}
+
+								h3 {
+									width: 260px;
+									font-family: Meiryo;
+									font-weight: normal;
+									font-size: 16px;
+									line-height: 40px;
+									text-align: left;
+									color: #000;
+								}
+
+								input {
+									width: 400px;
+									height: 40px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+
+								h3 {
+									width: 400px;
+									height: 40px;
+									margin: 15px 0;
+									text-align: left;
+								}
+
+								textarea {
+									width: 400px;
+									height: 150px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+							}
+
+							button {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background: rgba(255, 255, 255, 0.65);
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								margin: 30px auto;
+							}
 						}
-
 					}
 				}
 			}
 
-			/*============================
-		#Achievement
-		============================*/
-			div#Achievement {
-				display: flex;
-				flex-wrap: wrap;
-				width: 700px;
-				margin: 0 auto;
+			/*============================ #SideNav ============================*/
+			div#SideNav {
+				position: sticky;
+				top: 0;
+				width: 30%;
+				max-width: 400px;
+				height: auto;
+				background: rgba(255, 255, 255, 0.65);
+				margin: 0;
+				padding: 30px;
 
 				h2 {
-					width: 100%;
-					margin: 90px auto 30px;
-					order: 1;
+					padding: 30px 0 30px;
 				}
 
 				img {
 					display: block;
-					width: 380px;
-					height: 240px;
-					order: 3;
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 2;
-					margin-left: 40px;
-
-					p {
-						margin: 45px auto;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 40px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Activity
-		============================*/
-			div#Activity {
-				display: flex;
-				flex-wrap: wrap;
-				width: 700px;
-				margin: 0 auto;
-
-				h2 {
-					width: 100%;
-					margin: 90px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 380px;
-					height: 240px;
-					order: 2;
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 3;
-					margin-left: 40px;
-
-					p {
-						margin: 45px auto;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 40px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Contact
-		============================*/
-			div#Contact {
-				h2 {
-					margin: 75px auto 35px;
-				}
-
-				p#Contact-alt {
-					text-align: center;
-					margin-bottom: 50px;
-				}
-
-				form {
-					width: 700px;
-					height: auto;
+					width: 200px;
+					height: 200px;
 					margin: 0 auto;
-					padding-top: 30px;
+				}
 
-					label {
+				/*============================ #Profile ============================*/
+				div#Profile {
+					width: 100%;
+					margin: 45px auto 0;
+
+					dl {
 						display: flex;
 						flex-wrap: nowrap;
-						align-items: center;
-						width: 100%;
-						height: 70px;
-						width: 700px;
-						border-top: 1px solid #707070;
+						width: 90%;
+						margin: 0 auto;
+						padding: 7px 0;
 
-						&:nth-last-of-type(1) {
-							align-items: normal;
-							height: 180px;
+						dt {
+							width: 64px;
 						}
 
-						h3 {
-							width: 260px;
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 16px;
-							line-height: 70px;
-							text-align: left;
-							color: #000;
-						}
-
-						input {
-							width: 400px;
-							height: 40px;
-							background: rgba(255, 255, 255, 0.65);
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
-
-						p {
-							width: 400px;
-							height: 40px;
-							margin: 15px 0;
-							text-align: left;
-						}
-
-						textarea {
-							width: 400px;
-							height: 150px;
-							background: rgba(255, 255, 255, 0.65);
-							;
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
-					}
-
-					button {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background: rgba(255, 255, 255, 0.65);
-						;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						margin: 35px auto 45px;
 					}
 				}
-			}
-		}
 
-		/*============================
-		#SideNav
-		============================*/
-		div#SideNav {
-			width: 400px;
-			height: 1060px;
-			background: rgba(255, 255, 255, 0.65);
-			margin: 0 0;
-			margin: 40px 0;
+				div {
+					height: auto;
+					margin: 0 auto;
 
-			h2 {
-				margin: 40px auto;
-			}
+					h3 {
+						font-family: Meiryo;
+						font-weight: normal;
+						font-size: 20px;
+						text-align: center;
+						color: #000;
+						padding: 60px 0 30px;
+					}
+				}
 
-			img {
-				display: block;
-				width: 200px;
-				height: 200px;
-				margin: 0 auto;
-			}
-
-			/*============================
-		#Profile
-		============================*/
-			div#Profile {
-				width: 300px;
-				margin: 45px auto 5px;
-
-				dl {
+				/*============================ #sns ============================*/
+				div#sns {
+					width: 100%;
+					height: auto;
+					margin: 1px auto;
 					display: flex;
-					flex-wrap: nowrap;
-					width: 100%;
-					margin: 15px auto;
+					flex-wrap: wrap;
+					justify-content: space-between;
 
-					dt {
-						width: 64px;
-					}
-
-					dd {}
-				}
-			}
-
-			div {
-				width: 300px;
-				height: auto;
-				margin: 0 auto 35px;
-
-				h3 {
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 20px;
-					text-align: center;
-					color: #000;
-					margin-bottom: 30px;
-				}
-
-				p {}
-			}
-
-			/*============================
-		#sns
-		============================*/
-			div#sns {
-				width: 300px;
-				height: auto;
-				margin: 0 auto 0;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-
-				h2 {
-					width: 100%;
-					margin: 35px auto 50px;
-				}
-
-				a {
-					display: block;
-					width: 80px;
-					height: 80px;
-
-					img {
+					h2 {
 						width: 100%;
-						height: 100%;
+						padding: 60px 0 30px;
+					}
+
+					a {
+						display: block;
+						width: 30%;
+						height: auto;
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
 					}
 				}
 			}
 		}
-	}
 
-	footer {
-		width: 100%;
-		height: 144px;
-		background: rgba(255, 255, 255, 0.65);
-		margin: 100px auto 0;
-
-		p {
+		footer {
 			width: 100%;
-			font-family: Meiryo;
-			font-weight: normal;
-			font-size: 20px;
-			line-height: 144px;
-			text-align: center;
-			color: #000;
+			height: 80px;
+			background: rgba(255, 255, 255, 0.65);
+			margin: 60px auto 0;
 
+			p {
+				width: 100%;
+				font-family: Meiryo;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 80px;
+				text-align: center;
+				color: #000;
+
+			}
 		}
 	}
-
 }
 
+/*--------------------------------------------------
+            TB
+--------------------------------------------------*/
 @include tab {
 	body h2 {
 		font-family: Meiryo;
@@ -829,113 +798,117 @@ $sp: 320px;
 	body p {
 		font-family: Meiryo;
 		font-weight: normal;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 32px;
 		text-align: left;
 		color: #000;
 
 	}
 
-	p#Contact-alt {
-		text-align: center;
-		margin-bottom: 50px;
-	}
-
-	body .sp {
-		display: none !important;
-	}
-
-	body dd.category {
+	dd.category {
+		display: block;
 		width: auto;
 		height: 25px;
-		padding: 0 5px;
-		margin: 5px;
+		padding: 0 10px;
 		background: #ffa7a7;
-		margin: 0;
 	}
 
 	div.bg {
 		position: fixed;
 		width: 100%;
-		height: 100%;
-		background: linear-gradient(-135deg, #e4a972, #9941d8);
+		height: 100lvh;
+		background: linear-gradient(-135deg, #1717e6, #00004d);
 		z-index: -1;
 
-		/*============================
-		#particles-js
-		============================*/
-		div#particles-js {}
 	}
 
-	header {
-		div {
-			img {
-				display: block;
-				width: 700px;
-				height: 239px;
-				margin: 0 auto;
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 90%;
+		max-width: 700px;
+		margin: 0 auto;
+
+		header {
+			width: 100%;
+
+			div {
+				img {
+					display: block;
+					width: 100%;
+					height: 443px;
+					margin: 0 auto;
+				}
 			}
-		}
 
-		nav {
-			width: 700px;
-			height: 100px;
-			margin: 0 auto;
-
-			ul {
+			nav {
 				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				height: 80px;
 				margin: 0 auto;
 
-				li {
+				ul {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: normal;
+					margin: 0 auto;
 
-					a {
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 20px;
-						text-align: center;
-						color: #fff;
-						margin: 0 40px;
+					li {
+						width: 25%;
+
+						a {
+							display: block;
+							width: 100%;
+							font-family: Meiryo;
+							font-weight: normal;
+							line-height: 80px;
+							font-size: 20px;
+							text-align: center;
+							color: #fff;
+							margin: 0;
+						}
 					}
 				}
 			}
+
+			div#Hum-menu {
+				display: none;
+			}
 		}
-	}
 
-	main {
-		display: flex !important;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 700px;
-		height: auto;
-		margin: 0 auto;
 
-		/*============================
-		#News
-		============================*/
+
+		/*============================ #News ============================*/
 		div#News {
 			width: 100%;
 			height: auto;
 			background: rgba(255, 255, 255, 0.65);
-			margin: 0 auto 0;
+			margin: 0 auto;
 			padding: 1px;
+			padding-bottom: 60px;
+			margin: 0 0 40px;
 
 			h2 {
 				margin: 35px auto 25px;
 			}
 
 			div {
-				width: 600px;
+				width: 75%;
+				min-width: 500px;
+				max-width: 700px;
 				height: auto;
 				margin: 0 auto;
 
 				dl {
+					display: flex;
+					flex-wrap: nowrap;
+					justify-content: center;
+					align-items: center;
 					width: 100%;
 					height: 60px;
-					width: 100%;
 					border-top: 1px solid #707070;
 
 					&:nth-last-of-type(1) {
@@ -951,20 +924,19 @@ $sp: 320px;
 						dd.dd1 {
 							font-family: Meiryo;
 							font-weight: normal;
-							font-size: 16px;
+							font-size: 14px;
 							text-align: center;
 							color: #000;
-
 						}
 
 						dd.category {
-							margin: 30px;
+							margin: 0 10px;
 						}
 
 						dt {
 							font-family: Meiryo;
 							font-weight: normal;
-							font-size: 16px;
+							font-size: 14px;
 							text-align: center;
 							color: #000;
 
@@ -974,29 +946,36 @@ $sp: 320px;
 			}
 		}
 
-		/*============================
-#achive-news
-============================*/
+		/*============================ #achive-news ============================*/
 		div#achive-news {
-			width: 600px;
+			width: 100%;
+			max-width: 750px;
 			height: auto;
 			margin: 0 auto;
 
 			h2 {
-				margin: 50px auto 30px;
+				padding: 40px 0 10px;
 			}
 
 			p {
 				width: 490px;
 				height: auto;
-				margin: 0 auto 30px;
+				margin: 0 auto 10px;
+			}
+
+			a {
+				color: black;
+
+				&:visited {
+					color: black;
+				}
 			}
 
 			#all-category {
 				width: 100%;
 				display: flex;
 				flex-wrap: wrap;
-				margin: 20px 0;
+				padding: 10px 0 20px;
 
 				dd {
 					display: inline-block;
@@ -1006,42 +985,46 @@ $sp: 320px;
 
 			dl {
 				width: 100%;
+				max-width: 750px;
 				height: 160px;
 				background: rgba(255, 255, 255, 0.65);
-				margin-bottom: 20px;
+				margin: 0 auto 20px;
 
 				a {
 					width: 100%;
 					height: 100%;
 					display: flex;
+					align-items: center;
 					flex-wrap: nowrap;
+					align-content: space-between;
 
-					div.news-img {
+					img {
 						display: block;
-						width: 241px;
-						height: 160px;
-						background-position: center;
-						background-size: cover;
+						width: auto;
+						height: 100%;
 						margin: 0;
 					}
 
 					div {
 						display: flex;
 						flex-wrap: wrap;
-						width: 320px;
-						margin: 30px auto;
+						align-content: space-between;
+						width: 64%;
+						height: 100%;
+						margin: 0 3%;
+						padding: 3% 0;
 
 						dt {
 							width: 100%;
-							margin-bottom: 18px;
 						}
 
-						div.time-date {
+						div {
 							display: flex;
 							flex-wrap: nowrap;
 							align-items: center;
-							width: auto;
-							margin: 0 0 0 30px;
+							width: 140px;
+							height: 25px;
+							margin: 0 0 0 20px;
 
 							img.time-img {
 								display: block;
@@ -1049,26 +1032,14 @@ $sp: 320px;
 								height: 16px;
 								margin-right: 7px;
 							}
-
-							dd {
-								font-family: Meiryo;
-								font-weight: normal;
-								font-size: 16px;
-								line-height: 16px;
-								text-align: center;
-								color: #000;
-
-							}
 						}
 					}
 				}
 			}
 
-			/*============================
-#Page-controll
-============================*/
+			/*============================ #Page-controll ============================*/
 			div#Page-controll {
-				width: 100%;
+				width: 700px;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
@@ -1077,21 +1048,18 @@ $sp: 320px;
 			}
 		}
 
-		/*============================
-#Single
-============================*/
+
+		/*============================ #Single ============================*/
 		div#Single {
-			width: 600px;
+			width: 100%;
 			height: auto;
 			background: #fff;
-			margin: 50px auto 0;
-			padding: 1px;
+			margin: 0 auto;
+			padding: 40px;
 
-			/*============================
-.Thumbnail
-============================*/
+			/*============================ .Thumbnail ============================*/
 			div.Thumbnail {
-				width: 500px;
+				width: 100%;
 				height: 322px;
 				background-size: cover;
 				background-position: center;
@@ -1100,117 +1068,91 @@ $sp: 320px;
 
 			img {
 				display: block;
-				width: 500px;
+				width: 100%;
 				height: 322px;
-				margin: 50px auto 15px;
+				padding: 50px 0 15px;
 			}
 
-			/*============================
-#Single-title
-============================*/
+			/*============================ #Single-title ============================*/
 			h1#Single-title {
-				width: 500px;
+				width: 100%;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 24px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 30px 0 10px;
 			}
 
 			dl {
 				display: flex;
 				flex-wrap: nowrap;
-				width: 500px;
+				width: 100%;
 				height: auto;
-				margin: 15px auto;
+				padding: 15px 0;
 
 				dd.category {
 					margin-right: 20px;
 				}
-
-				dd.dd2 {}
 			}
 
 			h2 {
-				width: 500px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 20px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
-
+				padding: 30px 0 10px;
 			}
 
 			p {
-				width: 500px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 5px 0;
 			}
+
 			a {
 				display: block;
-				width: 500px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 5px 0;
 			}
+
 			h3 {
-				width: 500px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 18px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 30px 0 10px;
 			}
 
-			/*============================
-#Page-controll
-============================*/
+			/*============================ #Page-controll ============================*/
 			div#Page-controll {
-				width: 220px;
+				width: 240px;
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
 				align-items: center;
-				margin: 30px auto 50px;
+				margin: 0 auto;
+				padding: 30px 0 50px;
 
-				/*============================
-#Prev-page
-============================*/
-				a#Prev-page {
-					display: block;
-					width: 120px;
-					height: 30px;
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 16px;
-					line-height: 30px;
-					text-align: center;
-					color: #000;
-					background: #fff;
-					border: 1px solid #707070;
-				}
-
-				/*============================
-#Next-page
-============================*/
+				/*============================ #Prev-page及び#Next-page ============================*/
+				a#Prev-page,
 				a#Next-page {
 					display: block;
-					width: 120px;
+					width: 100px;
 					height: 30px;
 					font-family: Meiryo;
 					font-weight: normal;
@@ -1220,395 +1162,393 @@ $sp: 320px;
 					color: #000;
 					background: #fff;
 					border: 1px solid #707070;
+					padding: 0;
 				}
 			}
 		}
 
-
-		/*============================
-		#Content
-		============================*/
-		div#Content {
+		.main-container {
 			width: 100%;
-			background: rgba(255, 255, 255, 0.65);
-			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 
-			/*============================
-		#Welcom
-		============================*/
-			div#Welcom {
+			main {
 				width: 100%;
 				height: auto;
+				margin: 0;
 
-				h2 {
-					margin: 48px auto 42px;
-				}
-
-				div {
-					display: flex;
+				/*============================ #Content ============================*/
+				div#Content {
 					width: 100%;
+					background: rgba(255, 255, 255, 0.65);
+					margin: 0;
+					padding: 60px 60px;
 
-					img {
-						display: block;
-						width: 359px;
-						height: 226px;
-						margin: 0;
+					/*============================ #Welcom ============================*/
+					div#Welcom {
+						width: 100%;
+						height: auto;
+
+						h2 {
+							padding: 0 0 30px;
+						}
+
+						div {
+							display: flex;
+							align-items: center;
+							width: 100%;
+
+							img {
+								display: block;
+								width: 50%;
+								height: auto;
+								margin: 0;
+							}
+
+							p {
+								width: 50%;
+								padding-left: 35px;
+							}
+						}
 					}
 
-					p {
-						width: 272px;
-						margin: 20px 0 0 32px;
+					/*============================ #Business ============================*/
+					div#Business {
+						width: 100%;
+						height: auto;
+						margin: 0 auto;
+
+						h2 {
+							padding: 60px 0 30px;
+							;
+						}
+
+						ul {
+							display: flex;
+							justify-content: space-between;
+
+							li {
+								width: 30%;
+								min-height: 430px;
+								list-style: none;
+								background: #fff;
+								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+
+								img {
+									display: block;
+									width: 100px;
+									height: 100px;
+									margin: 25px auto;
+								}
+
+
+								h3 {
+									text-align: center;
+									margin: 20px auto 20px
+								}
+
+								p {
+									width: 100%;
+									margin: 0 auto;
+									padding: 0 20px;
+								}
+
+							}
+						}
 					}
-				}
-			}
 
-			/*============================
-		#Business
-		============================*/
-			div#Business {
-				width: 650px;
-				height: auto;
-				margin: 0 auto;
+					/*============================ #Achievement ============================*/
+					div#Achievement {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
 
-				h2 {
-					margin: 121px auto 36px;
-				}
-
-				ul {
-					display: flex;
-					justify-content: space-between;
-
-					li {
-						width: 200px;
-						height: 500px;
-						list-style: none;
-						background: #fff;
-						box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+						h2 {
+							width: 100%;
+							padding: 60px 0 30px;
+							order: 1;
+						}
 
 						img {
 							display: block;
-							width: 150px;
-							height: 150px;
-							margin: 25px;
+							width: 50%;
+							height: auto;
+							order: 3;
 						}
 
-						h3 {
-							text-align: center;
-							margin: 30px auto 20px
+						div {
+							display: flex;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 2;
+
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto 0;
+							}
 						}
-
-						p {
-							width: 160px;
-							margin: 0 auto;
-						}
-
-					}
-				}
-			}
-
-			/*============================
-		#Achievement
-		============================*/
-			div#Achievement {
-				display: flex;
-				flex-wrap: wrap;
-				width: 700px;
-				margin: 0 auto;
-
-				h2 {
-					width: 100%;
-					margin: 90px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 380px;
-					height: 240px;
-					order: 3;
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 2;
-					margin-left: 40px;
-
-					p {
-						margin: 45px auto;
 					}
 
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 40px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Activity
-		============================*/
-			div#Activity {
-				display: flex;
-				flex-wrap: wrap;
-				width: 700px;
-				margin: 0 auto;
-
-				h2 {
-					width: 100%;
-					margin: 60px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 380px;
-					height: 240px;
-					order: 2;
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 3;
-					margin-left: 10px;
-
-					p {
-						margin: 45px auto;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 40px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Contact
-		============================*/
-			div#Contact {
-				h2 {
-					margin: 75px auto 35px;
-				}
-
-				p#Contact-alt {
-					text-align: center;
-					margin-bottom: 50px;
-				}
-
-				form {
-					width: 600px;
-					height: auto;
-					margin: 0 auto;
-
-					label {
+					/*============================ #Activity ============================*/
+					div#Activity {
 						display: flex;
-						flex-wrap: nowrap;
-						align-items: center;
-						width: 550px;
-						height: 70px;
-						border-top: 1px solid #707070;
+						flex-wrap: wrap;
+						width: 100%;
 						margin: 0 auto;
 
-						&:nth-last-of-type(1) {
-							align-items: normal;
-							height: 180px;
+						h2 {
+							width: 100%;
+							padding: 60px 0 30px;
+							order: 1;
 						}
 
-						h3 {
-							width: 260px;
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 16px;
-							line-height: 70px;
-							text-align: left;
-							color: #000;
+						img {
+							display: block;
+							width: 50%;
+							height: auto;
+							order: 2;
 						}
 
-						input {
-							width: 400px;
-							height: 40px;
-							background: rgba(255, 255, 255, 0.65);
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
+						div {
+							display: flex;
+							flex-wrap: wrap;
+							align-content: center;
+							width: 50%;
+							height: auto;
+							order: 3;
 
-						p {
-							width: 400px;
-							height: 40px;
-							margin: 15px 0;
-							text-align: left;
-						}
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto 0;
 
-						textarea {
-							width: 400px;
-							height: 150px;
-							background: rgba(255, 255, 255, 0.65);
-							border: 1px solid #707070;
-							margin: 15px 0;
+
+							}
 						}
 					}
 
-					button {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background: rgba(255, 255, 255, 0.65);
-						;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						margin: 35px auto 45px;
+					/*============================ #Contact ============================*/
+					div#Contact {
+						h2 {
+							padding: 60px 0 30px;
+						}
+
+						p#Contact-alt {
+							text-align: center;
+							padding-bottom: 30px;
+						}
+
+						form {
+							width: 100%;
+							height: auto;
+							margin: 0 auto;
+
+							label {
+								display: flex;
+								flex-wrap: nowrap;
+								align-items: center;
+								justify-content: space-between;
+								width: 100%;
+								height: 70px;
+								width: 100%;
+								border-top: 1px solid #707070;
+								padding: 0 30px;
+
+								&:nth-last-of-type(1) {
+									align-items: normal;
+									height: 180px;
+								}
+
+								h3 {
+									width: 260px;
+									font-family: Meiryo;
+									font-weight: normal;
+									font-size: 16px;
+									line-height: 40px;
+									text-align: left;
+									color: #000;
+								}
+
+								input {
+									width: 400px;
+									height: 40px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+
+								h3 {
+									width: 400px;
+									height: 40px;
+									margin: 15px 0;
+									text-align: left;
+								}
+
+								textarea {
+									width: 400px;
+									height: 150px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+									margin: 15px 0;
+								}
+							}
+
+							button {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background: rgba(255, 255, 255, 0.65);
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								margin: 30px auto 0;
+							}
+						}
 					}
 				}
 			}
-		}
 
-		/*============================
-		#SideNav
-		============================*/
-		div#SideNav {
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-			height: auto;
-			background: rgba(255, 255, 255, 0.65);
-			margin: 0 0;
-			margin: 0;
-
-			h2 {
-				width: 100%;
-				margin: 65px auto 14px;
-			}
-
-			img {
-				display: block;
-				width: 200px;
-				height: 200px;
-				margin: 0 auto;
-			}
-
-			/*============================
-		#Profile
-		============================*/
-			div#Profile {
-				width: 300px;
-				margin: 45px auto 5px;
-
-				dl {
-					display: flex;
-					flex-wrap: nowrap;
-					width: 100%;
-					margin: 15px auto;
-
-					dt {
-						width: 64px;
-					}
-
-					dd {}
-				}
-			}
-
-			div {
-				width: 100%;
-				height: auto;
-				margin: 35px auto 30px;
-
-				h3 {
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 20px;
-					text-align: center;
-					color: #000;
-					margin-bottom: 30px;
-				}
-
-				p {
-					width: 300px;
-					margin: 0 auto;
-				}
-			}
-
-			/*============================
-		#sns
-		============================*/
-			div#sns {
-				width: 350px;
-				height: auto;
-				margin: 0 auto 60px;
+			/*============================ #SideNav ============================*/
+			div#SideNav {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-between;
+				justify-content: center;
+				width: 100%;
+				height: auto;
+				background: rgba(255, 255, 255, 0.65);
+				margin: 0;
+				padding: 1px 30px;
 
 				h2 {
 					width: 100%;
-					margin: 35px auto 50px;
+					padding-bottom: 30px;
 				}
 
-				a {
+				img {
 					display: block;
-					width: 80px;
-					height: 80px;
+					width: 100px;
+					height: 100px;
+					margin: 0;
+					margin-right: 10%;
+				}
 
-					img {
+				/*============================ #Profile ============================*/
+				div#Profile {
+					width: 55%;
+					padding: 0 15% 0 0;
+
+					dl {
+						display: flex;
+						flex-wrap: nowrap;
 						width: 100%;
-						height: 100%;
+						margin: 15px 0;
+
+						dt {
+							width: 64px;
+						}
+					}
+				}
+
+				div {
+					height: auto;
+					margin: 0 0 30px;
+
+					h3 {
+						font-family: Meiryo;
+						font-weight: normal;
+						font-size: 20px;
+						text-align: center;
+						color: #000;
+						padding: 30px 0;
+					}
+
+					p {
+						margin: 0;
+						padding: 0 10% 10px;
+					}
+				}
+
+				/*============================ #sns ============================*/
+				div#sns {
+					width: 100%;
+					height: auto;
+					margin: 0 auto 0;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+					padding: 0 20%;
+
+					h2 {
+						width: 100%;
+						padding: 0 0 30px;
+					}
+
+					a {
+						display: block;
+						width: 20%;
+						height: auto;
+
+						img {
+							width: 100%;
+							height: 100%;
+							padding: 0;
+						}
 					}
 				}
 			}
 		}
-	}
 
-	footer {
-		width: 100%;
-		height: 144px;
-		background: rgba(255, 255, 255, 0.65);
-		margin: 100px auto 0;
-
-		p {
+		footer {
 			width: 100%;
-			font-family: Meiryo;
-			font-weight: normal;
-			font-size: 20px;
-			line-height: 144px;
-			text-align: center;
-			color: #000;
+			height: 70px;
+			background: rgba(255, 255, 255, 0.65);
 
+			p {
+				width: 100%;
+				font-family: Meiryo;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 70px;
+				text-align: center;
+				color: #000;
+
+			}
 		}
 	}
 }
 
+/*--------------------------------------------------
+            SP
+--------------------------------------------------*/
 @include sp {
 	body h2 {
 		font-family: Meiryo;
 		font-weight: normal;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		text-align: center;
-		color: #000;
+		color: #fff;
 
 	}
 
@@ -1618,7 +1558,7 @@ $sp: 320px;
 		font-size: 14px;
 		line-height: 28px;
 		text-align: left;
-		color: #000;
+		color: #fff;
 
 	}
 
@@ -1638,126 +1578,129 @@ $sp: 320px;
 
 	div.bg {
 		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
-		height: 100%;
-		background: linear-gradient(-135deg, #e4a972, #9941d8);
+		height: 100lvh;
+		background: linear-gradient(-135deg, #000080, #9941d8);
 		z-index: -1;
-
-		/*============================
-		#particles-js
-		============================*/
-		div#particles-js {}
 	}
 
-	header {
-		padding-top: 85px;
-		div {
-			img {
-				display: block;
-				width: 320px;
-				height: 109px;
-				margin: 0 auto;
-			}
-		}
+	.container {
+		width: 100%;
+		min-width: 320px;
+		margin: 0 auto;
+		padding: 1px 20px;
 
-		nav {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			height: 100vh;
-			margin: 0 auto;
+		header {
 			padding-top: 85px;
-			background: linear-gradient(-135deg, #e4a972, #9941d8);
-			transform: translateY(-100vh);
-			transition: all 0.3s;
-			&.active{
-				transform: translateX(0);
-			}
-			ul {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-wrap: wrap;
-				margin: 0 auto;
 
-				li {
+			div {
+				img {
+					display: block;
 					width: 100%;
-					height: 40px;
-					a {
-						display: block;
+					height: 109px;
+					margin: 0 auto;
+				}
+			}
+
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				margin: 0 auto;
+				padding-top: 85px;
+				background: linear-gradient(-135deg, #000080, #9941d8);
+				transform: translateY(-100vh);
+				transition: all 0.3s;
+
+				&.active {
+					transform: translateX(0);
+				}
+
+				ul {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-wrap: wrap;
+					margin: 0 auto;
+
+					li {
 						width: 100%;
 						height: 40px;
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 20px;
-						line-height: 40px;
-						text-align: center;
-						color: #fff;
-						margin: 0;
+
+						a {
+							display: block;
+							width: 100%;
+							height: 40px;
+							font-family: Meiryo;
+							font-weight: normal;
+							font-size: 20px;
+							line-height: 40px;
+							text-align: center;
+							color: #fff;
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			div#Hum-menu {
+				position: fixed;
+				top: 20px;
+				right: calc(10% - 22.5px);
+				width: 45px;
+				height: 45px;
+
+				span {
+					position: absolute;
+					left: 10px;
+					width: 25px;
+					height: 4px;
+					border-radius: 2px;
+					background: #fff;
+					transition: all .3s;
+
+					&:nth-of-type(1) {
+						top: 10px;
+					}
+
+					&:nth-of-type(2) {
+						top: 20px;
+					}
+
+					&:nth-of-type(3) {
+						top: 30px;
+					}
+
+					&#span1.active {
+						top: 20px;
+						transform: rotate(225deg);
+					}
+
+					&#span2.active {
+						display: none;
+					}
+
+					&#span3.active {
+						top: 20px;
+						transform: rotate(-225deg);
 					}
 				}
 			}
 		}
 
-		div#Hum-menu {
-			position: fixed;
-			top: 20px;
-			left: calc( 50% - 22.5px );
-			width: 45px;
-			height: 45px;
-
-			span {
-				position: absolute;
-				left: 10px;
-				width: 25px;
-				height: 4px;
-				border-radius: 2px;
-				background: #fff;
-				transition: all .3s;
-				&:nth-of-type(1){
-					top: 10px;
-				}
-				&:nth-of-type(2){
-					top: 20px;
-				}
-				&:nth-of-type(3){
-					top: 30px;
-				}
-				&#span1.active{
-					top: 20px;
-					transform: rotate(225deg);
-				}
-				&#span2.active{
-					display: none;
-				}
-				&#span3.active{
-					top: 20px;
-					transform: rotate(-225deg);
-				}
-			}
-		}
-	}
-
-	main {
-		display: flex !important;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 320px;
-		height: auto;
-		margin: 0 auto;
-
-		/*============================
-		#News
-		============================*/
+		/*============================ #News ============================*/
 		div#News {
 			width: 100%;
 			height: auto;
-			background: rgba(255, 255, 255, 0.65);
 			margin: 0 auto 0;
-			padding: 1px 20px;
+			padding: 0 20px;
 
 			h2 {
-				margin: 35px auto 25px;
+				padding: 30px 0 10px;
 			}
 
 			div {
@@ -1770,6 +1713,7 @@ $sp: 320px;
 					width: 100%;
 					height: auto;
 					border-top: 1px solid #707070;
+
 					&:nth-last-of-type(1) {
 						border-bottom: 1px solid #707070;
 					}
@@ -1779,20 +1723,23 @@ $sp: 320px;
 						height: 100%;
 						display: flex;
 						flex-wrap: wrap;
-						justify-content: flex-start;
+						justify-content: center;
 						align-items: center;
 
 						dd.dd1 {
+							width: auto;
 							font-family: Meiryo;
 							font-weight: normal;
 							font-size: 14px;
 							text-align: center;
-							color: #000;
+							color: #fff;
 							margin: 5px 0;
 						}
 
 						dd.category {
-							margin: 0 5px;
+							width: auto;
+							margin: 0;
+							margin-left: 10px;
 						}
 
 						dt {
@@ -1801,29 +1748,27 @@ $sp: 320px;
 							font-weight: normal;
 							font-size: 14px;
 							text-align: center;
-							color: #000;
-							margin-bottom: 10px;
-							padding: 0 10px;
+							color: #fff;
+							margin: 5px 0;
+							padding: 0;
 						}
 					}
 				}
 			}
 		}
 
-		/*============================
-#achive-news
-============================*/
+		/*============================ #achive-news ============================*/
 		div#achive-news {
-			width: 300px;
+			width: 100%;
 			height: auto;
 			margin: 0 auto;
 
 			h2 {
-				margin: 50px auto 30px;
+				margin: 20px auto 10px;
 			}
 
 			p {
-				width: 280px;
+				width: 100%;
 				height: auto;
 				margin: 0 auto 20px;
 			}
@@ -1843,8 +1788,8 @@ $sp: 320px;
 			dl {
 				width: 100%;
 				height: auto;
+				margin-bottom: 40px;
 				background: rgba(255, 255, 255, 0.65);
-				margin-bottom: 20px;
 
 				a {
 					width: 100%;
@@ -1852,10 +1797,10 @@ $sp: 320px;
 					display: flex;
 					flex-wrap: wrap;
 
-					div.news-img {
+					img {
 						display: block;
-						width: 300px;
-						height: 200px;
+						width: 100%;
+						height: auto;
 						background-position: center;
 						background-size: cover;
 						margin: 0;
@@ -1904,9 +1849,7 @@ $sp: 320px;
 				}
 			}
 
-			/*============================
-#Page-controll
-============================*/
+			/*============================ #Page-controll ============================*/
 			div#Page-controll {
 				width: 100%;
 				display: flex;
@@ -1915,9 +1858,7 @@ $sp: 320px;
 				align-items: center;
 				margin: 30px auto 50px;
 
-				/*============================
-#Prev-page
-============================*/
+				/*============================ #Prev-page ============================*/
 				a#Prev-page {
 					display: block;
 					width: 120px;
@@ -1932,9 +1873,7 @@ $sp: 320px;
 					border: 1px solid #707070;
 				}
 
-				/*============================
-#Next-page
-============================*/
+				/*============================ #Next-page ============================*/
 				a#Next-page {
 					display: block;
 					width: 120px;
@@ -1951,22 +1890,18 @@ $sp: 320px;
 			}
 		}
 
-		/*============================
-#Single
-============================*/
+		/*============================ #Single ============================*/
 		div#Single {
-			width: 320px;
+			width: 100%;
 			height: auto;
 			background: #fff;
 			margin: 0 auto;
-			padding: 1px;
+			padding: 20px;
 
-			/*============================
-.Thumbnail
-============================*/
+			/*============================ .Thumbnail ============================*/
 			div.Thumbnail {
-				width: 300px;
-				height: 183px;
+				width: 100%;
+				height: auto;
 				background-size: cover;
 				background-position: center;
 				margin: 50px auto 15px;
@@ -1974,119 +1909,95 @@ $sp: 320px;
 
 			img {
 				display: block;
-				width: 300px;
-				height: 183px;
+				width: 100%;
+				height: auto;
 				margin: 50px auto 15px;
 			}
 
-			/*============================
-#Single-title
-============================*/
+			/*============================ #Single-title ============================*/
 			h1#Single-title {
-				width: 300px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 24px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 			}
 
 			dl {
 				display: flex;
 				flex-wrap: nowrap;
-				width: 280px;
 				height: auto;
-				margin: 15px auto;
+				padding: 20px 0 5;
 
 				dd.category {
 					margin-right: 20px;
+					font-size: 12px;
 				}
 
-				dd.dd2 {}
+				dd.dd2 {
+					font-size: 12px;
+				}
 			}
 
 			h2 {
-				width: 300px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 20px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 
 			}
 
 			p {
-				width: 280px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 5px 0;
 			}
 
 			a {
 				display: block;
-				width: 280px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 16px;
 				line-height: 32px;
 				text-align: left;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 			}
 
 			h3 {
-				width: 300px;
 				font-family: Meiryo;
 				font-weight: normal;
 				font-size: 18px;
 				line-height: 32px;
 				text-align: center;
 				color: #000;
-				margin: 15px auto;
+				padding: 20px 0 5px;
 			}
 
-			/*============================
-#Page-controll
-============================*/
+			/*============================ #Page-controll ============================*/
 			div#Page-controll {
-				width: 220px;
+				width: 240px;
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
 				align-items: center;
-				margin: 30px auto 50px;
+				margin: auto;
+				padding: 30px 0 50px;
 
-				/*============================
-#Prev-page
-============================*/
-				a#Prev-page {
-					display: block;
-					width: 120px;
-					height: 30px;
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 16px;
-					line-height: 30px;
-					text-align: center;
-					color: #000;
-					background: #fff;
-					border: 1px solid #707070;
-				}
-
-				/*============================
-#Next-page
-============================*/
+				/*============================ #Prev-page及び#Next-page ============================*/
+				a#Prev-page,
 				a#Next-page {
 					display: block;
-					width: 120px;
+					width: 100px;
 					height: 30px;
 					font-family: Meiryo;
 					font-weight: normal;
@@ -2096,411 +2007,386 @@ $sp: 320px;
 					color: #000;
 					background: #fff;
 					border: 1px solid #707070;
+					padding: 0;
 				}
 			}
 		}
 
-		/*============================
-		#Content
-		============================*/
-		div#Content {
-			width: 100%;
-			background: rgba(255, 255, 255, 0.65);
-			;
-			margin: 0;
-
-			/*============================
-		#Welcom
-		============================*/
-			div#Welcom {
+		.main-container {
+			main {
+				display: flex !important;
+				flex-wrap: wrap;
+				justify-content: space-between;
 				width: 100%;
 				height: auto;
+				margin: 0 auto;
+				padding: 0;
 
-				h2 {
-					margin: 48px auto 22px;
-				}
 
-				div {
-					display: flex;
-					flex-wrap: wrap;
+				/*============================ #Content ============================*/
+				div#Content {
 					width: 100%;
+					margin: 0;
+					padding: 1px;
 
-					img {
-						display: block;
-						width: 320px;
-						height: 202px;
-						margin: 0;
+					/*============================ #Welcom ============================*/
+					div#Welcom {
+						width: 100%;
+						height: auto;
+
+						h2 {
+							padding: 40px 0 15px;
+						}
+
+						div {
+							display: flex;
+							flex-wrap: wrap;
+							width: 100%;
+
+							img {
+								display: block;
+								width: 100%;
+								height: auto;
+								margin: 0;
+							}
+
+							p {
+								width: 100%;
+								padding: 10px 0 10px;
+							}
+						}
 					}
 
-					p {
-						width: 270px;
-						margin: 20px auto 32px;
+					/*============================ #Business ============================*/
+					div#Business {
+						width: 100%;
+						height: auto;
+						margin: 0 auto;
+
+						h2 {
+							padding: 30px 0 15px;
+						}
+
+						ul {
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: space-between;
+
+							li {
+								display: flex;
+								flex-wrap: wrap;
+								justify-content: center;
+								width: 100%;
+								height: auto;
+								list-style: none;
+								background: #fff;
+								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
+								margin: 0 auto 30px;
+
+								img {
+									display: block;
+									width: 60px;
+									height: 60px;
+									margin: 10px;
+								}
+
+
+
+								h3 {
+									width: auto;
+									text-align: center;
+									margin: 30px 10px 20px 20px;
+								}
+
+								p {
+									width: 60%;
+									margin: 0 auto 20px;
+									color: #000;
+								}
+
+							}
+						}
+					}
+
+					/*============================ #Achievement ============================*/
+					div#Achievement {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
+
+						h2 {
+							width: 100%;
+							margin: 40px auto 15px;
+							order: 1;
+						}
+
+						img {
+							display: block;
+							width: 100%;
+							height: auto;
+							order: 2;
+
+							&.pc {
+								display: none;
+							}
+						}
+
+						div {
+							width: 100%;
+							height: auto;
+							order: 3;
+							padding: 10px 0;
+
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto;
+
+
+							}
+						}
+					}
+
+					/*============================ #Activity ============================*/
+					div#Activity {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						margin: 0 auto;
+
+						h2 {
+							width: 100%;
+							margin: 40px auto 10px;
+							order: 1;
+						}
+
+						img {
+							display: block;
+							width: 100%;
+							height: auto;
+							order: 2;
+
+							&.pc {
+								display: none !important;
+							}
+						}
+
+						div {
+							width: 100%;
+							height: auto;
+							order: 3;
+							padding: 10px 0;
+
+							a {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background-color: #fff;
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								font-family: Meiryo;
+								font-weight: normal;
+								font-size: 14px;
+								line-height: 28px;
+								text-align: center;
+								color: #000;
+								margin: 10px auto;
+
+
+							}
+						}
+					}
+
+					/*============================ #Contact ============================*/
+					div#Contact {
+						width: 100%;
+
+						h2 {
+							margin: 40px auto 10px;
+						}
+
+						p#Contact-alt {
+							text-align: left;
+							width: 100%;
+							margin: 0 auto;
+							line-height: 1.6;
+							font-size: 12px;
+						}
+
+						form {
+							width: 100%;
+							height: auto;
+							margin: 0 auto;
+
+							label {
+								display: flex;
+								flex-wrap: wrap;
+								align-items: center;
+								width: 100%;
+								height: auto;
+								margin: 0 auto;
+
+								&:nth-last-of-type(1) {
+									align-items: normal;
+									min-height: 80px;
+									height: auto;
+								}
+
+								input {
+									width: 100%;
+									height: 40px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+								}
+
+								h3 {
+									width: 100%;
+									padding: 15px 0;
+									color: #fff;
+									text-align: center;
+
+									&#Semdtext {
+										width: 240px;
+										margin: 10px auto;
+									}
+								}
+
+								textarea {
+									display: block;
+									width: 100%;
+									height: 150px;
+									background: rgba(255, 255, 255, 0.65);
+									border: 1px solid #707070;
+								}
+							}
+
+							button {
+								display: block;
+								width: 60px;
+								height: 28px;
+								background: rgba(255, 255, 255, 0.65);
+								box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+								margin: 20px auto;
+							}
+						}
 					}
 				}
 			}
 
-			/*============================
-		#Business
-		============================*/
-			div#Business {
-				width: 300px;
+			/*============================ #SideNav ============================*/
+			div#SideNav {
+				display: flex;
+				flex-wrap: wrap;
+				align-content: flex-start;
+				width: 100%;
 				height: auto;
-				margin: 0 auto;
+				margin: 0 0;
+				padding: 0 30px;
 
 				h2 {
-					margin: 0 auto 36px;
+					width: 100%;
+					margin: 40px auto 10px;
 				}
 
-				ul {
+				img {
+					display: block;
+					width: 50%;
+					height: auto;
+					margin: 0 auto;
+				}
+
+				/*============================ #Profile ============================*/
+				div#Profile {
+					width: 100%;
+
+					dl {
+						display: flex;
+						flex-wrap: nowrap;
+						width: 100%;
+						margin: auto;
+
+						dt {
+							width: 50px;
+							color: #fff;
+						}
+
+						dd {
+							font-size: 14px;
+							color: #fff;
+						}
+					}
+				}
+
+				div {
+					width: 100%;
+					height: auto;
+					margin: 15px auto;
+
+					h3 {
+						font-family: Meiryo;
+						font-weight: normal;
+						font-size: 20px;
+						text-align: center;
+						color: #fff;
+						margin-bottom: 10px;
+					}
+
+					p {
+						margin: 0 auto;
+					}
+				}
+
+				/*============================ #sns ============================*/
+				div#sns {
+					width: 100%;
+					height: auto;
+					margin: 0 auto 30px;
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: space-between;
 
-					li {
-						display: flex;
-						flex-wrap: wrap;
-						width: 280px;
-						height: 206px;
-						list-style: none;
-						background: #fff;
-						box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
-						margin: 0 auto 40px;
+					h2 {
+						width: 100%;
+						margin: 20px auto 10px;
+					}
+
+					a {
+						display: block;
+						width: 30%;
+						height: auto;
 
 						img {
-							display: block;
-							width: 60px;
-							height: 60px;
-							margin: 10px;
-						}
-
-
-
-						h3 {
-							width: calc(100% - 80px);
-							text-align: center;
-							margin: 30px auto 20px;
-						}
-
-						p {
-							width: 240px;
-							margin: 0 auto 20px;
-						}
-
-					}
-				}
-			}
-
-			/*============================
-		#Achievement
-		============================*/
-			div#Achievement {
-				display: flex;
-				flex-wrap: wrap;
-				width: 320px;
-				margin: 0 auto;
-
-				h2 {
-					width: 100%;
-					margin: 60px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 320px;
-					height: 202px;
-					order: 2;
-
-					&.pc {
-						display: none;
-					}
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 3;
-					margin: 30px auto;
-
-					p {
-						margin: 0 auto 30px;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 30px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Activity
-		============================*/
-			div#Activity {
-				display: flex;
-				flex-wrap: wrap;
-				width: 320px;
-				margin: 0 auto;
-
-				h2 {
-					width: 100%;
-					margin: 30px auto 30px;
-					order: 1;
-				}
-
-				img {
-					display: block;
-					width: 320px;
-					height: 202px;
-					order: 2;
-
-					&.pc {
-						display: none !important;
-					}
-				}
-
-				div {
-					width: 280px;
-					height: auto;
-					order: 3;
-					margin: 30px auto;
-
-					p {
-						margin: 0 auto 30px;
-					}
-
-					a {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background-color: #fff;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						font-family: Meiryo;
-						font-weight: normal;
-						font-size: 14px;
-						line-height: 28px;
-						text-align: center;
-						color: #000;
-						margin: 30px auto;
-
-
-					}
-				}
-			}
-
-			/*============================
-		#Contact
-		============================*/
-			div#Contact {
-				width: 100%;
-
-				h2 {
-					margin: 45px auto 35px;
-				}
-
-				p#Contact-alt {
-					text-align: center;
-					width: 280px;
-					margin: 0 auto 30px;
-				}
-
-				form {
-					width: 280px;
-					height: auto;
-					margin: 0 auto;
-
-					label {
-						display: flex;
-						flex-wrap: wrap;
-						align-items: center;
-						width: 260px;
-						height: 105px;
-						margin: 0 auto;
-
-						&:nth-last-of-type(1) {
-							align-items: normal;
-							min-height: 105px;
-							height: auto;
-						}
-
-						h3 {
 							width: 100%;
-							font-family: Meiryo;
-							font-weight: normal;
-							font-size: 16px;
-							line-height: 20px;
-							text-align: center;
-							color: #000;
-							margin: 10px auto;
+							height: 100%;
 						}
-
-						input {
-							width: 400px;
-							height: 40px;
-							background: rgba(255, 255, 255, 0.65);
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
-
-						p {
-							width: 300px;
-							height: 40px;
-							margin: 10px 0;
-							text-align: center;
-
-							&#Semdtext {
-								width: 240px;
-								margin: 10px auto;
-							}
-						}
-
-						textarea {
-							display: block;
-							width: 400px;
-							height: 150px;
-							background: rgba(255, 255, 255, 0.65);
-							;
-							border: 1px solid #707070;
-							margin: 15px 0;
-						}
-					}
-
-					button {
-						display: block;
-						width: 60px;
-						height: 28px;
-						background: rgba(255, 255, 255, 0.65);
-						;
-						box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-						margin: 35px auto 45px;
 					}
 				}
 			}
 		}
 
-		/*============================
-		#SideNav
-		============================*/
-		div#SideNav {
-			display: flex;
-			flex-wrap: wrap;
+		footer {
 			width: 100%;
-			height: auto;
-			background: rgba(255, 255, 255, 0.65);
-			margin: 0 0;
-			padding: 0 30px;
+			height: 50px;
 
-			h2 {
+			p {
 				width: 100%;
-				margin: 65px auto 14px;
+				font-family: Meiryo;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 50px;
+				text-align: center;
+				color: #fff;
+
 			}
-
-			img {
-				display: block;
-				width: 200px;
-				height: 200px;
-				margin: 0 auto;
-			}
-
-			/*============================
-		#Profile
-		============================*/
-			div#Profile {
-				width: 100%;
-				margin: 45px auto 5px;
-
-				dl {
-					display: flex;
-					flex-wrap: nowrap;
-					width: 100%;
-					margin: 15px auto;
-
-					dt {
-						width: 64px;
-					}
-
-					dd {
-						font-size: 14px;
-					}
-				}
-			}
-
-			div {
-				width: 100%;
-				height: auto;
-				margin: 35px auto 30px;
-
-				h3 {
-					font-family: Meiryo;
-					font-weight: normal;
-					font-size: 20px;
-					text-align: center;
-					color: #000;
-					margin-bottom: 30px;
-				}
-
-				p {
-					margin: 0 auto;
-				}
-			}
-
-			/*============================
-		#sns
-		============================*/
-			div#sns {
-				width: 280px;
-				height: auto;
-				margin: 0 auto 40px;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-
-				h2 {
-					width: 100%;
-					margin: 25px auto 30px;
-				}
-
-				a {
-					display: block;
-					width: 80px;
-					height: 80px;
-
-					img {
-						width: 100%;
-						height: 100%;
-					}
-				}
-			}
-		}
-	}
-
-	footer {
-		width: 100%;
-		height: 144px;
-		background: rgba(255, 255, 255, 0.65);
-		margin: 100px auto 0;
-
-		p {
-			width: 100%;
-			font-family: Meiryo;
-			font-weight: normal;
-			font-size: 20px;
-			line-height: 144px;
-			text-align: center;
-			color: #000;
-
 		}
 	}
 }

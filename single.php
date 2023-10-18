@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<div class="main-container">
 <main>
     <div id="Content">
         <!--コンテンツ取得-->
@@ -62,8 +62,9 @@
             </form>
         </div>
     </div>
+    </main>
     <?php get_sidebar(); ?>
-</main>
+
 
 
 <?php get_footer(); ?>

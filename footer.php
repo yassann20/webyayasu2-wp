@@ -9,6 +9,7 @@
       <!-------------------------------------------------------------------------------------> 
       <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/animation.js/app.js"></script>
       <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascript/action.js"></script>
+      <!--------------------particles.jsはpcとspで処理を分ける--------------------------------------------------------------->
       <?php wp_footer(); ?>
     </body>
 

@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<div class="main-container">
 <main>
     <div id="Content">
         <div id="achive-news">
@@ -29,11 +30,15 @@
                         <a href="<?php echo get_permalink(); ?>">
                             <!--サムネイル表示、ない場合はnoimg.jpgを表示-->
                             <?php if (has_post_thumbnail()) : ?>
-                                <div class="news-img" style="background-image: url('<?php the_post_thumbnail_url('thumbnail'); ?>');"></div>
+                                <div class="news-img">
+                                    <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
+                                </div>
                             <?php else : ?>
-                                <div class="news-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/photos/PC-img/singlesample.jpg');"></div>
+                                <div class="news-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>" alt="">
+                                </div>
                             <?php endif; ?>
-                            <div>
+                            <div class="news-container">
                                 <!--本文を取得５０文字以降は切り捨て-->
                                 <dt><?php echo mb_substr(get_the_excerpt(), 0, 50) . '…'; ?></dt>
                                 <!--カテゴリー名を取得-->
@@ -56,29 +61,30 @@
             </div>
         </div>
         <div id="Contact">
-            <h2>お問い合わせ</h2>
-            <form action="<?php echo home_url('/confirmation/'); ?>" class="top-border-none" method="post">
-                <label for="">
-                    <h3>氏名</h3>
-                    <input type="text" name="nam" id="">
-                </label>
-                <label for="">
-                    <h3>氏名(ふりがな)</h3>
-                    <input type="text" name="kana" id="">
-                </label>
-                <label for="">
-                    <h3>メールアドレス</h3>
-                    <input type="text" name="mail" id="">
-                </label>
-                <label for="">
-                    <h3>内容</h3>
-                    <textarea name="text" id="" cols="30" rows="10"></textarea>
-                </label>
-                <button type="submit" name="submit">送信</button>
-                </form>
-        </div>
+                    <h2>お問い合わせ</h2>
+                    <form action="">
+                        <label for="">
+                            <h3>氏名</h3>
+                            <input type="text" name="nam" id="">
+                        </label>
+                        <label for="">
+                            <h3>氏名(ふりがな)</h3>
+                            <input type="text" name="kana" id="">
+                        </label>
+                        <label for="">
+                            <h3>メールアドレス</h3>
+                            <input type="text" name="mail" id="">
+                        </label>
+                        <label for="">
+                            <h3>内容</h3>
+                            <textarea name="text" id="" cols="30" rows="10"></textarea>
+                        </label>
+                        <button type="submit" name="submit">送信</button>
+                    </form>
+                </div>
     </div>
+    </main>
     <?php get_sidebar(); ?>
-</main>
+
 
 <?php get_footer(); ?>

@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<main>
   <div id="News">
     <h2>お知らせ</h2>
     <div>
@@ -31,6 +30,8 @@
       <!--ここまで-->
     </div>
   </div>
+  <div class="main-container">
+  <main>
   <div id="Content">
     <div id="Welcom">
       <h2><?php echo get_option('original_txt'); ?></h2>
@@ -76,28 +77,27 @@
       </div>
     </div>
     <div id="Contact">
-      <h2>お問い合わせ</h2>
-      <form action="<?php echo home_url('/confirmation/'); ?>" class="top-border-none" method="post">
-        <label for="">
-          <h3>氏名</h3>
-          <input type="text" name="nam" required>
-        </label>
-        <label for="">
-          <h3>氏名(ふりがな)</h3>
-          <input type="text" name="kana" required>
-        </label>
-        <label for="">
-          <h3>メールアドレス</h3>
-          <input type="email" name="mail" required>
-        </label>
-        <label for="">
-          <h3>内容</h3>
-          <textarea name="text" id="" cols="30" rows="10"></textarea>
-        </label>
-        <button type="submit" name="submit">送信</button>
-      </form>
-      <p id="Contact-alt">※ いたずら防止のためIPアドレスの保存をしております、ご容赦ください</p>
-    </div>
+                    <h2>お問い合わせ</h2>
+                    <form action="">
+                        <label for="">
+                            <h3>氏名</h3>
+                            <input type="text" name="nam" id="">
+                        </label>
+                        <label for="">
+                            <h3>氏名(ふりがな)</h3>
+                            <input type="text" name="kana" id="">
+                        </label>
+                        <label for="">
+                            <h3>メールアドレス</h3>
+                            <input type="text" name="mail" id="">
+                        </label>
+                        <label for="">
+                            <h3>内容</h3>
+                            <textarea name="text" id="" cols="30" rows="10"></textarea>
+                        </label>
+                        <button type="submit" name="submit">送信</button>
+                    </form>
+                </div>
   </div>
   </main>
   <?php get_sidebar(); ?>
