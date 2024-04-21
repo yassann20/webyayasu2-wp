@@ -22,6 +22,11 @@ $sp: 0px;
 	}
 }
 
+div.img {
+	position: relative;
+	overflow: hidden;
+}
+
 /*--------------------------------------------------
             PC
 --------------------------------------------------*/
@@ -84,13 +89,22 @@ $sp: 0px;
 		header {
 			width: 100%;
 
-			div {
-				img {
-					display: block;
-					width: 100%;
-					height: 443px;
-					margin: 0 auto;
-				}
+			div.slider {
+				position: relative;
+				width: 100%;
+					div.img {
+						width: 100%;
+						max-width: 1300px;
+						aspect-ratio: 16/9;
+						img {
+							display: block;
+							position: absolute;
+							top: 50%;
+							width: 100%;
+							height: auto;
+							transform: translateY(-50%);
+						}
+					}
 			}
 
 			nav {
@@ -244,6 +258,7 @@ $sp: 0px;
 						align-items: center;
 						width: 30%;
 						height: 100%;
+
 						img {
 							display: block;
 							width: 100%;
@@ -251,7 +266,7 @@ $sp: 0px;
 						}
 					}
 
-					div.news-container{
+					div.news-container {
 						display: flex;
 						flex-wrap: wrap;
 						align-content: space-between;

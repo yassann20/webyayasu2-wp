@@ -30,17 +30,27 @@
   </div>
   <div class="container">
   <header>
+    <!--slickを使用したスライダーを表示-->
     <div class="slider">
-      <?php 
-      $number = $_SESSION["number"]; /*functionsで定義したスライド枚数をここに定義*/
-      for( $i=1; $i<=$number; $i++): ?>
-      <div>
-      <a href="<?php echo home_url(); ?>">
-      <img src="<?php echo get_option('original_image'.$i)?>">
-      </a>
+      <?php
+      $args = array(
+        'post_type' => 'images',//スライドショーの投稿を選択
+        'posts_per_page' => -1 //すべての投稿を出力
+      );
+      $slider_query = new WP_Query($args);
+
+      if($slider_query->have_posts()):
+        while($slider_query->have_posts()) : $slider_query->the_post();
+      ?>
+      <div class="img">
+        <?php the_post_thumbnail(); ?>
       </div>
-      <?php endfor; ?>
+      <?php
+        endwhile;
+      endif;
+      ?>
     </div>
+    <!--slickスライドはここまで-->
     <nav id="nav">
       <?php
       $args = array(

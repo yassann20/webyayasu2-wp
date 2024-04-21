@@ -41,28 +41,24 @@ function add_next_post_link_class($output) {
 }
 add_filter( 'next_post_link', 'add_next_post_link_class' );
 
+//スライドショーをカスタム投稿機能で編集できるようにする
+function custom_slideshow(){
+  register_post_type('images',
+  array(
+    'labels' => array(
+      'name' => __('スライドショー画像'),
+      'singular_name' => __('画像')
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'rewrite' => array('slug' => 'images'),
+    'supports' => array('title', 'thumbnail'),
+  ));
+}
+add_action('init', 'custom_slideshow');
 
 //カスタマイザー付与
 function theme_customize_register($wp_customize) {
-  /* スライダー画像の処理 */
-  $num = $_SESSION["number"];
-  for( $i=1; $i<=$num; $i++):
-  $wp_customize->add_section('original_custom'.$i , array(
-    'title' => 'スライダー画像'.$i ,
-    'priority' => 30,
-  ));
-  $wp_customize->add_setting('original_image'.$i , array(
-    'type' => 'option',
-  ));
-  if(class_exists('WP_Customize_Image_Control')):
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'original_image'.$i , array(
-      'settings' => 'original_image'.$i ,
-      'label' => 'オリジナル画像'.$i ,
-      'section' => 'original_custom'.$i ,
-      'description' => 'ロゴ画像を設定してください。',
-    )));
-    endif;
-  endfor;
 
 
     /* トップページ大見出し */
