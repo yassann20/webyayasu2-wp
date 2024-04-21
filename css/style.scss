@@ -89,22 +89,37 @@ div.img {
 		header {
 			width: 100%;
 
+			h1 {
+				width: 100%;
+				font-size: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #fff;
+				padding: 50px 0;
+			}
+
 			div.slider {
 				position: relative;
-				width: 100%;
-					div.img {
+				width: 960px;
+				aspect-ratio: 16/9;
+				height: auto;
+				margin: 0 auto 60px;
+				padding: 0;
+
+				div.img {
+					width: 960px;
+					aspect-ratio: 16/9;
+					margin: 0 80px;
+
+					img {
+						display: block;
+						position: absolute;
+						top: 50%;
 						width: 100%;
-						max-width: 1300px;
-						aspect-ratio: 16/9;
-						img {
-							display: block;
-							position: absolute;
-							top: 50%;
-							width: 100%;
-							height: auto;
-							transform: translateY(-50%);
-						}
+						height: auto;
+						transform: translateY(-50%);
 					}
+				}
 			}
 
 			nav {
@@ -849,12 +864,31 @@ div.img {
 		header {
 			width: 100%;
 
-			div {
-				img {
-					display: block;
-					width: 100%;
-					height: 443px;
-					margin: 0 auto;
+			h1 {
+				width: 100%;
+				font-size: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #fff;
+				padding: 50px 0;
+			}
+
+			div.slider {
+
+				div.img {
+					width: 90vw;
+					max-width: 700px;
+					aspect-ratio: 16/9;
+					margin: 0 80px;
+
+					img {
+						position: absolute;
+						top: 50%;
+						display: block;
+						width: 100%;
+						height: auto;
+						transform: translateY(-50%);
+					}
 				}
 			}
 
@@ -1602,20 +1636,38 @@ div.img {
 	}
 
 	.container {
-		width: 100%;
-		min-width: 320px;
+		width: 300px;
 		margin: 0 auto;
 		padding: 1px 20px;
 
 		header {
-			padding-top: 85px;
 
-			div {
-				img {
-					display: block;
-					width: 100%;
-					height: 109px;
-					margin: 0 auto;
+			h1 {
+				width: 100%;
+				font-size: 24px;
+				line-height: 24px;
+				text-align: center;
+				color: #fff;
+				padding: 30px 0;
+			}
+
+			div.slider {
+				width: 100%;
+				aspect-ratio: 16/9;
+
+				div.img {
+					width: 300px;
+					aspect-ratio: 16/9;
+					margin: 0 60px;
+
+					img {
+						display: block;
+						position: absolute;
+						top: 50%;
+						width: 100%;
+						height: auto;
+						transform: translateY(-50%);
+					}
 				}
 			}
 

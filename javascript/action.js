@@ -42,6 +42,7 @@
       dots: true,           //スライド下のドット
       arrows: true,         //左右の矢印
       infinite: true,       //永久にループさせる
+      variableWidth: true,
   });
   /* slickここまで */
   

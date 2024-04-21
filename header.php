@@ -30,6 +30,7 @@
   </div>
   <div class="container">
   <header>
+    <h1 class="default_h1"><?php echo get_theme_mod('')?></h1>
     <!--slickを使用したスライダーを表示-->
     <div class="slider">
       <?php

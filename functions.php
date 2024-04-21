@@ -63,8 +63,8 @@ function theme_customize_register($wp_customize) {
 
     /* トップページ大見出し */
     $wp_customize->add_section('original_h1' , array(
-      'title' => '大見出し',
-      'priority' => 30,
+      'title' => 'トップページ大見出し',
+      'priority' => 10,
     ));
     $wp_customize->add_setting('original_txt', array(
       'type' => 'option',
@@ -75,6 +75,12 @@ function theme_customize_register($wp_customize) {
       'label' => 'オリジナルテキスト',
       'section' => 'original_h1',
       'type' => 'text',
+    ));
+    $wp_customize->selective_refresh->add_pertial('original_txt', array(
+      'selector' => 'default-h1',
+      'render_callback' => function(){
+        echo get_theme_mod()
+      }
     ));
     /* 大見出しここまで */
 
