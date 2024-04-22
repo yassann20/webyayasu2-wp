@@ -67,7 +67,8 @@ function theme_customize_register($wp_customize) {
       'priority' => 10,
     ));
     $wp_customize->add_setting('original_txt', array(
-      'type' => 'option',
+      'type' => 'theme_mod',
+      'default' => 'WEBYAYASU'//編集されない場合この文字列が出力される
     ));
    
     $wp_customize->add_control( 'original_txt', array(
@@ -76,31 +77,39 @@ function theme_customize_register($wp_customize) {
       'section' => 'original_h1',
       'type' => 'text',
     ));
-    $wp_customize->selective_refresh->add_pertial('original_txt', array(
-      'selector' => 'default-h1',
+    $wp_customize->selective_refresh->add_partial('original_txt', array(
+      'selector' => '.default-h1',
       'render_callback' => function(){
-        echo get_theme_mod()
+        echo '<h1>' . get_theme_mod('original_txt', 'WEBYAYASU') . '</h1>'; // レンダリングするコールバック関数を設定します
       }
     ));
     /* 大見出しここまで */
 
     /* sectionの画像 */
-    for( $i=1; $i<=$num; $i++):
-      $wp_customize->add_section('section-img'.$i , array(
+    for( $i=1; $i<=3; $i++):
+      $wp_customize->add_section('section2-img'.$i , array(
         'title' => 'セクションコンテンツ画像'.$i ,
         'priority' => 30,
       ));
-      $wp_customize->add_setting('section_image'.$i , array(
-        'type' => 'option',
+      $wp_customize->add_setting('section2_image'.$i , array(
+        'type' => 'theme_mod',
+        'default' => get_template_directory_uri() . '/photos/PC-img/content2-img'.$i.'.jpg',
+
       ));
       if(class_exists('WP_Customize_Image_Control')):
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'section_image'.$i , array(
-          'settings' => 'section_image'.$i ,
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'section2_image'.$i , array(
+          'settings' => 'section2_image'.$i ,
           'label' => 'オリジナル画像'.$i ,
-          'section' => 'section-img'.$i ,
+          'section' => 'section2-img'.$i ,
           'description' => 'リスト内の画像を選択してください',
         )));
         endif;
+        $wp_customize->selective_refresh->add_partial('section2_image'.$i, array(
+          'selector' => '.section2-thumbnail-'.$i,
+          'render_callback' => function() use ($i){
+            echo '<img class="section2-thumbnail-'.$i.'" src="' . get_theme_mod('section2_image'.$i) . '" />';
+          }
+        ));
       endfor;
     /* sectionの画像ここまで */
 
@@ -265,6 +274,8 @@ function theme_customize_register($wp_customize) {
       ));
     }
     /* section2テキストここまで */
-
+    // セレクティブリフレッシュを有効にする
+    add_theme_support( 'customize-selective-refresh' );
 }
 add_action( 'customize_register', 'theme_customize_register' );
+

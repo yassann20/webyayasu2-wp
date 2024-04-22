@@ -33,72 +33,22 @@
   <div class="main-container">
   <main>
   <div id="Content">
-    <div id="Welcom">
-      <h2><?php echo get_option('original_txt'); ?></h2>
-      <div>
-        <img src="<?php echo get_option("section_image1"); ?>" alt="">
-        <p><?php echo get_option('sec1_maintext'); ?></p>
-      </div>
-    </div>
-    <div id="Business">
-      <h2><?php echo get_option('section1-h2')?></h2>
-      <ul>
-        <li>
-          <img src="<?php echo get_option("original_list_image1")?>" alt="">
-          <h3><?php echo get_option('section2_li1-h3')?></h3>
-          <p><?php echo get_option('section2_li1-text')?></p>
-        </li>
-        <li>
-          <img src="<?php echo get_option("original_list_image2")?>" alt="">
-          <h3><?php echo get_option('section2_li2-h3')?></h3>
-          <p><?php echo get_option('section2_li2-text')?></p>
-        </li>
-        <li>
-          <img src="<?php echo get_option("original_list_image3")?>" alt="">
-          <h3><?php echo get_option('section2_li3-h3')?></h3>
-          <p><?php echo get_option('section2_li3-text')?></p>
-        </li>
-      </ul>
-    </div>
-    <div id="Achievement">
-      <h2><?php echo get_option('section2-h2')?></h2>
-      <img class="pc" src="<?php echo get_option("section_image2"); ?>" alt="">
-      <div>
-        <p><?php echo get_option('sec2_maintext'); ?></p>
-        <a href="<?php echo home_url('/category/work'); ?>"><?php echo get_option('sec1_button')?></a>
-      </div>
-    </div>
-    <div id="Activity">
-      <h2><?php echo get_option('section3-h2')?></h2>
-      <img class="pc" src="<?php echo get_option("section_image3"); ?>" alt="">
-      <div>
-        <p><?php echo get_option('sec3_maintext'); ?></p>
-        <a href="<?php echo home_url('/news/'); ?>"><?php echo get_option('sec2_button')?></a>
-      </div>
-    </div>
-    <div id="Contact">
-                    <h2>お問い合わせ</h2>
-                    <form action="">
-                        <label for="">
-                            <h3>氏名</h3>
-                            <input type="text" name="nam" id="">
-                        </label>
-                        <label for="">
-                            <h3>氏名(ふりがな)</h3>
-                            <input type="text" name="kana" id="">
-                        </label>
-                        <label for="">
-                            <h3>メールアドレス</h3>
-                            <input type="text" name="mail" id="">
-                        </label>
-                        <label for="">
-                            <h3>内容</h3>
-                            <textarea name="text" id="" cols="30" rows="10"></textarea>
-                        </label>
-                        <button type="submit" name="submit">送信</button>
-                    </form>
-                </div>
-  </div>
+
+    <!--wellcomeコンテンツの読み込み-->
+    <?php get_template_part('template-parts/wellcome'); ?>
+
+    <!--businessコンテンツの読み込み-->
+    <?php get_template_part('template-parts/business'); ?>
+
+    <!--achievementコンテンツの読み込み-->
+    <?php get_template_part('template-parts/achievement'); ?>
+
+    <!--activityコンテンツの読み込み-->
+    <?php get_template_part('template-parts/activity'); ?>
+
+    <!--contactコンテンツの読み込み-->
+    <?php get_template_part('template-parts/contact'); ?>
+
   </main>
   <?php get_sidebar(); ?>
 
