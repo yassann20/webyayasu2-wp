@@ -120,20 +120,26 @@ function theme_customize_register($wp_customize) {
       'ワードプレス',
       '保守・管理',
     ];
+    /*section2本文*/
+    $sec2ptxt = [
+      'デザインカンプを元にアークアップ、プログラミングしていき最終的にインターネットで閲覧できるデータを制作します。',
+      'プログラミングしたデータを元にワードプレスのテーマを制作します。ブログや情報発信を行う場合など必須のツールです。',
+      'サイト運用中の軽微なデザイン修正、また機能の追加などサイトに不都合が生じた際の保守やブログ更新などを行います。'
+    ];
     /* sectionの見出し*/
     for($i = 1; $i <= 3; $i++){
       $wp_customize->add_section('section_li_text'.$i , array(
-        'title' => '(セクション'.$i.')見出し',
+        'title' => 'セクション2-'.$i.'見出し',
         'priority' => 20,
         'panel' => 'business_panel',
       ));
       $wp_customize->add_setting('section2-'.$i.'-h2', array(
-        'type' => 'option',
+        'type' => 'theme_mod',
         'default' => $sec2h3txt[$i-1],
       ));
       $wp_customize->add_control('section2-'.$i.'-h2', array(
         'settings' => 'section2-'.$i.'-h2',
-        'label' => 'オリジナルテキスト',
+        'label' => 'セクション2-'.$i.'見出し',
         'section' => 'section_li_text'.$i,
         'type' => 'text',
       ));
@@ -143,147 +149,133 @@ function theme_customize_register($wp_customize) {
           echo '<h2>' . get_theme_mod('section2-'.$i.'-h2', 'WEBYAYASU') . '</h2>'; // レンダリングするコールバック関数を設定します
         }
       ));
-    }
-    /* section2見出しここまで */
-
-
-    /* sectionの見出し*/
-    $sec2ptxt = [
-      '(セクション1)見出し',
-      '(セクション2)見出し',
-      '(セクション3)見出し',
-    ];
-    for($i = 1; $i <= 3; $i++){
-      $wp_customize->add_section('section'.$i."h2" , array(
-        'title' => '(セクション'.$i.')見出し',
+      /*見出しはここまで*/
+      /*ここからは本文を記載*/
+      $wp_customize->add_section('sec2maintxt'.$i, array(
+        'title' => 'セクション2本文'.$i,
         'priority' => 30,
+        'panel' => 'business_panel',
       ));
-      $wp_customize->add_setting('section'.$i.'-h2', array(
-        'type' => 'option',
+      $wp_customize->add_setting('sec2_maintxt'.$i, array(
+        'type' => 'theme_mod',
+        'default' => $sec2ptxt[$i-1],
       ));
-      $wp_customize->add_control('section'.$i.'-h2', array(
-        'settings' => 'section'.$i.'-h2',
-        'label' => 'オリジナルテキスト',
-        'section' => 'section'.$i."h2",
-        'type' => 'text',
-      ));
-    }
-    /* section見出しここまで */
-
-    /* section　本文*/
-    $maintext_array = [
-      '(セクション1)本文',
-      '(セクション2)本文',
-      '(セクション3)本文',
-      '(セクション4)本文',
-    ];
-    for($i = 1; $i <= count($maintext_array); $i++){
-      $wp_customize->add_section('sec'.$i.'-maintext' , array(
-        'title' => '(セクション'.$i.')本文',
-        'priority' => 30,
-      ));
-      $wp_customize->add_setting('sec'.$i.'_maintext', array(
-        'type' => 'option',
-      ));
-      $wp_customize->add_control('sec'.$i.'_maintext', array(
-        'settings' => 'sec'.$i.'_maintext',
-        'label' => 'オリジナルテキスト',
-        'section' => 'sec'.$i.'-maintext',
+      $wp_customize->add_control('sec2_maintxt'.$i, array(
+        'settings' => 'sec2_maintxt'.$i,
+        'label' => 'セクション2本文'.$i,
+        'section' => 'sec2maintxt'.$i,
         'type' => 'textarea',
       ));
+      $wp_customize->selective_refresh->add_partial('sec2_maintxt'.$i, array(
+        'selector' => '.sec2maintxt'.$i,
+        'render_callback' => function() use ($i){
+          echo '<p class="sec2-maintxt-"'.$i.'>' . get_theme_mod('sec2_maintxt'.$i) . '</p>'; // レンダリングするコールバック関数を設定します
+        }
+      ));
     }
-    /* section　本文ここまで*/
+    /*section2本文ここまで*/
 
+    /*section3コンテンツをまとめるパネルを追加*/
+    $wp_customize->add_panel('section3', array(
+      'title' => 'コンテンツ3',
+      'priority' => 20,
+    ));
 
-    /* section　本文*/
-    $sectionbutton_array = [
-      '(セクション3)本文',
-      '(セクション4)本文',
+    /*sec3内で使用するデフォルトテキスト*/
+    $sec3h2txt = [
+      '作業実績',
+      '活動記録',
     ];
-    for($i = 1; $i <= count($sectionbutton_array); $i++){
-      $wp_customize->add_section('sec'.$i.'-button' , array(
-        'title' => 'セクションボタン'.$i,
-        'priority' => 30,
+    $sec3maintxt = [
+      'これまで複数の案件に取り組ませていただきまして、その中で実績として添付できる物をご紹介しております。',
+      '日々の業務での出来事、技術の習得などを記録しています。',
+    ];
+    for( $i = 1; $i <= 2; $i++){
+      $wp_customize->add_section('sec3-img-'.$i, array(
+        'title' => 'セクション3画像'.$i,
+        'priority' => 10,
+        'panel' => 'section3',
       ));
-      $wp_customize->add_setting('sec'.$i.'_button', array(
-        'type' => 'option',
+      $wp_customize->add_setting('sec3_img_'.$i, array(
+        'type' => 'theme_mod',
+        'default' => get_template_directory_uri().'/photos/PC-img/content3-img'.$i.'.jpg',
       ));
-      $wp_customize->add_control('sec'.$i.'_button', array(
-        'settings' => 'sec'.$i.'_button',
-        'label' => 'オリジナルテキスト',
-        'section' => 'sec'.$i.'-button',
+      if(class_exists('WP_Customize_Image_Control')){
+        $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'sec3_img_'.$i, array(
+          'settings' => 'sec3_img_'.$i ,
+          'label' => 'セクション3画像'.$i ,
+          'section' => 'sec3-img-'.$i ,
+          'type' => 'image',
+        )));
+      }
+
+      /*sec3見出し*/
+      $wp_customize->add_section('sec3-h2-'.$i , array(
+        'title' => 'セクション3-見出し'.$i,
+        'priority' => 20,
+        'panel' => 'section3',
+      ));
+      $wp_customize->add_setting('sec3-h2-'.$i, array(
+        'type' => 'theme_mod',
+        'default' => $sec3h2txt[$i-1],
+      ));
+      $wp_customize->add_control('sec3-h2-'.$i, array(
+        'settings' => 'sec3-h2-'.$i,
+        'label' => 'セクション3-見出し'.$i,
+        'section' => 'sec3-h2-'.$i,
         'type' => 'text',
       ));
-    }
-    /* section　本文ここまで*/
-
-  /* リストコンコンテンツ画像　*/
-  for( $i=1; $i<=$num; $i++):
-  $wp_customize->add_section('list-img'.$i , array(
-    'title' => 'リストコンテンツ画像'.$i ,
-    'priority' => 30,
-  ));
-  $wp_customize->add_setting('original_list_image'.$i , array(
-    'type' => 'option',
-  ));
-  if(class_exists('WP_Customize_Image_Control')):
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'original_list_image'.$i , array(
-      'settings' => 'original_list_image'.$i ,
-      'label' => 'オリジナル画像'.$i ,
-      'section' => 'list-img'.$i ,
-      'description' => 'リスト内の画像を選択してください',
-    )));
-    endif;
-  endfor;
-  /* リストコンテンツ画像 */
-  
-
-    /* section2リストごとのテキスト*/
-    $sec1_li_array = [
-      'section2内li見出し',
-      'section2内li見出し',
-      'section2内li見出し',
-    ];
-    for($i = 1; $i <= count($sec1_li_array); $i++){
-      $wp_customize->add_section('section_li_h3'.$i , array(
-        'title' => 'リストコンテンツ内見出し'.$i,
-        'priority' => 30,
+      $wp_customize->selective_refresh->add_partial('sec3-h2-'.$i, array(
+        'selector' => '.section3-h2-'.$i,
+        'render_callback' => function() use ($i){
+          echo '<h2>' . get_theme_mod('sec3-h2-'.$i) . '</h2>'; // レンダリングするコールバック関数を設定します
+        }
       ));
-      $wp_customize->add_setting('section2_li'.$i.'-h3', array(
-        'type' => 'option',
+
+      /*sec3本文*/
+      $wp_customize->add_section('sec3-p-'.$i , array(
+        'title' => 'セクション3本文'.$i,
+        'priority' => 20,
+        'panel' => 'section3',
       ));
-      $wp_customize->add_control('section2_li'.$i.'-h3', array(
-        'settings' => 'section2_li'.$i.'-h3',
-        'label' => 'オリジナルテキスト',
-        'section' => 'section_li_h3'.$i,
+      $wp_customize->add_setting('sec3-p-'.$i, array(
+        'type' => 'theme_mod',
+        'default' => $sec3maintxt[$i-1],
+      ));
+      $wp_customize->add_control('sec3-p-'.$i, array(
+        'settings' => 'sec3-p-'.$i,
+        'label' => 'セクション3本文'.$i,
+        'section' => 'sec3-p-'.$i,
         'type' => 'text',
       ));
-    }
-    /* section2テキストここまで */
-
-
-    /* section2リストごとのテキスト*/
-    $sec1_li_array = [
-      'section2内liテキスト',
-      'section2内liテキスト',
-      'section2内liテキスト',
-    ];
-    for($i = 1; $i <= count($sec1_li_array); $i++){
-      $wp_customize->add_section('section_li_text'.$i , array(
-        'title' => 'section2内テキスト'.$i,
-        'priority' => 30,
-      ));
-      $wp_customize->add_setting('section2_li'.$i.'-text', array(
-        'type' => 'option',
-      ));
-      $wp_customize->add_control('section2_li'.$i.'-text', array(
-        'settings' => 'section2_li'.$i.'-text',
-        'label' => 'オリジナルテキスト',
-        'section' => 'section_li_text'.$i,
-        'type' => 'textarea',
+      $wp_customize->selective_refresh->add_partial('sec3-p-'.$i, array(
+        'selector' => '.section3-p-'.$i,
+        'render_callback' => function() use ($i){
+          echo '<h2>' . get_theme_mod('sec3-p-'.$i) . '</h2>'; // レンダリングするコールバック関数を設定します
+        }
       ));
     }
-    /* section2テキストここまで */
+    /*プロフィール自己紹介文*/
+    $wp_customize->add_section('profile-text' , array(
+      'title' => '自己紹介本文',
+      'priority' => 20,
+    ));
+    $wp_customize->add_setting('profile-text', array(
+      'type' => 'theme_mod',
+      'default' => '初めまして。私は札幌市を中心にウェブサイトの制作業務を請け負っています。迅速かつハイクオリティを目標に活動しています。ご縁がありましたら是非ともよろしくお願いいたします。',
+    ));
+    $wp_customize->add_control('profile-text', array(
+      'settings' => 'profile-text',
+      'label' => '自己紹介本文',
+      'section' => 'profile-text',
+      'type' => 'textarea',
+    ));
+    $wp_customize->selective_refresh->add_partial('profile-text', array(
+      'selector' => '.profile-text',
+      'render_callback' => function() use ($i){
+        echo '<p>' . get_theme_mod('profile-text') . '</p>'; // レンダリングするコールバック関数を設定します
+      }
+    ));
     // セレクティブリフレッシュを有効にする
     add_theme_support( 'customize-selective-refresh' );
 }

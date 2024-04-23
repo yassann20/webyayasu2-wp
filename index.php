@@ -40,11 +40,8 @@
     <!--businessコンテンツの読み込み-->
     <?php get_template_part('template-parts/business'); ?>
 
-    <!--achievementコンテンツの読み込み-->
-    <?php get_template_part('template-parts/achievement'); ?>
-
-    <!--activityコンテンツの読み込み-->
-    <?php get_template_part('template-parts/activity'); ?>
+    <!--section3コンテンツの読み込み-->
+    <?php get_template_part('template-parts/section3'); ?>
 
     <!--contactコンテンツの読み込み-->
     <?php get_template_part('template-parts/contact'); ?>

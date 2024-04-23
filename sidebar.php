@@ -17,7 +17,7 @@
         </div>
         <div>
             <h3>自己紹介</h3>
-            <p>初めまして。私は札幌市を中心にウェブサイトの制作業務を請け負っています。迅速かつハイクオリティを目標に活動しています。ご縁がありましたら是非ともよろしくお願いいたします。</p>
+            <p class="profile-text"><?php echo get_theme_mod('profile-text'); ?></p>
         </div>
         <div id="sns">
             <h2>SNS</h2>
