@@ -85,11 +85,19 @@ function theme_customize_register($wp_customize) {
     ));
     /* 大見出しここまで */
 
+    /*business内のカスタマイザーを一つのパネルにまとめる*/
+    $wp_customize->add_panel('business_panel', array(
+      'title'       => __( '事業内容', 'textdomain' ),
+    'description' => __( '事業内容に関するパネル', 'textdomain' ),
+    'priority'    => 10,
+    ));
+
     /* sectionの画像 */
     for( $i=1; $i<=3; $i++):
       $wp_customize->add_section('section2-img'.$i , array(
         'title' => 'セクションコンテンツ画像'.$i ,
-        'priority' => 30,
+        'priority' => 10,
+        'panel' => 'business_panel',
       ));
       $wp_customize->add_setting('section2_image'.$i , array(
         'type' => 'theme_mod',
@@ -101,49 +109,51 @@ function theme_customize_register($wp_customize) {
           'settings' => 'section2_image'.$i ,
           'label' => 'オリジナル画像'.$i ,
           'section' => 'section2-img'.$i ,
-          'description' => 'リスト内の画像を選択してください',
+          'type' => 'image',
         )));
         endif;
-        $wp_customize->selective_refresh->add_partial('section2_image'.$i, array(
-          'selector' => '.section2-thumbnail-'.$i,
-          'render_callback' => function() use ($i){
-            echo '<img class="section2-thumbnail-'.$i.'" src="' . get_theme_mod('section2_image'.$i) . '" />';
-          }
-        ));
       endfor;
     /* sectionの画像ここまで */
 
-    /* sectionの見出し*/
-    $h2_array = [
-      '(セクション1)見出し',
-      '(セクション2)見出し',
-      '(セクション3)見出し',
+    $sec2h3txt = [
+      'コーディング',
+      'ワードプレス',
+      '保守・管理',
     ];
-    for($i = 1; $i <= count($h2_array); $i++){
+    /* sectionの見出し*/
+    for($i = 1; $i <= 3; $i++){
       $wp_customize->add_section('section_li_text'.$i , array(
         'title' => '(セクション'.$i.')見出し',
-        'priority' => 30,
+        'priority' => 20,
+        'panel' => 'business_panel',
       ));
-      $wp_customize->add_setting('section'.$i.'-h2', array(
+      $wp_customize->add_setting('section2-'.$i.'-h2', array(
         'type' => 'option',
+        'default' => $sec2h3txt[$i-1],
       ));
-      $wp_customize->add_control('section'.$i.'-h2', array(
-        'settings' => 'section'.$i.'-h2',
+      $wp_customize->add_control('section2-'.$i.'-h2', array(
+        'settings' => 'section2-'.$i.'-h2',
         'label' => 'オリジナルテキスト',
         'section' => 'section_li_text'.$i,
         'type' => 'text',
+      ));
+      $wp_customize->selective_refresh->add_partial('section2-'.$i.'-h2', array(
+        'selector' => '.section2-h2-'.$i,
+        'render_callback' => function() use ($i){
+          echo '<h2>' . get_theme_mod('section2-'.$i.'-h2', 'WEBYAYASU') . '</h2>'; // レンダリングするコールバック関数を設定します
+        }
       ));
     }
     /* section2見出しここまで */
 
 
     /* sectionの見出し*/
-    $h2_array = [
+    $sec2ptxt = [
       '(セクション1)見出し',
       '(セクション2)見出し',
       '(セクション3)見出し',
     ];
-    for($i = 1; $i <= count($h2_array); $i++){
+    for($i = 1; $i <= 3; $i++){
       $wp_customize->add_section('section'.$i."h2" , array(
         'title' => '(セクション'.$i.')見出し',
         'priority' => 30,
