@@ -88,14 +88,13 @@ function theme_customize_register($wp_customize) {
     /*business内のカスタマイザーを一つのパネルにまとめる*/
     $wp_customize->add_panel('business_panel', array(
       'title'       => __( '事業内容', 'textdomain' ),
-    'description' => __( '事業内容に関するパネル', 'textdomain' ),
     'priority'    => 10,
     ));
 
     /* sectionの画像 */
     for( $i=1; $i<=3; $i++):
       $wp_customize->add_section('section2-img'.$i , array(
-        'title' => 'セクションコンテンツ画像'.$i ,
+        'title' => 'セクション2画像'.$i ,
         'priority' => 10,
         'panel' => 'business_panel',
       ));
