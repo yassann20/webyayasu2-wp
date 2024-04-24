@@ -13,11 +13,13 @@
         ?>
                 <div id="Single">
                     <!--サムネイルがある場合は画像を表示しない場合はnoimg.jpを表示-->
+                    <div class="img">
                     <?php if (has_post_thumbnail()) : ?>
                         <div class="Thumbnail" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
                     <?php else : ?>
                         <div class="Thumbnail" style="background-image: url('<?php echo get_template_directory_uri(); ?>/photos/PC-img/singlesample.jpg');"></div>
                     <?php endif; ?>
+                    </div>
                     <!--ここまで-->
                     <!--タイトルを表示-->
                     <h1 id="Single-title"><?php the_title(); ?></h1>
