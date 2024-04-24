@@ -76,6 +76,10 @@ div.img {
 
 		/*============================ #particles-js ============================*/
 	}
+	div.img{
+		position: relative;
+		overflow: hidden;
+	}
 
 	.container {
 		display: flex;
@@ -514,13 +518,18 @@ div.img {
 								list-style: none;
 								background: #fff;
 								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
-
+							div.img{
+								width: 100%;
+								aspect-ratio: 16/9;
 								img {
+									position: absolute;
+									top: 50%;
 									display: block;
-									width: 100px;
-									height: 100px;
-									margin: 25px auto;
+									width: 100%;
+									height: auto;
+									transform: translateY(-50%);
 								}
+							}
 
 
 								h3 {
@@ -1283,13 +1292,18 @@ div.img {
 								list-style: none;
 								background: #fff;
 								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
-
+								div.img{
+									width: 100%;
+									aspect-ratio: 16/9;
 								img {
+									position: absolute;
+									top: 50%;
 									display: block;
-									width: 100px;
-									height: 100px;
-									margin: 25px auto;
+									width: 100%;
+									height: auto;
+									transform: translateY(-50%);
 								}
+							}
 
 
 								h3 {
@@ -2149,13 +2163,18 @@ div.img {
 								background: #fff;
 								box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.16);
 								margin: 0 auto 30px;
-
+								div.img{
+									width: 100%;
+									aspect-ratio: 16/9;
 								img {
+									position: absolute;
+									top: 50%;
 									display: block;
-									width: 60px;
-									height: 60px;
-									margin: 10px;
+									width: 100%;
+									height: auto;
+									transform: translateY(-50%);
 								}
+							}
 
 
 
