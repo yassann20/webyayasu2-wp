@@ -1,4 +1,5 @@
 <?php session_start(); /*スライド枚数を読み込むために追加*/?>
+
 <!DOCTYPE html>
 <html lang="ja">
 

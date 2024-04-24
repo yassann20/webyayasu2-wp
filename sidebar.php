@@ -1,3 +1,4 @@
+    
     <div id="SideNav">
         <h2>プロフィール</h2>
         <img src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/profile.png" alt="">
@@ -17,7 +18,7 @@
         </div>
         <div>
             <h3>自己紹介</h3>
-            <p class="profile-text"><?php echo get_theme_mod('profile-text'); ?></p>
+            <p class="profile-text"><?php echo get_theme_mod('profile-text', '初めまして。私は札幌市を中心にウェブサイトの制作業務を請け負っています。迅速かつハイクオリティを目標に活動しています。ご縁がありましたら是非ともよろしくお願いいたします。'); ?></p>
         </div>
         <div id="sns">
             <h2>SNS</h2>
