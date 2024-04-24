@@ -85,9 +85,80 @@ function theme_customize_register($wp_customize) {
     ));
     /* 大見出しここまで */
 
+    /*wellcome内のカスタマイザーを制作し１つのパネルにまとめる*/
+    $wp_customize->add_panel('wellcome_panel', array(
+      'title' => '事業内容画像',
+      'priority' => 10,
+    ));
+    $wp_customize->add_section('wellimg', array(
+      'title' => '事業内容画像',
+      'priority' => 10,
+    ));
+    $wp_customize->add_setting('well_img', array(
+      'type' => 'image',
+      'default' => get_template_directory_uri().'/photos/PC-img/content1-img.jpg',
+    ));
+    if(class_exists('WP_Customize_Image_control')){
+      $wp_customize->add_control(new WP_Customize_Image_Control( $wp_customize, 'well_img', array(
+        'settings' => 'well_img',
+          'label' => '事業内容画像',
+          'section' => 'wellimg',
+          'type' => 'image',
+      )));
+    }
+
+     /* 事業紹介大見出し */
+     $wp_customize->add_section('well-h2' , array(
+      'title' => '事業紹介見出し',
+      'priority' => 10,
+    ));
+    $wp_customize->add_setting('well_h2', array(
+      'type' => 'theme_mod',
+      'default' => '事業紹介'//編集されない場合この文字列が出力される
+    ));
+   
+    $wp_customize->add_control( 'well_h2', array(
+      'settings' => 'well-h2',
+      'label' => '事業紹介見出し',
+      'section' => 'well_h2',
+      'type' => 'text',
+    ));
+    $wp_customize->selective_refresh->add_partial('well_h2', array(
+      'selector' => '.well-h2',
+      'render_callback' => function(){
+        echo '<h2>' . get_theme_mod('well_h2') . '</h2>'; // レンダリングするコールバック関数を設定します
+      }
+    ));
+    /* 事業紹介大見出しここまで */
+
+    /* 事業紹介本文 */
+    $wp_customize->add_section('well-p' , array(
+      'title' => '事業紹介本文',
+      'priority' => 10,
+    ));
+    $wp_customize->add_setting('well_maintxt', array(
+      'type' => 'theme_mod',
+      'default' => '事業紹介本文'//編集されない場合この文字列が出力される
+    ));
+   
+    $wp_customize->add_control( 'well_maintxt', array(
+      'settings' => 'well_maintxt',
+      'label' => '事業紹介見出し',
+      'section' => 'well-p',
+      'type' => 'text',
+    ));
+    $wp_customize->selective_refresh->add_partial('well_maintxt', array(
+      'selector' => '.well-maintxt',
+      'render_callback' => function(){
+        echo '<h2>' . get_theme_mod('well_maintxt') . '</h2>'; // レンダリングするコールバック関数を設定します
+      }
+    ));
+    /* 事業紹介本文ここまで */
+    /*wellcomeはここまで*/
+
     /*business内のカスタマイザーを一つのパネルにまとめる*/
     $wp_customize->add_panel('business_panel', array(
-      'title'       => __( '事業内容', 'textdomain' ),
+      'title'       => __( '事業紹介', 'textdomain' ),
     'priority'    => 10,
     ));
 

@@ -377,6 +377,7 @@ div.img {
     height: auto;
     margin: 0;
     /*============================ #Content ============================*/
+    /*============================ #Activity ============================*/
   }
   .container .main-container main div#Content {
     width: 100%;
@@ -387,8 +388,6 @@ div.img {
     /*============================ #Welcom ============================*/
     /*============================ #Business ============================*/
     /*============================ #Achievement ============================*/
-    /*============================ #Activity ============================*/
-    /*============================ #Contact ============================*/
   }
   .container .main-container main div#Content div#Welcom {
     width: 100%;
@@ -402,15 +401,21 @@ div.img {
     align-items: center;
     width: 100%;
   }
-  .container .main-container main div#Content div#Welcom div img {
-    display: block;
+  .container .main-container main div#Content div#Welcom div div.img {
     width: 50%;
+    aspect-ratio: 16/9;
+  }
+  .container .main-container main div#Content div#Welcom div div.img img {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
     height: auto;
-    margin: 0;
+    transform: translateY(-50%);
   }
   .container .main-container main div#Content div#Welcom div p {
     width: 50%;
-    padding-left: 35px;
+    padding: 40px;
   }
   .container .main-container main div#Content div#Business {
     width: 100%;
@@ -462,13 +467,20 @@ div.img {
     padding: 60px 0 30px;
     order: 1;
   }
-  .container .main-container main div#Content div#Achievement img {
-    display: block;
+  .container .main-container main div#Content div#Achievement div.img {
     width: 50%;
-    height: auto;
+    aspect-ratio: 16/9;
     order: 3;
   }
-  .container .main-container main div#Content div#Achievement div {
+  .container .main-container main div#Content div#Achievement div.img img {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+  }
+  .container .main-container main div#Content div {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -476,7 +488,10 @@ div.img {
     height: auto;
     order: 2;
   }
-  .container .main-container main div#Content div#Achievement div a {
+  .container .main-container main div#Content div p {
+    padding: 0 40px;
+  }
+  .container .main-container main div#Content div a {
     display: block;
     width: 60px;
     height: 28px;
@@ -490,24 +505,25 @@ div.img {
     color: #000;
     margin: 10px auto 0;
   }
-  .container .main-container main div#Content div#Activity {
+  .container .main-container main div#Activity {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
+    /*============================ #Contact ============================*/
   }
-  .container .main-container main div#Content div#Activity h2 {
+  .container .main-container main div#Activity h2 {
     width: 100%;
     padding: 60px 0 30px;
     order: 1;
   }
-  .container .main-container main div#Content div#Activity img {
+  .container .main-container main div#Activity div.img img {
     display: block;
     width: 50%;
     height: auto;
     order: 2;
   }
-  .container .main-container main div#Content div#Activity div {
+  .container .main-container main div#Activity div.img div {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -515,7 +531,10 @@ div.img {
     height: auto;
     order: 3;
   }
-  .container .main-container main div#Content div#Activity div a {
+  .container .main-container main div#Activity div.img div p {
+    padding: 0 40px;
+  }
+  .container .main-container main div#Activity div.img div a {
     display: block;
     width: 60px;
     height: 28px;
@@ -529,19 +548,19 @@ div.img {
     color: #000;
     margin: 10px auto 0;
   }
-  .container .main-container main div#Content div#Contact h2 {
+  .container .main-container main div#Activity div#Contact h2 {
     padding: 60px 0 30px;
   }
-  .container .main-container main div#Content div#Contact p#Contact-alt {
+  .container .main-container main div#Activity div#Contact p#Contact-alt {
     text-align: center;
     padding-bottom: 30px;
   }
-  .container .main-container main div#Content div#Contact form {
+  .container .main-container main div#Activity div#Contact form {
     width: 100%;
     height: auto;
     margin: 0 auto;
   }
-  .container .main-container main div#Content div#Contact form label {
+  .container .main-container main div#Activity div#Contact form label {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -552,11 +571,11 @@ div.img {
     border-top: 1px solid #707070;
     padding: 0 30px;
   }
-  .container .main-container main div#Content div#Contact form label:nth-last-of-type(1) {
+  .container .main-container main div#Activity div#Contact form label:nth-last-of-type(1) {
     align-items: normal;
     height: 180px;
   }
-  .container .main-container main div#Content div#Contact form label h3 {
+  .container .main-container main div#Activity div#Contact form label h3 {
     width: 260px;
     font-family: Meiryo;
     font-weight: normal;
@@ -565,27 +584,27 @@ div.img {
     text-align: left;
     color: #000;
   }
-  .container .main-container main div#Content div#Contact form label input {
+  .container .main-container main div#Activity div#Contact form label input {
     width: 400px;
     height: 40px;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid #707070;
     margin: 15px 0;
   }
-  .container .main-container main div#Content div#Contact form label h3 {
+  .container .main-container main div#Activity div#Contact form label h3 {
     width: 400px;
     height: 40px;
     margin: 15px 0;
     text-align: left;
   }
-  .container .main-container main div#Content div#Contact form label textarea {
+  .container .main-container main div#Activity div#Contact form label textarea {
     width: 400px;
     height: 150px;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid #707070;
     margin: 15px 0;
   }
-  .container .main-container main div#Content div#Contact form button {
+  .container .main-container main div#Activity div#Contact form button {
     display: block;
     width: 60px;
     height: 28px;
@@ -1050,6 +1069,7 @@ div.img {
   .container .main-container main div#Content div#Welcom {
     width: 100%;
     height: auto;
+    padding-bottom: 40px;
   }
   .container .main-container main div#Content div#Welcom h2 {
     padding: 0 0 30px;
@@ -1059,11 +1079,17 @@ div.img {
     align-items: center;
     width: 100%;
   }
-  .container .main-container main div#Content div#Welcom div img {
-    display: block;
+  .container .main-container main div#Content div#Welcom div div.img {
     width: 50%;
+    aspect-ratio: 16/9;
+  }
+  .container .main-container main div#Content div#Welcom div div.img img {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
     height: auto;
-    margin: 0;
+    transform: translateY(-50%);
   }
   .container .main-container main div#Content div#Welcom div p {
     width: 50%;
@@ -1134,6 +1160,9 @@ div.img {
     height: auto;
     order: 2;
   }
+  .container .main-container main div#Content div#Achievement div p {
+    padding: 0 30px;
+  }
   .container .main-container main div#Content div#Achievement div a {
     display: block;
     width: 60px;
@@ -1172,6 +1201,9 @@ div.img {
     width: 50%;
     height: auto;
     order: 3;
+  }
+  .container .main-container main div#Content div#Activity div p {
+    padding: 0 30px;
   }
   .container .main-container main div#Content div#Activity div a {
     display: block;
@@ -1801,11 +1833,17 @@ div.img {
     flex-wrap: wrap;
     width: 100%;
   }
-  .container .main-container main div#Content div#Welcom div img {
+  .container .main-container main div#Content div#Welcom div div.img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  .container .main-container main div#Content div#Welcom div div.img img {
+    position: absolute;
+    top: 50%;
     display: block;
     width: 100%;
     height: auto;
-    margin: 0;
+    transform: translateY(-50%);
   }
   .container .main-container main div#Content div#Welcom div p {
     width: 100%;

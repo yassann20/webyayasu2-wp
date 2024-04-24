@@ -13,7 +13,6 @@ $sec2ptxt = [
 ?>
 
 <div id="Business">
-  <h2><?php echo get_option('section1-h2')?></h2>
   <ul>
     <li>
       <div class="img">
