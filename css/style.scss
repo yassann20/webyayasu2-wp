@@ -225,7 +225,27 @@ div.img {
 			}
 		}
 
-		/*============================ #achive-news ============================*/
+		
+		.main-container {
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			main {
+				width: 65%;
+				height: auto;
+				margin: 0;
+
+				/*============================ #Content ============================*/
+				div#Content {
+					width: 100%;
+					max-width: 850px;
+					background: rgba(255, 255, 255, 0.65);
+					margin: 0;
+					padding: 30px 60px;
+
+					/*============================ #achive-news ============================*/
 		div#achive-news {
 			width: 100%;
 			height: auto;
@@ -267,31 +287,31 @@ div.img {
 				background: rgba(255, 255, 255, 0.65);
 				margin-bottom: 20px;
 
-				a {
+				a.achive-a {
 					width: 100%;
 					height: 100%;
 					display: flex;
-					flex-wrap: nowrap;
+					flex-wrap: wrap;
 
-					div.news-img {
-						display: flex;
-						align-items: center;
+					div.img {
 						width: 30%;
-						height: 100%;
-
+						aspect-ratio: 16/9;
 						img {
+							position: absolute;
+							top: 50%;
 							display: block;
 							width: 100%;
 							height: auto;
+							transform: translateY(-50%);
 						}
 					}
 
-					div.news-container {
+					div.achive-left {
 						display: flex;
 						flex-wrap: wrap;
 						align-content: space-between;
-						width: 64%;
-						margin: 3% auto;
+						width: calc( 70% - 60px );
+						margin: 30px auto;
 
 						dt {
 							width: 100%;
@@ -452,30 +472,12 @@ div.img {
 			}
 		}
 
-		.main-container {
-			width: 100%;
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-between;
-
-			main {
-				width: 65%;
-				height: auto;
-				margin: 0;
-
-				/*============================ #Content ============================*/
-				div#Content {
-					width: 100%;
-					max-width: 850px;
-					background: rgba(255, 255, 255, 0.65);
-					margin: 0;
-					padding: 30px 60px;
 
 					/*============================ #Welcom ============================*/
 					div#Welcom {
 						width: 100%;
 						height: auto;
-
+						padding-bottom: 40px;
 						h2 {
 							padding: 30px 0 30px;
 						}
