@@ -24,8 +24,7 @@
                 ?>
                         <dl>
                             <!--記事のパーマリンクをaタグにあてはめる-->
-                            <!--記事のパーマリンクをaタグにあてはめる-->
-                            <a class="achive-a" href="<?php echo get_permalink(); ?>">
+                            <a class="archive-a" href="<?php echo get_permalink(); ?>">
                                 <!--サムネイル表示、ない場合はnoimg.jpgを表示-->
                                 <div class="img">
                                     <?php if (has_post_thumbnail()) : ?>
@@ -35,31 +34,39 @@
                                     <?php endif; ?>
                                 </div>
                                 <!--ここまで-->
-                                <div class="achive-left">
+
+                                <div class="archive-left">
                                     <!--本文を取得５０文字以降は切り捨て-->
-                                    <dt><?php echo mb_substr(get_the_excerpt(), 0, 50) . '…'; ?></dt>
-                                    <!--カテゴリー名を取得-->
-                                    <dd class="category"><?php the_category(', ') ?></dd>
-                                    <div class="time-date">
-                                        <img class="time-img" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/time-img.jpg" alt="">
-                                        <!--投稿日を取得-->
-                                        <dd><?php echo get_the_date('Y.m.d'); ?></dd>
-                                    </div>
+                                    <dt><?php the_title(); ?></dt>
+                                    <!--先頭のカテゴリー名を1つ取得-->
+                                    <?php
+                                    $categories = get_the_category();
+                                    if ($categories) {
+                                    $category = $categories[0]; // 最初のカテゴリー情報を取得
+                                        echo '<dd class="category">' . $category->name . '</dd>';   
+                                }
+                                    ?> 
+                                    <!--カテゴリここまで-->
+                                        <div class="time-date">
+                                            <img class="time-img" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/time-img.jpg" alt="">
+                                            <!--投稿日を取得-->
+                                    <dd><?php echo get_the_date('Y.m.d'); ?></dd>
                                 </div>
-                            </a>
-                        </dl>
-                <?php
+            </div>
+            </a>
+            </dl>
+    <?php
                     endwhile;
                 endif; ?>
-                <!--ここまで-->
-                <div id="Page-controll">
-                    <!--投稿記事が限界まで来たら次のページを作成-->
-                    <?php the_posts_pagination(); ?>
-                </div>
-            </div>
+    <!--ここまで-->
+    <div id="Page-controll">
+        <!--投稿記事が限界まで来たら次のページを作成-->
+        <?php the_posts_pagination(); ?>
+    </div>
+        </div>
 
-            <!--contactコンテンツの読み込み-->
-            <?php get_template_part('template-parts/contact'); ?>
+        <!--contactコンテンツの読み込み-->
+        <?php get_template_part('template-parts/contact'); ?>
     </main>
     <?php get_sidebar(); ?>
 

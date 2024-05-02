@@ -2,6 +2,7 @@
 div.img {
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 
 /*--------------------------------------------------
@@ -44,10 +45,6 @@ div.img {
     background: linear-gradient(-135deg, #1717e6, #00004d);
     z-index: -1;
     /*============================ #particles-js ============================*/
-  }
-  div.img {
-    position: relative;
-    overflow: hidden;
   }
   .container {
     display: flex;
@@ -233,17 +230,17 @@ div.img {
     background: rgba(255, 255, 255, 0.65);
     margin-bottom: 20px;
   }
-  .container .main-container main div#Content div#achive-news dl a.achive-a {
+  .container .main-container main div#Content div#achive-news dl a.archive-a {
     width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
   }
-  .container .main-container main div#Content div#achive-news dl a.achive-a div.img {
+  .container .main-container main div#Content div#achive-news dl a.archive-a div.img {
     width: 30%;
     aspect-ratio: 16/9;
   }
-  .container .main-container main div#Content div#achive-news dl a.achive-a div.img img {
+  .container .main-container main div#Content div#achive-news dl a.archive-a div.img img {
     position: absolute;
     top: 50%;
     display: block;
@@ -251,18 +248,20 @@ div.img {
     height: auto;
     transform: translateY(-50%);
   }
-  .container .main-container main div#Content div#achive-news dl a.achive-a div.achive-left {
+  .container .main-container main div#Content div#achive-news dl a.archive-a div.archive-left {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: space-between;
     width: calc(70% - 60px);
     margin: 30px auto;
   }
-  .container .main-container main div#Content div#achive-news dl a.achive-a div.achive-left dt {
+  .container .main-container main div#Content div#achive-news dl a.archive-a div.archive-left dt {
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
   }
-  .container .main-container main div#Content div#achive-news dl a.achive-a div.achive-left div {
+  .container .main-container main div#Content div#achive-news dl a.archive-a div.archive-left div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -271,7 +270,7 @@ div.img {
     height: 25px;
     margin-left: 20px;
   }
-  .container .main-container main div#Content div#achive-news dl a.achive-a div.achive-left div img.time-img {
+  .container .main-container main div#Content div#achive-news dl a.archive-a div.archive-left div img.time-img {
     display: block;
     width: 16px;
     height: 16px;
@@ -894,11 +893,11 @@ div.img {
   .container div#achive-news dl {
     width: 100%;
     max-width: 750px;
-    height: 160px;
+    height: auto;
     background: rgba(255, 255, 255, 0.65);
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
   }
-  .container div#achive-news dl a {
+  .container div#achive-news dl a.archive-a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -906,25 +905,33 @@ div.img {
     flex-wrap: nowrap;
     align-content: space-between;
   }
-  .container div#achive-news dl a img {
-    display: block;
-    width: auto;
-    height: 100%;
-    margin: 0;
+  .container div#achive-news dl a.archive-a div.img {
+    width: 50%;
+    aspect-ratio: 16/9;
   }
-  .container div#achive-news dl a div {
+  .container div#achive-news dl a.archive-a div.img img {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+  }
+  .container div#achive-news dl a.archive-a div.archive-left {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    justify-content: center;
     width: 64%;
     height: 100%;
     margin: 0 3%;
     padding: 3% 0;
   }
-  .container div#achive-news dl a div dt {
+  .container div#achive-news dl a.archive-a div.archive-left dt {
     width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
   }
-  .container div#achive-news dl a div div {
+  .container div#achive-news dl a.archive-a div.archive-left div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -932,7 +939,7 @@ div.img {
     height: 25px;
     margin: 0 0 0 20px;
   }
-  .container div#achive-news dl a div div img.time-img {
+  .container div#achive-news dl a.archive-a div.archive-left div img.time-img {
     display: block;
     width: 16px;
     height: 16px;
@@ -1629,48 +1636,53 @@ div.img {
     margin-bottom: 40px;
     background: rgba(255, 255, 255, 0.65);
   }
-  .container div#achive-news dl a {
+  .container div#achive-news dl a.archive-a {
     width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
   }
-  .container div#achive-news dl a img {
+  .container div#achive-news dl a.archive-a div.img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  .container div#achive-news dl a.archive-a div.img img {
+    position: absolute;
+    top: 50%;
     display: block;
     width: 100%;
     height: auto;
-    background-position: center;
-    background-size: cover;
-    margin: 0;
+    transform: translateY(-50%);
   }
-  .container div#achive-news dl a div {
+  .container div#achive-news dl a.archive-a div.archive-left {
     display: flex;
     flex-wrap: wrap;
     width: 280px;
     margin: 30px auto;
   }
-  .container div#achive-news dl a div dt {
+  .container div#achive-news dl a.archive-a div.archive-left dt {
     width: 100%;
     font-size: 14px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
+    text-align: center;
   }
-  .container div#achive-news dl a div dd.category {
+  .container div#achive-news dl a.archive-a div.archive-left dd.category {
     margin-left: 10px;
   }
-  .container div#achive-news dl a div div {
+  .container div#achive-news dl a.archive-a div.archive-left div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     width: auto;
     margin: 0 0 0 20px;
   }
-  .container div#achive-news dl a div div img.time-img {
+  .container div#achive-news dl a.archive-a div.archive-left div img.time-img {
     display: block;
     width: 16px;
     height: 16px;
     margin-right: 7px;
   }
-  .container div#achive-news dl a div div dd {
+  .container div#achive-news dl a.archive-a div.archive-left div dd {
     font-family: Meiryo;
     font-weight: normal;
     font-size: 14px;

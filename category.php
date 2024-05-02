@@ -5,7 +5,7 @@
     <main>
         <div id="Content">
             <div id="achive-news">
-                <h2><?php echo $catname; ?>一覧</h2>
+                <h2><?php single_cat_title(); ?>一覧</h2><!--カテゴリー名を取得する-->
                 <!--ワークスの場合は以下のtext-->
                 <?php if (is_category('works')) : ?>
                     <p>実績をご紹介しております、なおクライアント様の意向により制作したデータを見せられないものがありますのでご容赦ください。</p>
@@ -34,7 +34,7 @@
                         <dl>
                             <!--パーマリンクを取得-->
                             <!--記事のパーマリンクをaタグにあてはめる-->
-                            <a class="achive-a" href="<?php echo get_permalink(); ?>">
+                            <a class="archive-a" href="<?php echo get_permalink(); ?>">
                                 <!--サムネイル表示、ない場合はnoimg.jpgを表示-->
                                 <div class="img">
                                     <?php if (has_post_thumbnail()) : ?>
@@ -44,11 +44,19 @@
                                     <?php endif; ?>
                                 </div>
                                 <!--ここまで-->
-                                <div class="achive-left">
+
+                                <div class="archive-left">
                                     <!--本文を取得５０文字以降は切り捨て-->
-                                    <dt><?php echo mb_substr(get_the_excerpt(), 0, 50) . '…'; ?></dt>
-                                    <!--カテゴリー名を取得-->
-                                    <dd class="category"><?php the_category(', ') ?></dd>
+                                    <dt><?php the_title(); ?></dt>
+                                    <!--先頭のカテゴリー名を1つ取得-->
+                                    <?php
+                                    $categories = get_the_category();
+                                    if ($categories) {
+                                        $category = $categories[0]; // 最初のカテゴリー情報を取得
+                                        echo '<dd class="category">' . $category->name . '</dd>';
+                                    }
+                                    ?>
+                                    <!--カテゴリここまで-->
                                     <div class="time-date">
                                         <img class="time-img" src="<?php echo get_template_directory_uri(); ?>/photos/PC-img/time-img.jpg" alt="">
                                         <!--投稿日を取得-->
